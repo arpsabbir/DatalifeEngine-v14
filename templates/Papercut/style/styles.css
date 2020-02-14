@@ -477,6 +477,7 @@ li { list-style-type: none; }
 }
 
 .article .post-content {
+    min-height: 50px;
     color: #66676d;
     text-align: justify;
 }

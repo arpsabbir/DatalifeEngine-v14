@@ -13,16 +13,6 @@
 <body>
 {AJAX}
 
-{*<div class="modal">*}
-{*	<div class="modal-bg"></div>*}
-{*	<div class="modal-box">*}
-{*		<div class="modal-title"><div>ورود به سایت</div><span class="modal-close"></span></div>*}
-{*		<div class="modal-content">تست</div>*}
-{*	</div>*}
-{*</div>*}
-
-
-
 <header class="header">
 
 	<div class="wrapper relative">

@@ -326,7 +326,7 @@ while ( $row = $db->get_array() ) {
 	$entries .= <<<HTML
 <div id='table-comm-{$row['id']}' class="panel panel-default">
   <div class="panel-heading">
-    <span class="label label-info position-left">{$lang['edit_autor']}</span><strong class="position-left">{$row['autor']}</strong>IP: {$row['ip']} {$lang['cmod_n_title']} {$news_title}
+    <span class="label label-info position-left">{$lang['edit_autor']}</span><strong class="position-left">{$row['autor']}</strong>آی‌پی: {$row['ip']} {$lang['cmod_n_title']} {$news_title}
 	<div class="heading-elements">
 		<div class="checkbox checkbox-right"><label><input name="selected_comments[]" value="{$row['id']}" type="checkbox" class="icheck"></label></div>
 	</div>
