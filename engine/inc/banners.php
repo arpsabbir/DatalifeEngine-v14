@@ -1,11 +1,13 @@
 <?php
 /*
 =====================================================
-DataLife Engine - by SoftNews Media Group
+ DataLife Engine v13.3
 -----------------------------------------------------
-http://dle-news.ru/
+ Persian support site: http://datalifeengine.ir
 -----------------------------------------------------
-Copyright (c) 2004-2020 SoftNews Media Group
+ Contact us with: info@datalifeengine.ir
+=====================================================
+ Copyright (c) 2006-2020, All rights reserved.
 =====================================================
 File: banners.php
 -----------------------------------------------------
@@ -186,7 +188,7 @@ if( $_POST['action'] == "doadd" ) {
 	
 	if ( trim($_POST['start_date']) ) {
 
-		$start_date = @strtotime( $_POST['start_date'] );
+		$start_date = @jstrtotime( $_POST['start_date'] );
 
 		if ($start_date === - 1 OR !$start_date) $start_date = "";
 
@@ -194,7 +196,7 @@ if( $_POST['action'] == "doadd" ) {
 
 	if ( trim($_POST['end_date']) ) {
 
-		$end_date = @strtotime( $_POST['end_date'] );
+		$end_date = @jstrtotime( $_POST['end_date'] );
 
 		if ($end_date === - 1 OR !$end_date) $end_date = "";
 
@@ -288,7 +290,7 @@ if( $_POST['action'] == "doedit" ) {
 
 	if ( trim($_POST['start_date']) ) {
 
-		$start_date = @strtotime( $_POST['start_date'] );
+		$start_date = @jstrtotime( $_POST['start_date'] );
 
 		if ($start_date === - 1 OR !$start_date) $start_date = "";
 
@@ -296,7 +298,7 @@ if( $_POST['action'] == "doedit" ) {
 
 	if ( trim($_POST['end_date']) ) {
 
-		$end_date = @strtotime( $_POST['end_date'] );
+		$end_date = @jstrtotime( $_POST['end_date'] );
 
 		if ($end_date === - 1 OR !$end_date) $end_date = "";
 
@@ -596,8 +598,8 @@ if( $_REQUEST['action'] == "add" or $_REQUEST['action'] == "edit" ) {
 		if( $row['devicelevel'] == "all" ) $check_all_1 = "selected";
 		else $check_all_1 = "";
 		
-		if ( $row['start'] ) $start_date = @date( "Y-m-d H:i", $row['start'] );
-		if ( $row['end'] )  $end_date  = @date( "Y-m-d H:i", $row['end'] );
+		if ( $row['start'] ) $start_date = @jdate( "Y-m-d H:i", $row['start'] );
+		if ( $row['end'] )  $end_date  = @jdate( "Y-m-d H:i", $row['end'] );
 	
 	}
 	
@@ -631,7 +633,7 @@ if( $_REQUEST['action'] == "add" or $_REQUEST['action'] == "edit" ) {
 		<div class="form-group">
 		  <label class="control-label col-md-2 col-sm-3">{$lang['banners_xname']}</label>
 		  <div class="col-md-10 col-sm-9">
-			<input class="form-control width-350 position-left" maxlength="40" type="text" name="banner_tag" value="{$banner_tag}" /><span class="text-muted text-size-small">({$lang['xf_lat']})</span>
+			<input class="form-control width-350 position-left ltr" maxlength="40" type="text" name="banner_tag" value="{$banner_tag}" /><span class="text-muted text-size-small">({$lang['xf_lat']})</span>
 		  </div>
 		 </div>
 		<div class="form-group">
@@ -655,20 +657,23 @@ if( $_REQUEST['action'] == "add" or $_REQUEST['action'] == "edit" ) {
 		<div class="form-group">
 		  <label class="control-label col-md-2 col-sm-3">{$lang['vote_startdate']}</label>
 		  <div class="col-md-10 col-sm-9">
-			<input data-rel="calendardatetime" type="text" name="start_date" class="form-control" style="width:190px;" value="{$start_date}" autocomplete="off"><i class="help-button visible-lg-inline-block text-primary-600 fa fa-question-circle position-right position-left" data-rel="popover" data-trigger="hover" data-placement="auto right" data-content="{$lang['hint_bstart']}" ></i>
+			<input id="PersianDate_A" type="text" name="start_date" size="20" value="{$start_date}" class="form-control ltr" style="width:190px;" /><i class="help-button visible-lg-inline-block text-primary-600 fa fa-question-circle position-right position-left" data-rel="popover" data-trigger="hover" data-placement="right" data-content="{$lang['hint_bstart']}" ></i>
 		  </div>
 		 </div>
+		 <script type="text/javascript">Calendar.setup({inputField:"PersianDate_A",ifFormat:"%Y-%m-%d %H:%M",align:"Br",timeFormat:"24",dateType:"jalali",showsTime:true,singleClick:true});</script>
 		<div class="form-group">
 		  <label class="control-label col-md-2 col-sm-3">{$lang['vote_enddate']}</label>
 		  <div class="col-md-10 col-sm-9">
-			<input data-rel="calendardatetime" type="text" name="end_date" class="form-control" style="width:190px;" value="{$end_date}" autocomplete="off"><i class="help-button visible-lg-inline-block text-primary-600 fa fa-question-circle position-right position-left" data-rel="popover" data-trigger="hover" data-placement="auto right" data-content="{$lang['hint_bend']}" ></i>
+			<input id="PersianDate_B" type="text" name="end_date" size="20" value="{$end_date}" class="form-control ltr" style="width:190px;" /><i class="help-button visible-lg-inline-block text-primary-600 fa fa-question-circle position-right position-left" data-rel="popover" data-trigger="hover" data-placement="right" data-content="{$lang['hint_bend']}" ></i>
 		  </div>
 		 </div>
+		 <script type="text/javascript">Calendar.setup({inputField:"PersianDate_B",ifFormat:"%Y-%m-%d %H:%M",align:"Br",timeFormat:"24",dateType:"jalali",showsTime:true,singleClick:true});</script>
+
 		<div class="form-group editor-group">
 		  <label class="control-label col-md-2 col-sm-3">{$lang['banners_code']}</label>
 		  <div class="col-md-10 col-sm-9">
-			<div style="border: solid 1px #BBB;width:100%;">
-				<textarea style="width:100%;" name="banner_code" id="banner_code" rows="16">{$banner_code}</textarea>
+			<div style="border: solid 1px #BBB;width:100%;" class="ltr">
+				<textarea style="width:100%;" name="banner_code" class="ltr" id="banner_code" rows="16">{$banner_code}</textarea>
 			</div>
 		  </div>
 		 </div>
@@ -701,13 +706,13 @@ if( $_REQUEST['action'] == "add" or $_REQUEST['action'] == "edit" ) {
 		<div class="form-group">
 		  <label class="control-label col-md-2 col-sm-3">{$lang['banner_mviews']}</label>
 		  <div class="col-md-10 col-sm-9">
-			<input type="text" name="max_views" class="form-control" style="width:220px;" value="{$max_views}"><i class="help-button visible-lg-inline-block text-primary-600 fa fa-question-circle position-right position-left" data-rel="popover" data-trigger="hover" data-placement="auto right" data-content="{$lang['hint_bviews']}" ></i>
+			<input type="text" name="max_views" class="form-control" style="width:220px;" value="{$max_views}"><i class="help-button visible-lg-inline-block text-primary-600 fa fa-question-circle position-right position-left" data-rel="popover" data-trigger="hover" data-placement="right" data-content="{$lang['hint_bviews']}" ></i>
 		  </div>
 		</div>
 		<div class="form-group">
 		  <label class="control-label col-md-2 col-sm-3">{$lang['banner_mcounts']}</label>
 		  <div class="col-md-10 col-sm-9">
-			<input type="text" name="max_counts" class="form-control" style="width:220px;" value="{$max_counts}"><i class="help-button visible-lg-inline-block text-primary-600 fa fa-question-circle position-right position-left" data-rel="popover" data-trigger="hover" data-placement="auto right" data-content="{$lang['hint_bcounts']}" ></i>
+			<input type="text" name="max_counts" class="form-control" style="width:220px;" value="{$max_counts}"><i class="help-button visible-lg-inline-block text-primary-600 fa fa-question-circle position-right position-left" data-rel="popover" data-trigger="hover" data-placement="right" data-content="{$lang['hint_bcounts']}" ></i>
 		  </div>
 		</div>
 		
@@ -721,20 +726,19 @@ if( $_REQUEST['action'] == "add" or $_REQUEST['action'] == "edit" ) {
 		  </div>
 		 </div>
 		<div class="form-group">
-		  <label class="control-label col-md-2 col-sm-3"></label>
+		  <label class="control-label col-md-2 col-sm-3"><b>{$lang['banners_s_opt']}</b></label>
 		  <div class="col-md-10 col-sm-9">
-			<b>{$lang['banners_s_opt']}</b>
+			
 		  </div>
 		 </div>		 
 		<div class="form-group">
-		  <label class="control-label col-md-2 col-sm-3"></label>
+		  <label class="control-label col-md-2 col-sm-3">{$lang['banners_s']}</label>
 		  <div class="col-md-10 col-sm-9">
 HTML;
 
 	echo makeDropDown( array ("0" => $lang['banners_s_0'], "1" => $lang['banners_s_1'], "2" => $lang['banners_s_2'], "3" => $lang['banners_s_3'], "4" => $lang['banners_s_4'], "5" => $lang['banners_s_5'], "6" => $lang['banners_s_6'], "7" => $lang['banners_s_7'] ), "short_place", $short_place );
 	
 	echo <<<HTML
-		  <label class="position-right text-muted text-size-small">{$lang['banners_s']}</label>
 		  <div class="checkbox mt-5"><label><input class="icheck" type="checkbox" value="1" name="bstick" {$checked3} id="bstick" />{$lang['banners_bstick']}</label></div>
 		  </div>
 		 </div>	
@@ -796,10 +800,10 @@ HTML;
 		$row['descr'] = $row['descr'];
 		$row['code'] = "<pre><code>".htmlspecialchars ($row['code'], ENT_QUOTES, $config['charset'])."</code></pre>";
 
-		if( !$langformatdatefull ) $langformatdatefull = "d.m.Y H:i";
+		if( !$langformatdatefull ) $langformatdatefull = "Y/m/d - H:i";
 
-		if ( $row['start'] ) $start_date = "<br>".date( $langformatdatefull, $row['start'] ); else $start_date = "--";
-		if ( $row['end'] ) $end_date = "<br>".date( $langformatdatefull, $row['end'] ); else $end_date = "--";
+		if ( $row['start'] ) $start_date = "<br>".jdate( $langformatdatefull, $row['start'] ); else $start_date = "--";
+		if ( $row['end'] ) $end_date = "<br>".jdate( $langformatdatefull, $row['end'] ); else $end_date = "--";
 
 		if ($row['max_views'] AND $row['views'] >= $row['max_views'] ) $row['approve'] = 0;
 		if ($row['max_counts'] AND $row['clicks'] >= $row['max_counts'] ) $row['approve'] = 0;
@@ -830,8 +834,8 @@ HTML;
 			$status = "<span title=\"{$lang['banners_off']}\" class=\"text-danger tip\"><b><i class=\"fa fa-exclamation-circle\"></i></b></span>";
 		}	
 		
-		if($row['allow_views']) $row['views'] = number_format($row['views'], 0, ',', ' '); else $row['views'] = "--";
-		if($row['allow_counts']) $row['clicks'] = number_format($row['clicks'], 0, ',', ' '); else $row['clicks'] = "--";
+		if($row['allow_views']) $row['views'] = number_format($row['views']); else $row['views'] = "--";
+		if($row['allow_counts']) $row['clicks'] = number_format($row['clicks']); else $row['clicks'] = "--";
 		
 		$menu_link = <<<HTML
         <div class="btn-group">
@@ -938,7 +942,7 @@ HTML;
 	<div class="panel-footer">
 		<button type="button" onclick="document.location='?mod=banners&action=add&rubric={$rubric}'" class="btn bg-teal btn-sm btn-raised position-left"><i class="fa fa-plus position-left"></i>{$lang['bb_create']}</button>
 		<button type="button" onclick="addRubric(); return false;" class="btn bg-slate-600 btn-sm btn-raised position-left"><i class="fa fa-plus position-left"></i>{$lang['add_rubric']}</button>
-		<a class="pull-right" onclick="javascript:Help('banners'); return false;" href="#">{$lang['banners_help']}</a>
+		<a class="pull-left" onclick="javascript:Help('banners'); return false;" href="#">{$lang['banners_help']}</a>
 	</div>		
 </div>
 </form>

@@ -1,11 +1,9 @@
 <div class="footer grey">
-	<!-- Копирайт -->
 	<div class="copyright">
-		Copyright © 2004&ndash;2020 <a href="https://dle-news.ru/" target="_blank">SoftNews Media Group</a> All Rights Reserved.<br>Powered by DataLife Engine © 2020
+		Copyright © 2006&ndash;2020 <a href="http://www.datalifeengine.ir/" target="_blank">DLE Farsi Group</a> All Rights Reserved.<br>Powered by DataLife Engine Farsi
 	</div>
-	<!-- / Копирайт -->
-	<a class="ca" href="http://centroarts.ru" target="_blank" rel="nofollow">
+	<a class="ca" href="http://www.datalifeengine.ir" target="_blank">
 		<span><svg class="icon icon-ca"><use xlink:href="#icon-ca"></use></svg></span>
-		<div>Дизайн <b>Centroarts</b></div>
+		<div>توسط <b>دیتالایف انجین فارسی</b></div>
 	</a>
 </div>

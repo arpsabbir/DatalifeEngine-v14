@@ -1,13 +1,13 @@
 <?php
 /*
 =====================================================
- DataLife Engine - by SoftNews Media Group 
+ DataLife Engine v13.3
 -----------------------------------------------------
- http://dle-news.ru/
+ Persian support site: http://datalifeengine.ir
 -----------------------------------------------------
- Copyright (c) 2004-2020 SoftNews Media Group
+ Contact us with: info@datalifeengine.ir
 =====================================================
- This code is protected by copyright
+ Copyright (c) 2006-2020, All rights reserved.
 =====================================================
  File: xfields.php
 -----------------------------------------------------
@@ -372,7 +372,7 @@ switch ($xfieldsaction) {
 		<div class="form-group">
 		  <label class="control-label col-md-2 col-sm-3"><?php echo $lang['xfield_xname']; ?></label>
 		  <div class="col-md-10 col-sm-9">
-			<input class="form-control width-200" maxlength="30" type="text" name="editedxfield[0]" value="<?php echo htmlspecialchars($editedxfield[0], ENT_QUOTES, $config['charset'] );?>" /><span class="text-muted text-size-small"><i class="fa fa-exclamation-circle position-left position-right"></i><?php echo $lang['xf_lat']; ?></span>
+			<input class="form-control ltr width-200" maxlength="30" type="text" name="editedxfield[0]" value="<?php echo htmlspecialchars($editedxfield[0], ENT_QUOTES, $config['charset'] );?>" /><span class="text-muted text-size-small"><i class="fa fa-exclamation-circle position-left position-right"></i><?php echo $lang['xf_lat']; ?></span>
 		  </div>
 		 </div>	
 		<div class="form-group">
@@ -573,7 +573,7 @@ HTML;
 		<div id="optional7" class="form-group">
 			<label class="control-label col-md-2 col-sm-3"><?php echo $lang['xfield_separator']; ?></label>
 			<div class="col-md-10 col-sm-9">
-				<input class="form-control width-300" type="text" name="editedxfield[21]" value="<?php echo htmlspecialchars($editedxfield[21], ENT_QUOTES, $config['charset']); ?>" /><i class="help-button visible-lg-inline-block text-primary-600 fa fa-question-circle position-right position-left" data-rel="popover" data-trigger="hover" data-placement="auto right" data-content="<?php echo $lang['xfield_separator_1']; ?>" ></i>
+				<input class="form-control ltr width-300" type="text" name="editedxfield[21]" value="<?php echo htmlspecialchars($editedxfield[21], ENT_QUOTES, $config['charset']); ?>" /><i class="help-button visible-lg-inline-block text-primary-600 fa fa-question-circle position-right position-left" data-rel="popover" data-trigger="hover" data-placement="right" data-content="<?php echo $lang['xfield_separator_1']; ?>" ></i>
 			</div>
 		</div>
 
@@ -643,7 +643,7 @@ $(function(){
 				
 				$req = $value[5] != 0 ? $lang['opt_sys_yes'] : $lang['opt_sys_no'];
 	
-				$x_list .= "<li class=\"dd-item\" data-id=\"{$name}\"><div class=\"dd-handle\"></div><div class=\"dd-content\"><b id=\"x_name\" class=\"s-el\">{$value[0]}</b><b id=\"x_cats\" class=\"s-el\">{$lang['xfield_xcat']}: {$cats_v}</b><b id=\"x_type\" class=\"s-el\">{$type}</b><b class=\"s-el\">{$lang['xfield_xwt']}: {$req}</b><div style=\"float:right;\"><a href=\"?mod=xfields&xfieldsaction=configure&xfieldssubaction=edit&xfieldsindex={$name}&user_hash={$dle_login_hash}\"><i title=\"{$lang['cat_ed']}\" alt=\"{$lang['cat_ed']}\" class=\"fa fa-pencil-square-o position-left\"></i></a><a href=\"javascript:xfdelete('{$name}');\"><i title=\"{$lang['cat_del']}\" alt=\"{$lang['cat_del']}\" class=\"fa fa-trash-o position-right text-danger\"></i></a></div></div></li>";
+				$x_list .= "<li class=\"dd-item\" data-id=\"{$name}\"><div class=\"dd-handle\"></div><div class=\"dd-content\"><b id=\"x_name\" class=\"s-el\">{$value[0]}</b><b id=\"x_cats\" class=\"s-el\">{$lang['xfield_xcat']}: {$cats_v}</b><b id=\"x_type\" class=\"s-el\">{$type}</b><b class=\"s-el\">{$lang['xfield_xwt']}: {$req}</b><div style=\"float:left;\"><a href=\"?mod=xfields&xfieldsaction=configure&xfieldssubaction=edit&xfieldsindex={$name}&user_hash={$dle_login_hash}\"><i title=\"{$lang['cat_ed']}\" alt=\"{$lang['cat_ed']}\" class=\"fa fa-pencil-square-o position-left\"></i></a><a href=\"javascript:xfdelete('{$name}');\"><i title=\"{$lang['cat_del']}\" alt=\"{$lang['cat_del']}\" class=\"fa fa-trash-o position-right text-danger\"></i></a></div></div></li>";
 	
 			}
 
@@ -1357,7 +1357,7 @@ $del_function = <<<HTML
 	};
 HTML;
 
-	$max_file_size = number_format($max_file_size, 0, '', '');
+	$max_file_size = number_format($max_file_size);
 
 $uploadscript = <<<HTML
 	var uploader_{$fieldcount} = new qq.FileUploader({
@@ -1551,7 +1551,7 @@ HTML;
 			
 		} else { $show="display:none;"; $fileid="";}
 
-		$max_file_size = number_format($max_file_size, 0, '', '');
+		$max_file_size = number_format($max_file_size);
 
 $uploadscript = <<<HTML
 	new qq.FileUploader({

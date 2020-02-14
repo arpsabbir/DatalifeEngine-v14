@@ -1,17 +1,17 @@
 <article class="block story shadow">
 	<div class="wrp">
 		<div class="head">
-			<h1 class="title h2 ultrabold">Личные сообщения</h1>
+			<h1 class="title h2 ultrabold">پیام های خصوصی</h1>
 		</div>
 		<div class="pm-box">
 			<nav id="pm-menu">
-				[inbox]<span>Входящие</span>[/inbox]
-				[outbox]<span>Отправленые</span>[/outbox]
-				[new_pm]<span>Создать сообщение</span>[/new_pm]
+				[inbox]<span>صندوق دریافتی</span>[/inbox]
+				[outbox]<span>صندوق ارسالی</span>[/outbox]
+				[new_pm]<span>ایجاد پیام</span>[/new_pm]
 			</nav>
 			<div class="pm_status">
 				{pm-progress-bar}
-				<div class="grey">{proc-pm-limit} % / ({pm-limit} сообщений)</div>
+				<div class="grey">{proc-pm-limit} % / ({pm-limit} پیام)</div>
 			</div>
 		</div>
 		[pmlist]
@@ -24,25 +24,24 @@
 [newpm]
 <div class="block">
 	<div class="wrp">
-		<h4 class="block_title ultrabold">Создать сообщение</h4>
+		<h4 class="block_title ultrabold">ارسال پیام</h4>
 		<ul class="ui-form">
 			<li class="form-group combo">
 				<div class="combo_field">
-					<input placeholder="Имя адресата" type="text" name="name" value="{author}" class="wide" required>
+					<input placeholder="گیرنده" type="text" name="name" value="{author}" class="wide" required>
 				</div>
 				<div class="combo_field">
-					<input placeholder="Тема сообщения" type="text" name="subj" value="{subj}" class="wide" required>
+					<input placeholder="موضوع" type="text" name="subj" value="{subj}" class="wide" required>
 				</div>
 			</li>
-			<li id="comment-editor">{editor}</li>
-			<li><input type="checkbox" id="outboxcopy" name="outboxcopy" value="1" /> <label for="outboxcopy">Сохранить сообщение в папке "Отправленные"</label></li> 
+			<li id="comment-editor">{editor}</li>    
 		[recaptcha]
 			<li>{recaptcha}</li>
 		[/recaptcha]
 		[question]
 			<li class="form-group">
-				<label for="question_answer">Вопрос: {question}</label>
-				<input placeholder="Ответ" type="text" name="question_answer" id="question_answer" class="wide" required>
+				<label for="question_answer">سوال امنیتی: {question}</label>
+				<input placeholder="پاسخ" type="text" name="question_answer" id="question_answer" class="wide" required>
 			</li>
 		[/question]
 		</ul>
@@ -50,11 +49,11 @@
 			[sec_code]
 				<div class="c-capcha">
 					{sec_code}
-					<input placeholder="Повторите код" title="Введите код указанный на картинке" type="text" name="sec_code" id="sec_code" required>
+					<input placeholder="کاراکترها را وارد نمایید" title="کاراکترها را وارد نمایید" type="text" name="sec_code" id="sec_code" required>
 				</div>
 			[/sec_code]
-			<button class="btn" type="submit" name="add"><b class="ultrabold">Отправить</b></button>
-			<button class="btn btn_border" type="button" onclick="dlePMPreview()"><b class="ultrabold">Предпросмотр</b></button>
+			<button class="btn" type="submit" name="add"><b class="ultrabold">ارسال</b></button>
+			<button class="btn btn_border" type="button" onclick="dlePMPreview()"><b class="ultrabold">پیش نمایش</b></button>
 		</div>
 	</div>
 </div>
@@ -70,8 +69,8 @@
 			<div class="com_content">
 				<div class="com_info">
 					<b class="name">{author}</b>
-					[online]<span title="Онлайн" class="status online">Онлайн</span>[/online]
-					[offline]<span title="Офлайн" class="status offline">Офлайн</span>[/offline]
+					[online]<span title="Online" class="status online">آنلاین</span>[/online]
+					[offline]<span title="Offline" class="status offline">آفلاین</span>[/offline]
 					<span class="grey date">{date}</span>
 				</div>
 				<div class="text">
@@ -81,10 +80,10 @@
 				</div>
 				<div class="com_tools">
 					<div class="com_tools_links grey">
-						[reply]<svg class="icon icon-meta_reply"><use xlink:href="#icon-meta_reply"></use></svg><span>Ответить</span>[/reply]
-						[complaint]<svg class="icon icon-compl"><use xlink:href="#icon-compl"></use></svg><span>Жалоба</span>[/complaint]
-						[del]<svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg><span>Удалить</span>[/del]
-						[ignore]<svg class="icon icon-meta_views"><use xlink:href="#icon-meta_views"></use></svg><span>В игнор</span>[/ignore]
+						[reply]<svg class="icon icon-meta_reply"><use xlink:href="#icon-meta_reply"></use></svg><span>پاسخ</span>[/reply]
+						[complaint]<svg class="icon icon-compl"><use xlink:href="#icon-compl"></use></svg><span>گزارش تخلف</span>[/complaint]
+						[del]<svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg><span>حذف</span>[/del]
+						[ignore]<svg class="icon icon-meta_views"><use xlink:href="#icon-meta_views"></use></svg><span>افزودن به لیست سیاه</span>[/ignore]
 					</div>
 				</div>
 			</div>

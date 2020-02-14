@@ -1,53 +1,54 @@
 <div class="page_form__inner">
 	<h1 class="title h1">
-		[registration]Регистрация[/registration]
-		[validation]Продолжение регистрации[/validation]
+		[registration]ثبت نام کاربر جدید[/registration]
+		[validation]بروزرسانی مشخصات کاربری[/validation]
 	</h1>
 	<div class="page_form__form">
 		<div class="regtext">
 		[registration]
-			Регистрация на нашем сайте позволит Вам быть его полноценным участником.
-			Вы сможете добавлять новости на сайт, оставлять свои комментарии, просматривать скрытый текст и многое другое.
-			<br>В случае возникновения проблем с регистрацией, обратитесь к <a href="/index.php?do=feedback">администратору</a> сайта.
+			<b>سلام, به وبسایت ما خوش آمدید!</b><br /><br />
+			با عضویت در سایت ما سطح دسترسی شما به امکانات سایت افزایش خواهد داشت.
+			می توانید در سایت مطالب خود را انتشار دهید، ارسال نظر، مشاهده نوشته های پنهان و به خیلی امکانات بیشتری دسترسی خواهید داشت.
+			<br/> اگر شما با هرگونه مشکلی در عضویت مواجه شدید، لطفا به <a href="/feedback.html"> مدیریت </a> سایت اطلاع دهید.
 		[/registration]
 		[validation]
-			Ваш аккаунт был зарегистрирован на нашем сайте,
-			однако информация о Вас является неполной, поэтому ОБЯЗАТЕЛЬНО заполните дополнительные поля в Вашем профиле.<br>
+			<b>کاربر گرامی,</b><br />
+			حساب کاربری شما با موفقیت در سایت ایجاد شد. در صورت تمایل، می توانید فیلدهای زیر را کامل کنید
 		[/validation]
 		</div>
 		<ul class="ui-form">
 		[registration]
 			<li class="form-group">
-				<label for="name">Логин</label>
+				<label for="name">نام کاربری</label>
 				<div class="login_check">
-					<input type="text" name="name" id="name" class="wide" required>
-					<button class="btn" title="Проверить" onclick="CheckLogin(); return false;">Проверить</button>
+					<input type="text" name="name" id="name" class="wide ltr" required>
+					<button class="btn" title="Check username" onclick="CheckLogin(); return false;">چک کردن</button>
 				</div>
 				<div id="result-registration"></div>
 			</li>
 			<li class="form-group">
-				<label for="password1">Пароль</label>
-				<input type="password" name="password1" id="password1" class="wide" required>
+				<label for="password1">رمز عبور</label>
+				<input type="password" name="password1" id="password1" class="wide ltr" required>
 			</li>
 			<li class="form-group">
-				<label for="password2">Повторите пароль</label>
-				<input type="password" name="password2" id="password2" class="wide" required>
+				<label for="password2">تکرار رمز عبور</label>
+				<input type="password" name="password2" id="password2" class="wide ltr" required>
 			</li>
 			<li class="form-group">
-				<label for="email">E-mail</label>
-				<input type="email" name="email" id="email" class="wide" required>
+				<label for="email">ایمیل</label>
+				<input type="email" name="email" id="email" class="wide ltr" required>
 			</li>
 		[question]
 			<li class="form-group">
 				<label for="question_answer">{question}</label>
-				<input placeholder="Введите ответ" type="text" name="question_answer" id="question_answer" class="wide" required>
+				<input placeholder="پاسخ" type="text" name="question_answer" id="question_answer" class="wide" required>
 			</li>
 		[/question]
 		[sec_code]
 			<li class="form-group">
 				<div class="c-captcha">
 					{reg_code}
-					<input placeholder="Повторите код" title="Введите код указанный на картинке" type="text" name="sec_code" id="sec_code" required>
+					<input placeholder="کد امنیتی" title="کد امنیتی را وارد کنید" type="text" name="sec_code" id="sec_code" required>
 				</div>
 			</li>
 		[/sec_code]
@@ -57,20 +58,20 @@
 		[/registration]
 		[validation]
 			<li class="form-group">
-				<label for="fullname">Ваше имя</label>
+				<label for="fullname">نام کامل</label>
 				<input type="text" id="fullname" name="fullname" class="wide">
 			</li>
 			<li class="form-group">
-				<label for="land">Место жительства</label>
+				<label for="land">محل سکونت</label>
 				<input type="text" id="land" name="land" class="wide">
 			</li>
 			<li class="form-group">
-				<label for="image">О себе</label>
+				<label for="image">درباره من</label>
 				<textarea id="info" name="info" rows="5" class="wide"></textarea>
 			</li>
 			<li class="form-group">
-				<label for="image">Аватар</label>
-				<input type="file" id="image" name="image" class="wide">
+				<label for="image">آواتار</label>
+				<input type="file" id="image" name="image" class="wide ltr">
 			</li>
 			<li class="form-group">
 				<table class="xfields">
@@ -80,7 +81,15 @@
 		[/validation]
 		</ul>
 		<div class="form_submit">
-			<button class="btn" name="submit" type="submit">Зарегистрироваться</button>
+			<button class="btn" name="submit" type="submit">ثبت فرم</button>
 		</div>
 	</div>
+</div>
+
+
+<div class="page addform">
+	<table class="tableform">
+
+
+	</table>
 </div>

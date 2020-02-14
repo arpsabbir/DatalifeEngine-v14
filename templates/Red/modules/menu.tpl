@@ -1,36 +1,43 @@
 <ul>
-	<li class="parent"><a href="/lastnews">Новости<svg class="icon icon-arrow_down"><use xlink:href="#icon-arrow_down"></use></svg></a>
-		{catmenu}
-	</li>
-	<li class="parent"><a href="/index.php?do=feedback">Поддержка<svg class="icon icon-arrow_down"><use xlink:href="#icon-arrow_down"></use></svg></a>
+	<li class="parent"><a href="/lastnews">اخبار<svg class="icon icon-arrow_down"><use xlink:href="#icon-arrow_down"></use></svg></a>
 		<ul>
-			<li><a rel="nofollow" target="_blank" href="http://dle-news.ru/">Сайт системы</a></li>
-			<li><a rel="nofollow" target="_blank" href="http://forum.dle-news.ru/">Форум</a></li>
-			<li><a rel="nofollow" target="_blank" href="http://dle-news.ru/lastnews/">Новости системы</a></li>
-			<li><a rel="nofollow" target="_blank" href="http://dle-news.ru/faq.html">FAQ</a></li>
-			<li><a rel="nofollow" target="_blank" href="http://dle-news.ru/price.html">Купить скрипт</a></li>
+			<li><a href="#">درباره ما</a></li>
+			<li><a href="#">اجتماعی</a></li>
+			<li><a href="#">اقتصادی</a></li>
+			<li><a href="#">مذهبی</a></li>
+			<li><a href="#">جنایی</a></li>
+			<li><a href="#">ورزشی</a></li>
+			<li><a href="#">فرهنگی</a></li>
+			<li><a href="#">جهان خارجه</a></li>
 		</ul>
 	</li>
-	<li class="parent"><a href="#">Клиенту<svg class="icon icon-arrow_down"><use xlink:href="#icon-arrow_down"></use></svg></a>
+	<li class="parent"><a href="/index.php?do=feedback">پشتیبانی<svg class="icon icon-arrow_down"><use xlink:href="#icon-arrow_down"></use></svg></a>
 		<ul>
-			<li><a href="/rules.html">Правила</a></li>
-			<li><a href="/index.php?do=register">Регистрация</a></li>
-			<li><a href="/statistics.html">Статистика</a></li>
-			<li><a href="#">Вопрос ответ</a></li>
+			<li><a rel="nofollow" target="_blank" href="http://datalifeengine.ir/">دیتالایف انجین</a></li>
+			<li><a rel="nofollow" target="_blank" href="http://datalifeengine.ir/lastnews/">بلاگ</a></li>
+			<li><a rel="nofollow" target="_blank" href="http://datalifeengine.ir/faq/">پرسش و پاسخ</a></li>
+			<li><a rel="nofollow" target="_blank" href="http://datalifeengine.ir/shop/">فروشگاه</a></li>
 		</ul>
 	</li>
-	<li class="parent block_archives"><a href="#">Архив<svg class="icon icon-arrow_down"><use xlink:href="#icon-arrow_down"></use></svg></a>
+	<li class="parent"><a href="#">مشتریان<svg class="icon icon-arrow_down"><use xlink:href="#icon-arrow_down"></use></svg></a>
+		<ul>
+			<li><a href="/rules.html">قوانین</a></li>
+			<li><a href="/index.php?do=register">عضویت</a></li>
+			<li><a href="/statistics.html">آمار</a></li>
+		</ul>
+	</li>
+	<li class="parent block_archives"><a href="#">آرشیو<svg class="icon icon-arrow_down"><use xlink:href="#icon-arrow_down"></use></svg></a>
 		<div>
 			<div>
 				<ul class="arh_tabs">
 					<li class="active">
-						<a title="Календарь" href="#arch_calendar" aria-controls="arch_calendar" data-toggle="tab">
-							Календарь
+						<a title="Calendar" href="#arch_calendar" aria-controls="arch_calendar" data-toggle="tab">
+							تقویم
 						</a>
 					</li>
 					<li>
-						<a title="Архив" href="#arch_list" aria-controls="arch_list" data-toggle="tab">
-							Архив
+						<a title="Archive" href="#arch_list" aria-controls="arch_list" data-toggle="tab">
+							فهرست
 						</a>
 					</li>
 				</ul>

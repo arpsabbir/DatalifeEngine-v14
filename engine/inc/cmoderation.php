@@ -1,13 +1,13 @@
 <?php
 /*
 =====================================================
- DataLife Engine - by SoftNews Media Group 
+ DataLife Engine v13.3
 -----------------------------------------------------
- http://dle-news.ru/
+ Persian support site: http://datalifeengine.ir
 -----------------------------------------------------
- Copyright (c) 2004-2020 SoftNews Media Group
+ Contact us with: info@datalifeengine.ir
 =====================================================
- This code is protected by copyright
+ Copyright (c) 2006-2020, All rights reserved.
 =====================================================
  File: cmoderation.php
 -----------------------------------------------------
@@ -75,7 +75,7 @@ if( $action == "mass_approve" ) {
 					
 				} else {
 					
-					$full_link = $config['http_home_url'] . date( 'Y/m/d/', $row['date'] ) . $row['alt_name'] . ".html";
+					$full_link = $config['http_home_url'] . jdate( 'Y/m/d/', $row['date'] ) . $row['alt_name'] . ".html";
 				}
 				
 			} else {
@@ -292,7 +292,7 @@ while ( $row = $db->get_array() ) {
 	$row['newsdate'] = strtotime( $row['newsdate'] );
 	$row['date'] = strtotime( $row['date'] );
 	if( !$langformatdatefull ) $langformatdatefull = "d.m.Y H:i:s";
-	$date = date( $langformatdatefull, $row['date'] );
+	$date = jdate( $langformatdatefull, $row['date'] );
 	
 	if( $config['allow_alt_url'] ) {
 		
@@ -310,7 +310,7 @@ while ( $row = $db->get_array() ) {
 		
 		} else {
 			
-			$full_link = $config['http_home_url'] . date( 'Y/m/d/', $row['newsdate'] ) . $row['alt_name'] . ".html";
+			$full_link = $config['http_home_url'] . jdate( 'Y/m/d/', $row['newsdate'] ) . $row['alt_name'] . ".html";
 		}
 	
 	} else {
@@ -339,7 +339,7 @@ while ( $row = $db->get_array() ) {
 	<button onclick="ajax_comm_edit('{$row['id']}'); return false;" type="button" class="btn bg-primary-600 btn-sm btn-raised position-left"><i class="fa fa-pencil-square-o position-left"></i>{$lang['group_sel1']}</button>
 	<button onclick="MarkSpam('{$row['id']}'); return false;" type="button" class="btn bg-brown-600 btn-sm btn-raised position-left"><i class="fa fa-minus-circle position-left"></i>{$lang['btn_spam']}</button>
 	<button onclick="DeleteComments('{$row['id']}'); return false;" type="button" class="btn bg-danger btn-sm btn-raised"><i class="fa fa-trash-o position-left"></i>{$lang['edit_dnews']}</button>
-	<span class="pull-right" style="margin-top: 4px;"><i class="fa fa-clock-o position-left"></i>{$date}</span>
+	<span class="pull-left" style="margin-top: 4px;"><i class="fa fa-clock-o position-left"></i>{$date}</span>
   </div>
 </div>
 <input type="hidden" name="post_id[{$row['id']}]" value="{$row['post_id']}">
@@ -401,7 +401,7 @@ echo <<<HTML
 
 .bb-editor textarea { 
 	font-size: 12px;
-	font-family: verdana;
+	font-family: tahoma;
 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 	-webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;

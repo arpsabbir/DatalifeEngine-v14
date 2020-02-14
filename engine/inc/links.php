@@ -1,13 +1,13 @@
 <?php
 /*
 =====================================================
- DataLife Engine - by SoftNews Media Group 
+ DataLife Engine v13.3
 -----------------------------------------------------
- http://dle-news.ru/
+ Persian support site: http://datalifeengine.ir
 -----------------------------------------------------
- Copyright (c) 2004-2020 SoftNews Media Group
+ Contact us with: info@datalifeengine.ir
 =====================================================
- This code is protected by copyright
+ Copyright (c) 2006-2020, All rights reserved.
 =====================================================
  File: links.php
 -----------------------------------------------------
@@ -431,7 +431,7 @@ echo <<<HTML
 	</table>
 </div>
 <div class="panel-footer">
-	<div class="pull-right">
+	<div class="pull-left">
 	<input class="btn bg-teal btn-sm btn-raised position-left" type="button" onclick="addLink()" value="{$lang['add_links']}">
 	<select class="uniform position-left" name="action" data-dropdown-align-right="auto">
 	<option value="">{$lang['edit_selact']}</option>

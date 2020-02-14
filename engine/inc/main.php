@@ -1,13 +1,13 @@
 <?PHP
 /*
 =====================================================
- DataLife Engine - by SoftNews Media Group 
+ DataLife Engine v13.3
 -----------------------------------------------------
- http://dle-news.ru/
+ Persian support site: http://datalifeengine.ir
 -----------------------------------------------------
- Copyright (c) 2004-2020 SoftNews Media Group
+ Contact us with: info@datalifeengine.ir
 =====================================================
- This code is protected by copyright
+ Copyright (c) 2006-2020, All rights reserved.
 =====================================================
  File: main.php
 -----------------------------------------------------
@@ -82,25 +82,25 @@ if ( $config['allow_cache'] AND !$config['cache_type'] ) {
 if ( !count($stats_arr) ) {
 
 	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_post" );
-	$stats_arr['stats_news'] = number_format( $row['count'], 0, ',', ' ');
+	$stats_arr['stats_news'] = number_format( $row['count'] );
 	
 	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_subscribe" );
-	$stats_arr['count_subscribe'] = number_format( $row['count'], 0, ',', ' ');
+	$stats_arr['count_subscribe'] = number_format( $row['count'] );
 	
 	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_comments" );
-	$stats_arr['count_comments'] = number_format( $row['count'], 0, ',', ' ');
+	$stats_arr['count_comments'] = number_format( $row['count'] );
 	
 	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_comments WHERE approve ='0'" );
-	$stats_arr['count_c_app'] = number_format( $row['count'], 0, ',', ' ');
+	$stats_arr['count_c_app'] = number_format( $row['count'] );
 	
 	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . USERPREFIX . "_users" );
-	$stats_arr['stats_users'] = number_format( $row['count'], 0, ',', ' ');
+	$stats_arr['stats_users'] = number_format( $row['count'] );
 	
 	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . USERPREFIX . "_users WHERE banned='yes'" );
-	$stats_arr['stats_banned'] = number_format( $row['count'], 0, ',', ' ');
+	$stats_arr['stats_banned'] = number_format( $row['count'] );
 	
 	$row = $db->super_query( "SELECT COUNT(*) as count FROM " . PREFIX . "_post where approve = '0'" );
-	$stats_arr['approve']  = number_format( $row['count'], 0, ',', ' ');
+	$stats_arr['approve']  = number_format( $row['count'] );
 	
 	
 	$db->query( "SHOW TABLE STATUS FROM `" . DBNAME . "`" );
@@ -527,7 +527,7 @@ echo <<<HTML
 								<td>{$gdversion}</td>
 							</tr>
 							<tr>
-								<td>Module mod_rewrite</td>
+								<td>ماژول mod_rewrite:</td>
 								<td>{$mod_rewrite}</td>
 							</tr>
 							<tr>

@@ -1,7 +1,7 @@
 [available=main]
-<!-- Блок Новости от партнеров -->
+<!-- Partners news -->
 <aside class="box hblock">
-	<h4 class="title">Новости партнеров</h4>
+	<h4 class="title">اخبار دوستان</h4>
 	<div class="box_in">
 		<ul class="informer_list">
 			{inform_dle}
@@ -13,7 +13,7 @@
 	</div>
 	[/banner_header]
 </aside>
-<!-- / Блок Новости от партнеров -->
+<!-- / Partners news -->
 [/available]
 [available=cat]
 [banner_header]

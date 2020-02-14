@@ -1,13 +1,13 @@
 <?php
 /*
 =====================================================
- DataLife Engine - by SoftNews Media Group 
+ DataLife Engine v13.3
 -----------------------------------------------------
- http://dle-news.ru/
+ Persian support site: http://datalifeengine.ir
 -----------------------------------------------------
- Copyright (c) 2004-2020 SoftNews Media Group
+ Contact us with: info@datalifeengine.ir
 =====================================================
- This code is protected by copyright
+ Copyright (c) 2006-2020, All rights reserved.
 =====================================================
  File: editnews.php
 -----------------------------------------------------
@@ -248,7 +248,7 @@ if( $_REQUEST['action'] == "edit" ) {
 				
 			} else $up_image = "";
 
-$max_file_size = number_format($max_file_size, 0, '', '');
+$max_file_size = number_format($max_file_size);
 
 $uploadscript = <<<HTML
 	new qq.FileUploader({

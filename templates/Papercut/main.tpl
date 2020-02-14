@@ -133,7 +133,7 @@
 		<div class="wrapper">
 
 			<div class="copyright">
-				Copyright © 2019 {site-name}. Powered by <a href="http://www.datalifeengine.ir/?utm_source=customers&utm_medium=cpc&utm_campaign=copyright" target="_blank">Datalife Engine</a>
+				Copyright © 2020 {site-name}. Powered by <a href="http://www.datalifeengine.ir/?utm_source=customers&utm_medium=cpc&utm_campaign=copyright" target="_blank">Datalife Engine</a>
 			</div>
 
 			<div class="footer-separator"></div>

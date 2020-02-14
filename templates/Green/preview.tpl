@@ -12,7 +12,7 @@
 	</div>
 	<div class="story_tools">
 		<div class="story_tools_in">
-			<a href="{full-link}" title="Читать подробнее: {title}" class="btn"><span class="more_icon"><i></i><i></i><i></i></span></a>
+			<a href="{full-link}" title="{title}" class="btn"><span class="more_icon"><i></i><i></i><i></i></span></a>
 		</div>
 	</div>
 </article>

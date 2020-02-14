@@ -1,9 +1,8 @@
-<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-<script>
-    //  Яндекс карта
+<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript">
+
     var myMap;
 
-    // Дождёмся загрузки API и готовности DOM.
     ymaps.ready(init);
 
     function init () {
@@ -15,9 +14,9 @@
         var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
             balloonContentBody: [
                 '<address>',
-                '<strong>ООО "Софтньюс Медиа Групп"</strong>',
+                '<strong>LLC "Datalife Engine Farsi"</strong>',
                 '<br/>',
-                'Адрес: 660093 г. Красноярск, ул. Капитанская, дом 12, офис 43',
+                'Address: 660093, Tehran',
                 '</address>'
             ].join('')
         }, {

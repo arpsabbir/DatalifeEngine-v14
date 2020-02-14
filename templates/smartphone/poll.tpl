@@ -4,10 +4,10 @@
 		{list}
 	</div>
 	<div class="vfoot">
-		[voted]<span class="small">{votes} голосов</span>[/voted]
+		[voted]<span class="small">{votes} رأی دهنده</span>[/voted]
 		[not-voted]
-			<button class="btn" type="submit" onclick="doPoll('vote', '{news-id}'); return false;" >Голосовать</button>
-			<button class="btn" type="submit" onclick="doPoll('results', '{news-id}'); return false;">Результаты</button>
+			<button class="btn" type="submit" onclick="doPoll('vote', '{news-id}'); return false;" >رأی</button>
+			<button class="btn" type="submit" onclick="doPoll('results', '{news-id}'); return false;">نتایج</button>
 		[/not-voted]
 	</div>
 </div>

@@ -7,7 +7,7 @@
 		[not-group=5]
 		<ul class="story_icons">
 			<li class="edit_btn">
-				[edit]<i title="Редактировать">Редактировать</i>[/edit]
+				[edit]<i title="Edit">ویرایش</i>[/edit]
 			</li>
 		</ul>
 		[/not-group]
@@ -30,7 +30,7 @@
 		<h5 class="title">{news_title}</h5>
 		<div class="story_top"><time class="date grey" datetime="{date=Y-m-d}">{date=d/m/Y H:i}</time></div>
 		<div class="text">
-			{comment limit="200"}
+			{comment limit="200"}...
 		</div>
 	</div>
 	[/shortresult]

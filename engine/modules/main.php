@@ -1,13 +1,13 @@
 <?php
 /*
 =====================================================
- DataLife Engine - by SoftNews Media Group 
+ DataLife Engine v13.3
 -----------------------------------------------------
- http://dle-news.ru/
+ Persian support site: http://datalifeengine.ir
 -----------------------------------------------------
- Copyright (c) 2004-2020 SoftNews Media Group
+ Contact us with: info@datalifeengine.ir
 =====================================================
- This code is protected by copyright
+ Copyright (c) 2006-2020, All rights reserved.
 =====================================================
  File: main.php
 =====================================================
@@ -37,6 +37,14 @@ $tpl->set ( '{tags}', $tpl->result['tags_cloud'] );
 $tpl->set ( '{vote}', $tpl->result['vote'] );
 $tpl->set ( '{login}', $tpl->result['login_panel'] );
 $tpl->set ( '{speedbar}', $tpl->result['speedbar'] );
+$tpl->set ( '{today}', jdate("l، j F Y") );
+$tpl->set ( '{main-title}', $config['short_title'] );
+$tpl->set ( '{site-name}', ucfirst( parse_url( $config['http_home_url'] )['host'] ) );
+
+$tpl->set( '{main-link}', $config['http_home_url'] );
+$tpl->set( '{feedback-link}', $config['http_home_url'] . "?do=feedback" );
+$tpl->set( '{lastcomments-link}', $config['http_home_url'] . "?do=lastcomments" );
+$tpl->set( '{registration-link}', $PHP_SELF . "?do=register" );
 
 if ( $dle_module == "showfull" AND $news_found ) {
 	
@@ -723,7 +731,7 @@ $tpl->global_clear();
 
 $db->close();
 
-echo "\n<!-- DataLife Engine Copyright SoftNews Media Group (http://dle-news.ru) -->\r\n";
+echo "\n<!-- DataLife Engine Farsi Copyright (http://datalifeengine.ir) -->\r\n";
 
 GzipOut();
 

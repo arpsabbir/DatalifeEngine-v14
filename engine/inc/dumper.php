@@ -108,7 +108,7 @@ mysqli_close( $dblink );
 
 		if(!defined('AUTOMODE'))
 		{
-			echo "<SCRIPT>document.getElementById('timer').innerHTML = '" . round(array_sum(explode(' ', microtime())) - $timer, 4) . " sec.'</SCRIPT>";
+			echo "<SCRIPT>document.getElementById('timer').innerHTML = '" . round(array_sum(explode(' ', microtime())) - $timer, 4) . " ثانیه.'</SCRIPT>";
 		}
 
 class dumper {
@@ -278,7 +278,7 @@ class dumper {
 					echo tpl_l($lang['dumper_9'].' `'. $table .'` -> ' . $tab_charset[$table] . ' ('.$lang['dumper_10'].' '  . CHARSET . ')', C_ERROR);
 				}
 			}
-			echo tpl_l("{$lang['dumper_11']} `{$table}` [" . fn_int($tabinfo[$table]) . "].");
+			echo tpl_l("{$lang['dumper_11']} `{$table}` [داده‌ها: " . fn_int($tabinfo[$table]) . "].");
 
 			$result = mysqli_query($dblink, "SHOW CREATE TABLE `{$table}`");
         	$tab = mysqli_fetch_array($result);
@@ -337,8 +337,8 @@ class dumper {
         echo tpl_l(str_repeat("-", 60));
         $this->fn_close($fp);
 		echo tpl_l("{$lang['dumper_12']} `{$db}` {$lang['dumper_13']}", C_RESULT);
-		echo tpl_l("{$lang['dumper_14']}       " . round($this->size / 1048576, 2) . " MB", C_RESULT);
-		$filesize = round(filesize(PATH . $this->filename) / 1048576, 2) . " MB";
+		echo tpl_l("{$lang['dumper_14']} " . round($this->size / 1048576, 2) . " مگابایت", C_RESULT);
+		$filesize = round(filesize(PATH . $this->filename) / 1048576, 2) . " مگابایت";
 		echo tpl_l("{$lang['dumper_15']} {$filesize}", C_RESULT);
 		echo tpl_l("{$lang['dumper_16']} {$tabs}", C_RESULT);
 		echo tpl_l("{$lang['dumper_17']}   " . fn_int($tabinfo[0]), C_RESULT);
@@ -695,7 +695,7 @@ class dumper {
 }
 
 function fn_int($num){
-	return number_format($num, 0, ',', ' ');
+	return number_format($num );
 }
 
 function tpl_page($content = '', $buttons = ''){
@@ -710,13 +710,14 @@ function tpl_page($content = '', $buttons = ''){
 
 return <<<HTML
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fa" lang="fa">
 <head>
 <META HTTP-EQUIV=Content-Type CONTENT="text/html; charset={$config['charset']}">
 <STYLE TYPE="TEXT/CSS">
 <!--
 body{
 	overflow: auto;
+	direction: rtl;
 }
 form {
 	margin:0px;

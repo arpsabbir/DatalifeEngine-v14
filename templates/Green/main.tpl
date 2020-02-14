@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
 	{headers}
 	<meta name="HandheldFriendly" content="true">
@@ -13,6 +13,7 @@
 	<link rel="apple-touch-icon" sizes="76x76" href="{THEME}/images/touch-icon-ipad.png">
 	<link rel="apple-touch-icon" sizes="120x120" href="{THEME}/images/touch-icon-iphone-retina.png">
 	<link rel="apple-touch-icon" sizes="152x152" href="{THEME}/images/touch-icon-ipad-retina.png">
+	<meta property="og:image" content="{THEME}/images/logo.png">
 
 	<link href="{THEME}/css/engine.css" type="text/css" rel="stylesheet">
 	<link href="{THEME}/css/styles.css" type="text/css" rel="stylesheet">
@@ -21,24 +22,24 @@
 	<div class="page">
 		<div class="wrp">
 			<div class="body">
-				<!-- Левая колонка -->
+				<!-- The left column -->
 				<div id="body_left">
 					<div class="body_left_in">
-					<!-- Шапка -->
+					<!-- Header -->
 					<header id="header">
-						<!-- Логотип -->
-						<a class="logotype" href="/" title="DataLife Engine">
+						<!-- Logo -->
+						<a class="logotype" href="/" title="دیتالایف انجین">
 							<svg class="icon icon-logo"><use xlink:href="#icon-logo"></use></svg>
 						</a>
-						<!-- / Логотип -->
+						<!-- / Logo -->
 						{login}
-						<!-- Кнопка вызова меню -->
+						<!-- The button menu -->
 						<button class="h_btn" id="menubtn">
 							<span class="menu_toggle">
 								<i class="mt_1"></i><i class="mt_2"></i><i class="mt_3"></i>
 							</span>
 						</button>
-						<!-- / Кнопка вызова меню -->
+						<!-- / The button menu -->
 						[sort]
 						<div id="sort">
 							<button class="h_btn" id="sortbtn">
@@ -50,39 +51,38 @@
 							</button>
 							<div id="sort_drop" class="head_drop">
 								<div class="hd_pad">
-									<b class="sort_label">Сортировать по</b>
+									<b class="sort_label">مرتب کردن بر اساس</b>
 									{sort}
 								</div>
 							</div>
-						</div>
 						[/sort]
 					</header>
-					<!-- / Шапка -->
+					<!-- / Header -->
 					</div>
-					<!-- Кнопка "Наверх" -->
+					<!-- button "Up" -->
 					<a href="/" id="upper"><svg class="icon icon-up"><use xlink:href="#icon-up"></use></svg></a>
-					<!-- / Кнопка "Наверх" -->
+					<!-- / button "Up" -->
 					<div id="menu">
 						{include file="modules/menu.tpl"}
 					</div>
 				</div>
-				<!-- / Левая колонка -->
+				<!-- / The left column -->
 				<div class="body_right">
 					[available=main]
-					<!-- Карусель и новости -->
+					<!-- Carousel and news -->
 					<aside id="topside" class="structure">
 						<div id="topside_left" class="str_left">
 							{include file="modules/carousel.tpl"}
 						</div>
 						<div id="topside_right" class="str_right">
-							<!-- Новые новости в рэндоме -->
+							<!-- New news random -->
 							<div class="bignews">
 								{custom days="120" template="story_big" limit="2" order="rand" cache="yes"}
 							</div>
-							<!-- / Новые новости в рэндоме -->
+							<!-- / New news random -->
 						</div>
 					</aside>
-					<!-- / Карусель и новости -->
+					<!-- / Carousel and news -->
 					[/available]
 					[not-available=main]
 					<div id="breadcrumbs">
@@ -94,7 +94,7 @@
 							{info}
 							[available=lastcomments]
 							<div class="block story">
-								<h1 class="title h2">Последние комментарии</h1>
+								<h1 class="title h2">آخرین نظرات</h1>
 								<div class="com_list">
 									{content}
 								</div>
@@ -119,9 +119,9 @@
 		</div>
 	</div>
 	{AJAX}
-	<script src="{THEME}/js/lib.js"></script>
-	<script src="{THEME}/js/svgxuse.min.js"></script>
-	<script>
+	<script type="text/javascript" src="{THEME}/js/lib.js"></script>
+	<script type="text/javascript" src="{THEME}/js/svgxuse.min.js"></script>
+	<script type="text/javascript">
 		jQuery(function($){
 			$.get("{THEME}/images/sprite.svg", function(data) {
 			  var div = document.createElement("div");

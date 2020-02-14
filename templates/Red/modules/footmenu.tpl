@@ -1,57 +1,56 @@
 <ul class="foot_menu">
 	<li class="grid_1_4">
 		<b data-toggle="collapse" data-target="#fmenu_1" aria-expanded="false" class="ultrabold collapsed">
-			<i></i> Новости
+			<i></i> اخبار
 		</b>
 		<div class="collapse" id="fmenu_1">
 			<nav>
-				<a href="#">О сайте</a>
-				<a href="#">В мире</a>
-				<a href="#">Экономика</a>
-				<a href="#">Религия</a>
-				<a href="#">Криминал</a>
+				<a href="#">ورزشی</a>
+				<a href="#">سیاسی</a>
+				<a href="#">اقتصاد</a>
+				<a href="#">فرهنگی</a>
+				<a href="#">اجتماعی</a>
 			</nav>
 		</div>
 	</li>
 	<li class="grid_1_4">
 		<b data-toggle="collapse" data-target="#fmenu_2" aria-expanded="false" class="ultrabold collapsed">
-			<i></i> Поддержка
+			<i></i> پشتیبانی
 		</b>
 		<div class="collapse" id="fmenu_2">
 			<nav>
-				<a href="http://dle-news.ru/" target="_blank" rel="nofollow">Сайт системы</a>
-				<a href="http://dle-news.ru/" target="_blank" rel="nofollow">Поддержка скрипта</a>
-				<a href="http://forum.dle-news.ru/" target="_blank" rel="nofollow">Форум</a>
-				<a href="http://dle-news.ru/lastnews/" target="_blank" rel="nofollow">Новости системы</a>
-				<a href="http://dle-news.ru/price.html" target="_blank" rel="nofollow">Купить скрипт</a>
+				<a href="http://datalifeengine.ir/" target="_blank">توسعه دهنده</a>
+				<a href="http://datalifeengine.ir/" target="_blank">پشتیبانی</a>
+				<a href="http://forum.datalifeengine.ir/" target="_blank">انجمن</a>
+				<a href="http://datalifeengine.ir/lastnews/" target="_blank">آخرین اخبار</a>
+				<a href="http://datalifeengine.ir/shop/" target="_blank">فروشگاه</a>
 			</nav>
 		</div>
 	</li>
 	<li class="grid_1_4">
 		<b data-toggle="collapse" data-target="#fmenu_3" aria-expanded="false" class="ultrabold collapsed">
-			<i></i> Клиенту
+			<i></i> مشتریان
 		</b>
 		<div class="collapse" id="fmenu_3">
 			<nav>
-				<a href="/">Главная</a>
-				<a href="/index.php?do=feedback">Контакты</a>
-				<a href="/rules.html">Правила</a>
-				<a href="/index.php?do=register">Регистрация</a>
-				<a href="/statistics.html">Статистика</a>
+				<a href="/">صفحه اصلی</a>
+				<a href="/index.php?do=feedback">تماس با ما</a>
+				<a href="/rules.html">قوانین</a>
+				<a href="/index.php?do=register">عضویت در سایت</a>
+				<a href="/statistics.html">آمار سایت</a>
 			</nav>
 		</div>
 	</li>
 	<li class="grid_1_4 grid_last">
 		<b data-toggle="collapse" data-target="#fmenu_4" aria-expanded="false" class="ultrabold collapsed">
-			<i></i> Мы в Соц.сетях
+			<i></i> ما را دنبال نمایید
 		</b>
 		<div class="collapse" id="fmenu_4">
 			<nav>
-				<a href="#" target="_blank" rel="nofollow">вКонтакте</a>
-				<a href="#" target="_blank" rel="nofollow">Facebook</a>
-				<a href="#" target="_blank" rel="nofollow">Twitter</a>
-				<a href="#" target="_blank" rel="nofollow">Одноклассники</a>
-				<a href="#" target="_blank" rel="nofollow">Инстаграм</a>
+				<a href="#" target="_blank" rel="nofollow">فیسبوک</a>
+				<a href="#" target="_blank" rel="nofollow">تویتر</a>
+				<a href="#" target="_blank" rel="nofollow">اینستاگرام</a>
+				<a href="#" target="_blank" rel="nofollow">تلگرام</a>
 			</nav>
 		</div>
 	</li>

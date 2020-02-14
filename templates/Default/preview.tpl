@@ -7,12 +7,12 @@
 		</div>
 		<div class="story_tools">
 			<div class="category">
-				{link-category}
+				<a href="{category-url}">{category}</a>
 			</div>
 		</div>
 	</div>
 	<div class="meta">
-		<ul class="left">
+		<ul class="right">
 			<li class="grey"><time datetime="{date=Y-m-d}">[day-news]{date}[/day-news]</time></li>
 		</ul>
 	</div>
@@ -27,12 +27,12 @@
 		</div>
 		<div class="story_tools">
 			<div class="category">
-				{link-category}
+				<a href="{category-url}">{category}</a>
 			</div>
 		</div>
 	</div>
 	<div class="meta">
-		<ul class="left">
+		<ul class="right">
 			<li class="grey"><time datetime="{date=Y-m-d}">[day-news]{date}[/day-news]</time></li>
 		</ul>
 	</div>

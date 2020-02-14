@@ -1,27 +1,27 @@
 <article class="post static">
-	<h1>Восстановление пароля</h1>
+	<h1>بازيابی رمز عبور</h1>
 </article>
 <div class="ux-form">
 	<ul class="ui-form">
-		<li><input placeholder="Логин или E-mail" class="f_input f_wide" type="text" name="lostname" id="lostname"></li>
+		<li><input placeholder="نام‌کاربری يا ايميل" class="f_input f_wide" type="text" name="lostname" id="lostname"></li>
 		[sec_code]
 		<li>
 			<div class="c-captcha-box">
-				<label for="sec_code">Повторите код:</label>
+				<label for="sec_code">تصوير کد امنیتی:</label>
 				<div class="c-captcha">
 					{code}
-					<input title="Введите код указанный на картинке" type="text" name="sec_code" id="sec_code" class="f_input" >
+					<input title="کد امنیتی داده شده را وارد نمائيد" type="text" name="sec_code" id="sec_code" class="f_input" >
 				</div>
 			</div>
 		</li>
 		[/sec_code]
 		[recaptcha]
 		<li>
-			<div>Введите слова</div>
+			<div>کد امنيتی</div>
 			{recaptcha}
 		</li>
 		[/recaptcha]
 	<div class="submitline">
-		<button name="submit" class="btn f_wide" type="submit">Восстановить</button>
+		<button name="submit" class="btn f_wide" type="submit">ارسال</button>
 	</div>
 </div>

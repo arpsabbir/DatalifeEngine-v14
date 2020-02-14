@@ -1,13 +1,13 @@
 <?php
 /*
 =====================================================
- DataLife Engine - by SoftNews Media Group 
+ DataLife Engine v13.3
 -----------------------------------------------------
- http://dle-news.ru/
+ Persian support site: http://datalifeengine.ir
 -----------------------------------------------------
- Copyright (c) 2004-2020 SoftNews Media Group
+ Contact us with: info@datalifeengine.ir
 =====================================================
- This code is protected by copyright
+ Copyright (c) 2006-2020, All rights reserved.
 =====================================================
  File: lostpassword.php
 -----------------------------------------------------
@@ -76,7 +76,7 @@ var filebtntext    = '';
 	<div class="panel panel-default" style="margin-top: 100px;">
 
       <div class="panel-heading">
-        {$lang['skin_title']} DataLife Engine
+        بازیابی رمز عبور 
       </div>
 	  
       <div class="panel-body">
@@ -86,7 +86,7 @@ var filebtntext    = '';
 			<a href="?mod=main" class="text-right">{$lang['lost_pass_3']}</a>
 	   </div>
     </div>
-	<div class="text-muted text-size-small text-center">DataLife Engine&reg;  Copyright 2004-{$year}<br>&copy; <a href="https://dle-news.ru/" target="_blank">SoftNews Media Group</a> All rights reserved.</div>
+	<div class="text-muted text-size-small text-center">&copy; سیستم قدرت گرفته از <a href="http://www.datalifeengine.ir/" target="_blank">دیتالایف انجین فارسی</a></div>
 
 	 <!--MAIN area-->
   </div>

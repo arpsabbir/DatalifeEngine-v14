@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
 	{headers}
 	<meta name="HandheldFriendly" content="true">
@@ -13,82 +13,83 @@
 	<link rel="apple-touch-icon" sizes="76x76" href="{THEME}/images/touch-icon-ipad.png">
 	<link rel="apple-touch-icon" sizes="120x120" href="{THEME}/images/touch-icon-iphone-retina.png">
 	<link rel="apple-touch-icon" sizes="152x152" href="{THEME}/images/touch-icon-ipad-retina.png">
+	<meta property="og:image" content="{THEME}/images/logo.png">
 
 	<link href="{THEME}/css/engine.css" type="text/css" rel="stylesheet">
 	<link href="{THEME}/css/styles.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 	<div class="page">
-		<!-- Поиск -->
+		<!-- Search -->
 		<form class="droptopbar" id="q_search" method="post">
 			<div class="wrp">
 				<div class="q_search">
-					<input id="story" name="story" placeholder="Поиск по сайту..." type="search">
-					<button class="btn btn_border" type="submit" title="Найти"><b class="ultrabold">Искать</b></button>
+					<input id="story" name="story" placeholder="جستجو در سایت..." type="search">
+					<button class="btn btn_border" type="submit" title="بیاب"><b class="ultrabold">بگرد</b></button>
 				</div>
 			</div>
 			<input type="hidden" name="do" value="search">
 			<input type="hidden" name="subaction" value="search">
 		</form>
-		<!-- / Поиск -->
-		<!-- Шапка -->
+		<!-- / Search -->
+		<!-- Header -->
 		<div class="headpic fixed">
 			<div class="wrp">
 				<header id="header">
-					<!-- Логотип -->
-					<a class="logotype" href="/" title="DataLife Engine">
+					<!-- Logo -->
+					<a class="logotype" href="/" title="دیتالایف انجین">
 						<svg class="icon icon-logo"><use xlink:href="#icon-logo"></use></svg>
-						<span class="title_hide">DataLife Engine</span>
+						<span class="title_hide">دیتالایف انجین فارسی</span>
 					</a>
-					<!-- / Логотип -->
+					<!-- / Logo -->
 					<div class="topbar">
 						{login}
-						<!-- Кнопка вызова поиска -->
-						<div class="h_btn" id="search" title="Поиск">
+						<!-- Search button -->
+						<div class="h_btn" id="search" title="Search">
 							<svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>
 							<span class="icon_close">
 								<i class="mt_1"></i><i class="mt_2"></i>
 							</span>
-							<span class="title_hide">Поиск по сайту</span>
+							<span class="title_hide">جستجو در سایت</span>
 						</div>
-						<!-- / Кнопка вызова поиска -->
-						<!-- Меню -->
-						<!-- Кнопка вызова меню -->
+						<!-- / Search button -->
+						<!-- Menu -->
+						<!-- Menu button -->
 						<div class="h_btn" id="mainmenu">
 							<span class="menu_toggle">
 								<i class="mt_1"></i><i class="mt_2"></i><i class="mt_3"></i>
 							</span>
 						</div>
-						<!-- / Кнопка вызова меню -->
+						<!-- / Menu button -->
 						<nav id="topmenu">
 							{include file="modules/menu.tpl"}
 						</nav>
 						<a href="#" id="closemenu"><span><svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg></span></a>
-						<!-- / Меню -->
+						<!-- / Menu -->
 					</div>
 				</header>
 				[available=main]
 				<div class="head_text">
 					<div class="head_text_in">
-						<h1 class="title ultrabold">DataLife Engine</h1>
-						<p class="text">Собственный сайт без компромиссов!</p>
+						<h1 class="title ultrabold">دیتالایف انجین فارسی</h1>
+						<p class="text">وبسایت خود را بدون هیچ محدودیتی ایجاد نمایید!</p>
 					</div>
 				</div>
 				[/available]
 			</div>
 		</div>
-		<!-- / Шапка -->
-		<!-- Сортировка, Теги, Хлебные крошки -->
+		<!-- / Header -->
+		<!-- Sorting, Tags, Bread crumbs -->
 		{include file="modules/tools.tpl"}
-		<!-- / Сортировка, Теги, Хлебные крошки -->
-		<!-- Контент -->
+		<!-- / Sorting, Tags, Bread crumbs -->
+		<!-- Content -->
 		<div id="content">
 			{info}
 			[available=lastcomments]
 				<div class="block story lastcomments">
 					<div class="wrp">
 						<div class="head">
-							<h1 class="title h2 ultrabold">Последние комментарии</h1>
+							<h1 class="title h2 ultrabold">آخرین دیدگاه ها</h1>
 						</div>
 			[/available]
 			[available=cat|favorites|newposts|lastnews|main]<section class="story_list">[/available]
@@ -96,35 +97,35 @@
 			[available=cat|favorites|newposts|lastnews|main]</section>[/available]
 			[available=lastcomments]</div></div>[/available]
 		</div>
-		<!-- / Контент -->
+		<!-- / Content -->
 		[available=main]
-		<!-- Популярные новости -->
+		<!-- Popular news -->
 		<div class="block col_news">
 			<div class="wrp">
-				<div class="block_title"><h4 class="ultrabold">Популярные новости</h4></div>
+				<div class="block_title"><h4 class="ultrabold">محبوب ترین ها</h4></div>
 				<div class="grid_list">
 					{custom template="story_top" limit="4" days="80" order="reads" cache="yes"}
 				</div>
 			</div>
 		</div>
-		<!-- / Популярные новости -->
+		<!-- / Popular news -->
 		[/available]
 		[not-available=showfull]
 		{vote}
 		[/not-available]
-		<!-- Нижняя часть шаблона -->
+		<!-- footer -->
 		<footer id="footer">
 			<div class="wrp">
 				{include file="modules/footmenu.tpl"}
 				{include file="modules/copyright.tpl"}
 			</div>
 		</footer>
-		<!-- / Нижняя часть шаблона -->
+		<!-- / footer -->
 	</div>
 	{AJAX}
-	<script src="{THEME}/js/lib.js"></script>
-	<script src="{THEME}/js/svgxuse.min.js"></script>
-	<script>
+	<script type="text/javascript" src="{THEME}/js/lib.js"></script>
+	<script type="text/javascript" src="{THEME}/js/svgxuse.min.js"></script>
+	<script type="text/javascript">
 		jQuery(function($){
 			$.get("{THEME}/images/sprite.svg", function(data) {
 			  var div = document.createElement("div");

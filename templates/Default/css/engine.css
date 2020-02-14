@@ -1,14 +1,14 @@
-/* =========== © 2016 Centroarts.com =========== */
+/* =========== 2020 DatalifeEngine.ir =========== */
 
-/*--- Загрузчик AJAX ---*/
-#loading-layer { background: #000; padding: 20px; text-align: center; color: #fff; border-radius: 2px }
+/*--- The AJAX loader ---*/
+#loading-layer { direction: rtl; background: #000; padding: 20px; text-align: center; color: #fff; border-radius: 2px }
 
-/*--- Цитаты, Спойлеры, Код  ---*/
+/*--- Quotes, Spoilers, Code  ---*/
 .scriptcode, .title_quote,
-	.title_spoiler, .text_spoiler, .quote { padding: 2% 4%; background: #fff; border: 1px solid #dde4ea; }
+	.title_spoiler, .text_spoiler { padding: 2% 4%; background: #fff; border: 1px solid #dde4ea; }
 
-	.title_quote { border-left: 2px solid #e85319; border-bottom: 0; margin-top: 2px; font-weight: bold; }
-	.quote, blockquote { padding: 1% 4%; border-left: 2px solid #e85319; font-style: italic;}
+	.title_quote { margin-top: 2px; font-weight: bold; }
+	.quote, blockquote { padding: 1% 4%; margin: 1em 0; border-left: 2px solid #e85319; font-style: italic;}
 	.title_spoiler { margin-top: 2px; }
 	.text_spoiler { margin-bottom: 2px; }
 	.title_spoiler img { vertical-align: middle; margin: -1px 0 0 !important }
@@ -19,7 +19,7 @@
 	.hide { background-color: #f0f0f0; padding: 5px; color: #4c6d0f; margin: 0 0 1em 0 }
 	.hide a { text-decoration: underline; } .hide a:hover { text-decoration: none }
 
-/* --- Сортировка статей --- */
+/* --- Sorting articles --- */
 .sort { list-style: none; padding: 0; margin: 0; }
 	.sort > li, .sort { display: inline; }
 	.sort > li { margin: 0 0 0 3%; }
@@ -36,18 +36,19 @@
 	}
 	.sort > li.asc a:after { background-position: 0 -11px; }
 	
-/* --- Оформление календаря --- */
+/* --- The design of the calendar --- */
+#calendar caption { text-align: center; padding: 10px 0; font-size: 17px; }
 .calendar { width: 100%; text-align: center; }
 .calendar tr td, .calendar tr th { padding: 3px; }
 	.calendar tr td a { color: inherit; font-weight: bold; }
 	.calendar tr td { padding: 5px 3px; }
 	.calendar tr td.weekday { color: #ea5f24; }
-	.calendar tr th { background-color: #fff; font-weight: bold; text-transform: uppercase; }
+	.calendar tr th { background-color: #fff; font-weight: bold; text-transform: uppercase; padding-bottom: 8px }
 	.calendar tr th.weekday { background-color: #ea5f24; color: #fff; }
 	.calendar tr th.monthselect { background-color: transparent; color: #b8b8b8; padding-bottom: 15px; }
 	.calendar tr th.monthselect a { color: #b8b8b8; }
 
-/* --- Вывод результатов голосования на сайте --- */
+/* --- Displays the results of voting on the site --- */
 .voteprogress, .pollprogress {
 	overflow: hidden;
 	height: 6px;
@@ -68,7 +69,7 @@
 	.voteprogress .vote4, .pollprogress .poll4 { background-color: #4bb1cf; }
 	.voteprogress .vote5, .pollprogress .poll5 { background-color: #faa732; }
 
-/*--- Рейтинг - Звездами ---*/
+/*--- Rating - Stars ---*/
 .rating, .unit-rating { width: 115px; height: 23px; }
 	.rating { font-size: 11px; }
 	.unit-rating, .unit-rating li a:hover, .unit-rating li.current-rating {
@@ -122,7 +123,7 @@
 	}
 
 	.ratingplus {
-		color: #70bb39;
+		color: green;
 	}
 
 	.ratingminus {
@@ -132,23 +133,23 @@
 	.ratingzero {
 		color: #6c838e;
 	}
-	
-/*--- Таблица Персональных сообщений и лучших пользователей ---*/
+
+/*--- The table of Personal messages and best users ---*/
 .userstop td, .pm td.pm_list, .pm td.pm_head { border-bottom: 1px solid #efefef; padding: 12px 2px; }
 	table.pm, table.userstop { width: 100%; margin-bottom: 0; }
 	table.pm select { width: 100px; }
 	.userstop thead td, .pm td.pm_head { border-bottom: 1px solid #efefef; font-weight: bold; }
 	table.pm .navigation { border-top-width: 0; margin: 0; }
 
-/*---Выпадающее меню кнопки редактировать---*/
+/*---The drop-down menu button edit---*/
 #dropmenudiv { padding: 10px 0; min-width: 140px; width: auto !important; opacity: 1 !important; display: none; font-size: .9em;
 		box-shadow: 0 8px 40px -10px rgba(0,0,0,0.3); border: 1px solid #e6e6e6; border-color: rgba(0,0,0,0.1); background-clip: padding-box;
 	}
 	#dropmenudiv { background-color: #fff; }
-	#dropmenudiv a { text-decoration: none !important; color: inherit; display: block; padding: 3px 20px; border: 0 none; white-space: nowrap; color: inherit; }
+	#dropmenudiv a { direction: rtl; text-decoration: none !important; color: inherit; display: block; padding: 3px 20px; border: 0 none; white-space: nowrap; color: inherit; }
 	#dropmenudiv a:hover { background-color: #eeeeef; }
 
-/*---показ оригинальной картинки загруженной на сайт из уменьшенной копии---*/
+/*---display the uploaded original image from a small copy---*/
 .highslide-wrapper, .highslide-outline { background: #fff }
 	.highslide-image { border: 2px solid #fff }
 	.highslide-active-anchor { visibility: hidden } 
@@ -167,7 +168,7 @@
 	.highslide-controls a.disabled { cursor: default }
 	.highslide-controls a span { display: none }
  
-/*---Навигация по картинкам галереи---*/
+/*---The CSS sprites for the controlbar---*/
 .highslide-controls .highslide-previous a { background-position: 0 0 }
 	.highslide-controls .highslide-previous a:hover { background-position: 0 -30px }
 	.highslide-controls .highslide-previous a.disabled { background-position: 0 -60px !important }
@@ -187,8 +188,9 @@
 	.highslide-controls .highslide-close a { background-position: -180px 0 }
 	.highslide-controls .highslide-close a:hover { background-position: -180px -30px }
 
-/*---Быстрый поиск на сайте---*/
+/*---A quick search on the website---*/
 #searchsuggestions {
+	direction: rtl;
 	z-index: 2200;
 	width: 300px;
 	border-radius: 2px;
@@ -209,8 +211,7 @@
 	#searchsuggestions span.notfound { padding: 15px 25px; display: block; }
 	#searchsuggestions .break { display: none; }
 
-/*---Диалоговые и всплывающие окна jQuery UI---*/
-.ui-front { z-index: 1000; }
+/*---Dialog and popup Windows jQuery UI---*/
 .ui-widget-overlay {
 	background: #000;
 	opacity: 0.5;
@@ -222,7 +223,8 @@
 	* html .ui-helper-clearfix { height: 1% }
 	.ui-helper-clearfix { display: block }
 	.ui-dialog {
-		text-align: left;
+		direction: rtl; 
+		text-align: right;
 		overflow: hidden;
 		padding: 0;
 		position: absolute;
@@ -232,20 +234,15 @@
 		border: 1px solid #e6e6e6; border-color: rgba(0,0,0,0.1);
 		background-color: #f7f7f7;
 		background-clip: padding-box;
-		outline: none;
 	}
 	.ui-dialog-titlebar { padding: 20px 20px; position: relative; }
-	.ui-dialog-title { float: left; font-weight: bold; font-size: 1.15em; }
+	.ui-dialog-title { float: right; font-weight: bold; font-size: 1.15em; }
 	.ui-dialog-titlebar-close {
 		position: absolute;
-		right: 10px; top: 50%;
-		margin-top: -16px !important;
-		height: 23px !important;
-		width: 32px;
+		left: 10px; top: 50%;
+		margin-top: -16px;
+		height: 32px; width: 32px;
 		border: 0 none !important;
-		background-color: inherit !important;
-		box-shadow: none !important;
-		padding: 0px !important;
 	}
 	.ui-dialog-titlebar-close .ui-icon {
 		display: block;
@@ -255,30 +252,12 @@
 		-webkit-background-size: 12px auto; background-size: 12px auto;
 		opacity: .5;
 	}
-	.ui-button {
-		float: right;
-		border: 0 none;
-		display: inline-block;
-		vertical-align: middle;
-		cursor: pointer;
-		height: 36px;
-		border-radius: 18px;
-		line-height: 22px;
-		outline: none;
-		background-color: #3394e6;
-		color: #fff;
-		border: 0 none;
-		padding: 7px 22px;
-		text-decoration: none !important;
-		box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2); -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
-		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
-		-webkit-transition: all ease .1s; transition: all ease .1s;
-	}
 	.ui-dialog-titlebar-close:hover .ui-icon { opacity: 1; }
-	.ui-icon, .ui-button-icon-only { overflow: hidden; text-indent: -9999px; }
+	.ui-icon { overflow: hidden; text-indent: -9999px; }
 	.ui-dialog label { color: #575757; }
-	.ui-dialog-content { padding: 20px; border: 1px solid #fff; overflow: auto; position: relative; zoom: 1; }
-	.loginbox.ui-dialog, .loginbox .ui-dialog-content { overflow: visible !important; }
+	.ui-dialog-content { direction: rtl; text-align: right; padding: 20px; border: 1px solid #fff; overflow: auto; position: relative; zoom: 1; }
+	.ui-dialog-content br:first-child { display: none; }
+	.loginbox.ui-dialog, .loginbox .ui-dialog-content { direction: rtl; overflow: visible !important; }
 	.ui-dialog-content h2 { display: inline; font-size: 1em; font-weight: bold }
 	.ui-dialog .ui-dialog-buttonpane { padding: 20px; text-align: center; }
 	.ui-dialog .ui-resizable-se { bottom: 3px; height: 14px; right: 3px; width: 14px; }
@@ -287,7 +266,7 @@
 	.ui-button { margin: 0 3px; }
 	.ui-helper-hidden-accessible{display: none;}
 
-/* --- Автозаполнение облака тегов --- */
+/* --- Autocomplete tag clouds --- */
 .ui-autocomplete { position: absolute; cursor: default; }
 * html .ui-autocomplete { width: 1px } /* without this, the menu expands to 100% in IE6 */
 .ui-menu {
@@ -304,7 +283,7 @@
 	.ui-menu .ui-menu-item a.ui-state-hover,
 	.ui-menu .ui-menu-item a.ui-state-active { font-weight: normal; margin: -1px; border: 1px solid #a7a7a7; color: #4e4e4e; font-weight: bold; }
 
-/*---Подсветка кода в теге [code]---*/
+/*---The hilight code in the tag [code]---*/
 pre code { display: block; padding: 0.5em; background: #f9fafa; border: 1px solid #dce7e7; overflow:auto; white-space: pre; }
 	pre .comment, pre .template_comment, pre .diff .header, pre .doctype, pre .lisp .string, pre .javadoc { padding: 0; margin: 0; border:none; box-shadow: none; background-color: inherit; color: #93a1a1; font-style: italic; }
 	pre .keyword, pre .css .rule .keyword, pre .winutils, pre .javascript .title, pre .method, pre .addition, pre .css .tag, pre .lisp .title { color: #859900; }
@@ -320,93 +299,25 @@ pre code { display: block; padding: 0.5em; background: #f9fafa; border: 1px soli
 	pre .tex .formula { background: #eee8d5; }
 	pre .comment:hover {background-color: inherit;box-shadow: none;}
 
-/*---BB Редактор---*/
+/*---BB Editor---*/
 .bb-pane {
-  height: 1%; overflow: hidden;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  margin: 0;
-  height: auto !important;
-  text-decoration:none;
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#FBFBFB), to(#EAEAEA));
-  background-image: -webkit-linear-gradient(top, #FBFBFB, 0%, #EAEAEA, 100%);
-  background-image: -moz-linear-gradient(top, #FBFBFB 0%, #EAEAEA 100%);
-  background-image: linear-gradient(to bottom, #FBFBFB 0%, #EAEAEA 100%);
-  background-repeat: repeat-x;
-  border-radius: 3px 3px 3px 3px;
-  -moz-border-radius-bottomright: 0px;
-  -webkit-border-bottom-right-radius: 0px;
-  -khtml-border-bottom-right-radius: 0px; 
-  border-bottom-right-radius: 0px;
-  -moz-border-radius-bottomleft: 0px;
-  -webkit-border-bottom-left-radius: 0px;
-  -khtml-border-bottom-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-top:1px solid #d7d7d7;
-  border-left:1px solid #d7d7d7;
-  border-right:1px solid #d7d7d7;
-  box-shadow: none !important;
+	padding-bottom: 5px; padding-left: 5px; margin: 0;
+	background-color: #fff;
+	border: 0 solid #e8e8e8; border-width: 2px 2px 0 2px;
+	text-decoration: none;
 }
-
-.bb-pane>b {
-    margin-top: 5px;
-    margin-left: 0;
-	vertical-align: middle;
-}
-.bb-pane .bb-btn + .bb-btn,.bb-pane .bb-btn + .bb-pane,.bb-pane .bb-pane + .bb-btn,.bb-pane .bb-pane + .bb-pane {
-    margin-left:-1px;
-}
-.bb-btn {
-	display: inline-block; overflow: hidden; float: left;
-	padding: 4px 10px;
-    border: 1px solid #d4d4d4;
-    -webkit-box-shadow: inset 0 1px 2px white;
-    -moz-box-shadow: inset 0 1px 2px white;
-    box-shadow: inset 0 1px 2px white;
-    background-repeat: repeat-x;
-    background-image: -webkit-gradient(linear, left 0%, left 100%, color-stop(0%, #fdfdfd), color-stop(100%, #e9e9e9));
-    background-image: -webkit-linear-gradient(top, #fdfdfd, 0%, #e9e9e9, 100%);
-    background-image: -moz-linear-gradient(top, #fdfdfd, 0%, #e9e9e9, 100%);
-    background-image: linear-gradient(to bottom, #fdfdfd 0%, #e9e9e9  100%);
-
-}
- 
-
-.bb-btn:hover {
-      background: #e6e6e6;
-      background-repeat: repeat-x;
-      background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fdfdfd), color-stop(100%, #e6e6e6));
-      background-image: -webkit-linear-gradient(top, #fdfdfd, 0%, #e6e6e6, 100%);
-      background-image: -moz-linear-gradient(top, #fdfdfd, 0%, #e6e6e6, 100%);
-      background-image: -o-linear-gradient(top, #fdfdfd, 0%, #e6e6e6, 100%);
-      background-image: linear-gradient(to bottom, #fdfdfd 0%, #e6e6e6 100%);
-      -webkit-transition: box-shadow 0.05s ease-in-out;
-      -moz-transition: box-shadow 0.05s ease-in-out;
-      -o-transition: box-shadow 0.05s ease-in-out;
-      transition: box-shadow 0.05s ease-in-out;
-}
-    
-.bb-btn:active {
-      background: #f3f3f3;
-      border-color: #cfcfcf;
-      -webkit-box-shadow: 0 0 5px #f3f3f3 inset;
-      -moz-box-shadow: 0 0 5px #f3f3f3 inset;
-      box-shadow: 0 0 5px #f3f3f3 inset;
-}
-
-.bb-editor textarea { 
-    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
-    padding: 7px; border: 1px solid #d7d7d7; width: 100%; -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    -webkit-transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-    transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-	margin-top: -1px;
-	outline: none;
-}
-
-.bb-editor textarea:focus{
-		border-color: #d7d7d7 !important;
-}
+	.bb-pane:after { content: ""; display: block; clear: both; }
+	.bb-pane > b { margin-top: 5px; margin-left: 0; vertical-align: middle; }
+	.bb-pane .bb-btn + .bb-btn, .bb-pane .bb-btn + .bb-pane,
+	.bb-pane .bb-pane + .bb-btn,.bb-pane .bb-pane + .bb-pane { margin-left:-1px; }
+	.bb-btn { float: left; padding: 6px 10px; border-radius: 3px; }
+	.bb-btn:hover {
+	      background-color: #e6e6e6;
+	      -webkit-transition: box-shadow 0.05s ease-in-out;
+	      transition: box-shadow 0.05s ease-in-out;
+	}
+	    
+	.bb-btn:active { background: #f3f3f3; border-color: #cfcfcf; box-shadow: 0 0 5px #f3f3f3 inset; }
 
 	@font-face {
 	    font-family: 'bb-editor-font';
@@ -431,7 +342,7 @@ pre code { display: block; padding: 0.5em; background: #f9fafa; border: 1px soli
 
 	.bb-sel { float: left; padding: 2px 2px 0 2px; }
 	.bb-sel select { font-size: 11px; }
-	.bb-sep { display: inline-block; float: left; width: 1px; padding: 2px; }
+	.bb-sep { display: none; }
 	.bb-btn { cursor: pointer;  outline: 0; }
 
 	#b_font select, #b_size select { padding: 0;}
@@ -512,36 +423,13 @@ pre code { display: block; padding: 0.5em; background: #f9fafa; border: 1px soli
 		cursor: pointer;
 	}
 	.bb-pane-dropdown .color-palette { padding: 0px 5px; }
+	.bb-editor textarea { padding: 7px; width: 100%; margin-top: -1px;
+		-webkit-transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+		transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	}
 
 	.bb-pane-dropdown table { margin: 0px; }
-	
-	.emoji_box {
-		width:100%;
-		max-width: 390px;
-	}
-	.emoji_category {
-		padding:7px;
-		clear:both;
-	}
-	.emoji_list {
-		margin-top:5px;
-		margin-bottom:5px;
-		width:100%;
-		font-family:'Apple Color Emoji', 'Segoe UI Emoji', 'NotoColorEmoji', 'Segoe UI Symbol', 'Android Emoji', 'EmojiSymbols';
-		font-size:2em;
-	}
-	.emoji_symbol {
-		float:left;
-		margin-bottom: 10px;
-		width:12.5%;
-		text-align:center;
-	}
-	
-	.emoji_symbol a,  .emoji_symbol a:hover {
-		cursor: pointer;
-		text-decoration:none;
-	}
-	
+
 /*---Поля быстрого редактирования публикаций на сайте---*/
 .quick-edit-text { padding: .4em; width: 350px; }
 	.quick-edit-textarea {
@@ -553,11 +441,7 @@ pre code { display: block; padding: 0.5em; background: #f9fafa; border: 1px soli
 		transition:border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 	}
 
-/*---Быстрый ответ на комментарии, упрощенная форма---*/
-#dlefastreplycomments {
-	padding: 10px;
-}
-/*---Выделение текста и всплывающее окно (поделиться ссылкой)---*/
+/*---Text selection and pop-up window (share the link)---*/
 #marker-bar,
 	#txtselect_marker {
 		display: block;
@@ -696,7 +580,7 @@ pre code { display: block; padding: 0.5em; background: #f9fafa; border: 1px soli
 	#share-popup .link a { display: block; }
 	.dle-alert, .dle-confirm, .dle-promt { padding: 20px 1em !important; }
 
-/* --- Поля форм --- */
+/* --- Form fields --- */
 select, textarea, input[type="text"], input[type="password"], input[type="file"],
 input[type="datetime"], input[type="datetime-local"], input[type="date"],
 input[type="month"], input[type="time"], input[type="week"], input[type="number"],
@@ -709,10 +593,11 @@ input[type="color"] {
 	vertical-align: middle;
 	border-radius: 2px;
 	background: #fff;
-	border: 1px solid #d7d7d7;
+	border: 2px solid #e8e8e8;
 	-webkit-transition: border 0.2s linear 0s; transition: border 0.2s linear 0s;
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
+select { padding: 5px }
 	textarea { margin: 0; overflow: auto; vertical-align: top; resize: vertical; }
 	textarea:focus, select:focus, input[type="text"]:focus, input[type="password"]:focus,
 	input[type="file"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus,
@@ -722,7 +607,7 @@ input[type="color"] {
 	input[type="color"]:focus, .uneditable-input:focus {
 		border-color: #3394e6;
 	}
-	input[type="radio"], input[type="checkbox"] { line-height: normal; margin: -2px 6px 0 0; vertical-align: middle; }
+	input[type="radio"], input[type="checkbox"] { line-height: normal; margin: -2px 0 0 6px; vertical-align: middle; }
 	input[type="file"], input[type="image"],
 	input[type="submit"], input[type="reset"],
 	input[type="button"], input[type="radio"],
@@ -741,13 +626,14 @@ input[type="color"] {
 	input:focus { outline: none; }
 	input[type="file"], input[type="image"] { padding: 0; border-width: 0; background-color: transparent; }
 	.wide, .bb-editor textarea, .ui-dialog textarea, select#category, .timezoneselect, .quick-edit-text { width: 100% !important; }
+	.timezoneselect { direction: ltr; font-family: verdana; }
 	#searchuser, #searchinput { width: 100% !important; margin-bottom: 10px; }
 
-	/* Настройка стандартной капчи */
+	/* Setup a standard captcha */
 	.form_submit .c-captcha { float: right; }
 	.c-captcha { position: relative; }
 	.c-captcha:after { clear: both; display: block; content: ""; }
-	.c-captcha > a { float: left; margin-right: 5px; }
+	.c-captcha > a { float: right; margin-left: 5px; }
 	.c-captcha img {
 		position: relative;
 		display: block;
@@ -755,22 +641,10 @@ input[type="color"] {
 		z-index: 1;
 		-webkit-transition: all ease .2s; transition: all ease .2s;
 	}
-	.c-captcha > input { float: left; width: 130px; }
+	.c-captcha > input { float: right; width: 130px; }
 
-	/* Настройка стандартной капчи при ответах на комментарии */
-	.dle-captcha { position: relative; }
-	.dle-captcha:after { clear: both; display: block; content: ""; }
-	.dle-captcha > a { float: left; margin-right: 5px; }
-	.dle-captcha img {
-		position: relative;
-		display: block;
-		width: 130px; height: 46px;
-		-webkit-transition: all ease .2s; transition: all ease .2s;
-	}
-	.dle-captcha > input { float: left; width: 130px; }
-
-/* --- Настройка кнопок --- */
-.btn, .bbcodes, .btn-border {
+/* --- Button settings --- */
+.btn, .bbcodes, .ui-button, .btn-border {
 	border: 0 none;
 	display: inline-block;
 	vertical-align: middle;
@@ -782,7 +656,7 @@ input[type="color"] {
 	background-color: #3394e6;
 	color: #fff;
 	border: 0 none;
-	padding: 7px 22px;
+	padding: 4px 22px 8px 22px;
 	text-decoration: none !important;
 	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2); -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
@@ -810,28 +684,10 @@ input[type="color"] {
 		box-shadow: inset 0 0 0 2px rgba(51,148,230,0.2); -webkit-box-shadow: inset 0 0 0 2px rgba(51,148,230,0.2);
 	}
 
-/*---Дополнительные поля---*/
-table.xfields {
-	width: 100%;
-}
+/*---Additional fields---*/
 .xfields textarea, .xprofile textarea {
     width: 100%;
     height: 186px;
-    margin-top: 5px;
-}
-.xfields input[type="text"] {
-	width: 100%;
-}
-
-.xfieldsdescr {
-	width: 200px;
-}
-.xfields .bb-pane + textarea {
-    margin-top: 0px;
-}
-.xfieldsnote {
-	color: #838383;
-    font-size: .9em;
 }
 
 .xfields_table td {
@@ -842,12 +698,11 @@ table.xfields {
 	clear: both;
 }
 .xfieldscolleft {
-	float: left;
+	float: right;
 	width: 30%;
-	padding-top: 14px;
 }
 .xfieldscolright {
-	float: left;
+	float: right;
 	width: 70%;
 }
 .file-box {
@@ -858,32 +713,6 @@ table.xfields {
 	background-color: #F5F5F5;
 	padding: 10px;
 	margin-top: 10px;
-}
-
-.xfieldimagegallery {
-  margin: 0;
-  padding: 0;  
-  list-style: none;
-  clear: both;
-}
-
-.xfieldimagegallery li {
-	list-style: none;
-	margin: 0;
-	padding: 0;  
-}
-
-.xfieldimagegallery li img {
-  float: left;
-  margin-right: 5px;
-  border: 5px solid #fff;
-  width: 100px;
-  height: 100px;
-  transition: box-shadow 0.5s ease;
-}
-
-.xfieldimagegallery li img:hover {
-  box-shadow: 0px 0px 7px rgba(0,0,0,0.4);
 }
 
 .qq-uploader { position:relative; width: 100%;}
@@ -904,49 +733,40 @@ table.xfields {
 }
 
 .qq-upload-drop-area-active {background:#FF7171;}
-
 .uploadedfile {
 	display: inline-block;
-    width: 115px;
-    height: 160px;
-    margin: 10px 5px 5px 5px;
-    border:1px solid #B3B3B3;
-    box-shadow: 0px 1px 4px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    background:#ffffff;
+	width: 115px;
+	height: 160px;
+	margin: 10px 5px 5px 5px;
+	border:1px solid #B3B3B3;
+	box-shadow: 0px 1px 4px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+	text-align: center;
+	background:#ffffff;
 
 }
 
 .uploadedfile .uploadimage {
-    margin-top: 5px;
-    width: 115px;
-    height: 90px;
+	margin-top: 5px;
+	width: 115px;
+	height: 90px;
 	display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: move;
-    cursor: -webkit-grabbing;
+	align-items: center;
+	justify-content: center;
+	cursor: move;
+	cursor: -webkit-grabbing;
 }
 
 .sortable-ghost {
 	opacity: 0.4;
 }
+
 .uploadedfile .info {
-    text-align: left;
+    text-align: right;
     white-space: nowrap;
     margin: 0px 5px 0px 5px;
     overflow: hidden;
-}
-
-.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
-    cursor:not-allowed;
-    pointer-events:none;
-    opacity:0.65;
-    filter:alpha(opacity=65);
-    -webkit-box-shadow:none;
-    box-shadow:none;
 }
 
 .progress {
@@ -1004,7 +824,7 @@ table.xfields {
     border:1px solid #55aeee;
 }
 
-/*---Смайлы---*/
+/*---emoji Smiles---*/
 
 .emoji {
     border: none;
@@ -1013,7 +833,58 @@ table.xfields {
     height: 22px;
 }
 
-.native-emoji {
-    font-size: 1.3em;
-    font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'NotoColorEmoji', 'Segoe UI Symbol', 'Android Emoji', 'EmojiSymbols';
+.xfieldimagegallery {
+  margin: 0;
+  padding: 0;  
+  list-style: none;
+  clear: both;
 }
+
+.xfieldimagegallery li {
+  list-style: none;
+  margin: 0;
+  padding: 0;  
+}
+
+.xfieldimagegallery li img {
+  float: left;
+  margin-right: 5px;
+  border: 5px solid #fff;
+  width: 100px;
+  height: 100px;
+  transition: box-shadow 0.5s ease;
+}
+
+.xfieldimagegallery li img:hover {
+  box-shadow: 0px 0px 7px rgba(0,0,0,0.4);
+}
+
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+    cursor:not-allowed;
+    pointer-events:none;
+    opacity:0.65;
+    filter:alpha(opacity=65);
+    -webkit-box-shadow:none;
+    box-shadow:none;
+}
+
+/* Setup a standard captcha when replying to comments */
+.dle-captcha { position: relative; }
+.dle-captcha:after { clear: both; display: block; content: ""; }
+.dle-captcha > a { float: left; margin-right: 5px; }
+.dle-captcha img {
+  position: relative;
+  display: block;
+  width: 130px; height: 46px;
+  -webkit-transition: all ease .2s; transition: all ease .2s;
+}
+.dle-captcha > input { float: left; width: 130px; }
+
+
+/* Setup hints for custom fields */
+.xfieldsnote {
+  color: #838383;
+  font-size: .9em;
+}
+.ui-front { z-index: 1000; }
+.ui-button-icon-only { overflow: hidden; text-indent: -9999px; }

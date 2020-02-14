@@ -7,7 +7,7 @@
 		<div class="story_cont">
 			<div class="text">
 				{short-story}
-				<div class="more"><a href="#" title="Читать подробнее: {title}" class="btn"><b class="ultrabold">Подробнее</b></a></div>
+				<div class="more"><a href="#" title="ادامه مطلب: {title}" class="btn"><b class="ultrabold">بیشتر</b></a></div>
 			</div>
 		</div>
 	</div>

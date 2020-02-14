@@ -3,10 +3,13 @@
 <meta content="text/html; charset=utf-8" http-equiv=Content-Type>
 <style>
 body{ 
-	font-family: Verdana, Tahoma, Arial, Trebuchet MS, Sans-Serif, Georgia, Courier, Times New Roman, Serif;
+	direction: rtl;
+	font-family: Tahoma;
 	font-size: 11px;
 	margin: 0;
 	padding: 0; /* required for Opera to have 0 margin */
+	text-align:right;
+	direction:rtl
 }
 .errorwrap {
 	background: #F2DDDD;
@@ -38,19 +41,19 @@ body{
 	font-size: 11px;
 }
 </style>
-<title>Аккаунт заблокирован</title>
+<title>شما از سایت اخراج شده اید !</title>
 </head>
 <body>
-<br><br><br><br><br><br><br><br><br>
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
 <table border="0" width="600" cellspacing="0" cellpadding="0" align="center">
 <tr>
 <td width="100%">
 <div class="errorwrap">
-<h4>Ваш аккаунт на сайте заблокирован:</h4>
-<p>Ваша учетная запись на сайте была заблокирована администратором. При этом были указаны следующие причины:</p>
+<h4>حساب کاربری شما در سایت مسدود شده است :</h4>
+<p>حساب کاربری شما به دلایل زیر توسط مدیر مسدود شده است :</p>
 <p>{description}</p>
-<p>Срок окончания блокировки: {end}</p>
-<p>Это полностью автоматический процесс блокировки и от вас не требуется ничего делать для его ускорения или прекращения.</p>
+<p>تاریخ اتمام : {end}</p>
+<p>این عمل به طور اتوماتیک انجام می گیرد.</p>
 </div>
 </td>
 </tr>

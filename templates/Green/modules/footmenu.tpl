@@ -1,75 +1,75 @@
 <ul class="foot_menu">
 	<li>
 		<b data-toggle="collapse" data-target="#fmenu_1" aria-expanded="false" class="collapsed">
-			<i></i> Новости
+			<i></i> اخبار
 		</b>
 		<div class="collapse" id="fmenu_1">
 			<nav>
-				<a href="#">Специальный репортаж</a>
-				<a href="#">Стратегия</a>
-				<a href="#">Страховое время</a>
-				<a href="#">Территория безопасности</a>
-				<a href="#">Технологии жилья</a>
-				<a href="#">Транспорт</a>
+				<a href="#">لینک اخبار</a>
+				<a href="#">لینک اخبار</a>
+				<a href="#">لینک اخبار</a>
+				<a href="#">لینک اخبار</a>
+				<a href="#">لینک اخبار</a>
+				<a href="#">لینک اخبار</a>
 			</nav>
 		</div>
 	</li>
 	<li>
 		<b data-toggle="collapse" data-target="#fmenu_2" aria-expanded="false" class="collapsed">
-			<i></i> Статьи
+			<i></i> مقالات
 		</b>
 		<div class="collapse" id="fmenu_2">
 			<nav>
-				<a href="#">Факты</a>
-				<a href="#">Финансовая стратегия</a>
-				<a href="#">Формула власти</a>
-				<a href="#">Церковь и мир</a>
-				<a href="#">Честный детектив</a>
-				<a href="#">Экономика</a>
+				<a href="#">لینک</a>
+				<a href="#">لینک</a>
+				<a href="#">لینک</a>
+				<a href="#">لینک</a>
+				<a href="#">لینک</a>
+				<a href="#">لینک</a>
 			</nav>
 		</div>
 	</li>
 	<li>
 		<b data-toggle="collapse" data-target="#fmenu_3" aria-expanded="false" class="collapsed">
-			<i></i> Пользователю
+			<i></i> کاربران
 		</b>
 		<div class="collapse" id="fmenu_3">
 			<nav>
-				<a href="/">Главная</a>
-				<a href="/statistics.html">Статистика</a>
-				<a href="/lastnews">Последние новости</a>
-				<a href="/index.php?do=lastcomments">Последние комментарии</a>
-				<a href="/index.php?do=register">Регистрация</a>
-				<a href="/index.php?do=feedback">Контакты</a>
+				<a href="/">خانه</a>
+				<a href="/statistics.html">آمار</a>
+				<a href="/lastnews">آخرین مطالب</a>
+				<a href="/index.php?do=lastcomments">آخرین نظرات</a>
+				<a href="/index.php?do=register">عضویت</a>
+				<a href="/index.php?do=feedback">تماس با ما</a>
 			</nav>
 		</div>
 	</li>
 	<li>
 		<b data-toggle="collapse" data-target="#fmenu_4" aria-expanded="false" class="collapsed">
-			<i></i> Поддержка
+			<i></i> پشتیبانی
 		</b>
 		<div class="collapse" id="fmenu_4">
 			<nav>
-				<a href="http://dle-news.ru/" target="_blank" rel="nofollow">Сайт системы</a>
-				<a href="http://dle-news.ru/" target="_blank" rel="nofollow">Поддержка скрипта</a>
-				<a href="http://forum.dle-news.ru/" target="_blank" rel="nofollow">Форум</a>
-				<a href="http://dle-news.ru/lastnews/" target="_blank" rel="nofollow">Новости системы</a>
-				<a href="http://dle-news.ru/faq.html" target="_blank" rel="nofollow">FAQ</a>
-				<a href="http://dle-news.ru/price.html" target="_blank" rel="nofollow">Купить скрипт</a>
+				<a href="http://datalifeengine.ir/" target="_blank" rel="nofollow">دیتالایف انجین</a>
+				<a href="http://datalifeengine.ir/" target="_blank" rel="nofollow">پشتیبانی دیتالایف</a>
+				<a href="http://datalifeengine.ir/forum" target="_blank" rel="nofollow">انجمن</a>
+				<a href="http://datalifeengine.ir/lastnews/" target="_blank" rel="nofollow">بلاگ</a>
+				<a href="http://datalifeengine.ir/faq.html" target="_blank" rel="nofollow">سوال و جواب</a>
+				<a href="http://datalifeengine.ir/" target="_blank" rel="nofollow">دریافت دیتالایف انجین</a>
 			</nav>
 		</div>
 	</li>
 	<li>
 		<b data-toggle="collapse" data-target="#fmenu_5" aria-expanded="false" class="collapsed">
-			<i></i> Клиенту
+			<i></i> مشتری ها
 		</b>
 		<div class="collapse" id="fmenu_5">
 			<nav>
-				<a href="/">Главная</a>
-				<a href="/index.php?do=feedback">Контакты</a>
-				<a href="/rules.html">Правила</a>
-				<a href="/index.php?do=register">Регистрация</a>
-				<a href="/statistics.html">Статистика</a>
+				<a href="/">خانه</a>
+				<a href="/index.php?do=feedback">تماس با ما</a>
+				<a href="/rules.html">قوانین</a>
+				<a href="/index.php?do=register">عضویت</a>
+				<a href="/statistics.html">آمار</a>
 			</nav>
 		</div>
 	</li>

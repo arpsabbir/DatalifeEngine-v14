@@ -1,3 +1,3 @@
 <div class="splitnewsnavigation ignore-select">
-	Страницы: <div>{pages}</div>
+	صفحات: <div>{pages}</div>
 </div>
