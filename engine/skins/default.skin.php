@@ -120,7 +120,7 @@ HTML;
 		$pop_notice = "<span class=\"badge bg-warning-800\">{$member_id['pm_unread']}</span>";
 	} else $pop_notice = "";
 
-	$message_notice = "<span class=\"badge bg-teal pull-right\">{$member_id['pm_all']}</span>";
+	$message_notice = "<span class=\"badge bg-teal pull-left\">{$member_id['pm_all']}</span>";
 	
 	$profile_link = $config['http_home_url'] . "user/" . urlencode ( $member_id['name'] ) . "/";
 	
@@ -292,7 +292,15 @@ HTML;
 	
 	
 	$options['others'] = array (
-								array (
+
+                                array (
+                                    'name' => $lang['opt_obmen'],
+                                    'url' => "?mod=obmen",
+                                    'mod' => "obmen",
+                                    'access' => $user_group[$member_id['user_group']]['admin_static']
+                                ),
+
+                                array (
 											'name' => $lang['opt_rules'], 
 											'url' => "?mod=static&action=doedit&page=rules", 
 											'mod' => "rules",
@@ -578,7 +586,7 @@ var dle_login_hash = '{$dle_login_hash}';
 <div id="loading-layer" class="shadow-depth3"><i class="fa fa-spinner fa-spin"></i></div>
 	<div class="navbar navbar-inverse bg-primary-700">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="?mod=main">DataLife Engine</a>
+			<a class="navbar-brand" href="?mod=main">دیتالایف انجین</a>
 			<ul class="nav navbar-nav visible-xs-block">
 				<li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="fa fa-angle-double-down"></i></a></li>
 				<li><a class="sidebar-mobile-main-toggle"><i class="fa fa-bars"></i></a></li>
@@ -681,7 +689,7 @@ HTML;
 
 $skin_footer = <<<HTML
 					<div class="footer text-muted text-size-small">
-						DataLife Engine&reg;  Copyright 2004-{$year} &copy; <a href="https://dle-news.ru/" target="_blank">SoftNews Media Group</a> All rights reserved.
+						&copy; سیستم قدرت گرفته از <a href="http://www.datalifeengine.ir/" target="_blank">دیتالایف انجین فارسی</a>
 					</div>
 				</div>
 			</div>
@@ -797,7 +805,7 @@ var filebtntext    = '';
 	<div class="panel panel-default" style="margin-top: 100px;">
 
       <div class="panel-heading">
-        {$lang['skin_title']} DataLife Engine
+        ورود به {$lang['skin_title']} دیتالایف انجین
       </div>
 	  
       <div class="panel-body">

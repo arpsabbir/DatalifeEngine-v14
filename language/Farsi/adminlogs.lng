@@ -47,7 +47,7 @@ $lang_logs = array (
 // 11.2
 'admin_logs_action_99'	=>	"PIN نامعتبر است",
 'admin_logs_action_100'	=>	"احراز هویت بوسیله PIN تایید شد!",
-'admin_logs_action_101'	=>	"احراز هویت (نام کاربری و کلمه عبور).",
+'admin_logs_action_101'	=>	"احراز هویت (نام کاربری و رمز عبور).",
 // 11.2
 
 // 10.4
