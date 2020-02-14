@@ -1,13 +1,13 @@
 <?php
 /*
 =====================================================
- DataLife Engine - by SoftNews Media Group
+ DataLife Engine v14.0
 -----------------------------------------------------
- http://dle-news.ru/
+ Persian support site: http://datalifeengine.ir
 -----------------------------------------------------
- Copyright (c) 2004-2020 SoftNews Media Group
+ Contact us with: info@datalifeengine.ir
 =====================================================
- This code is protected by copyright
+ Copyright (c) 2006-2020, All rights reserved
 =====================================================
  File: install.php
 -----------------------------------------------------
@@ -28,7 +28,7 @@ define('ENGINE_DIR', ROOT_DIR.'/engine');
 
 header("Content-type: text/html; charset=utf-8");
 
-require_once(ROOT_DIR.'/language/Russian/adminpanel.lng');
+require_once(ROOT_DIR.'/language/Farsi/adminpanel.lng');
 require_once(ENGINE_DIR.'/inc/include/functions.inc.php');
 
 
@@ -43,7 +43,7 @@ $skin_header = <<<HTML
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>DataLife Engine - Установка</title>
+	<title>DataLife Engine - نصب سیستم</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="HandheldFriendly" content="true">
 	<meta name="format-detection" content="telephone=no">
@@ -65,7 +65,7 @@ var filebtntext    = '';
 </script>
 <div class="navbar navbar-inverse bg-primary-700">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="#">Мастер установки DataLife Engine</a>
+		<a class="navbar-brand" href="#">نصب دیتالایف انجین فارسی</a>
 	</div>
 </div>
 <div class="page-container">
@@ -102,7 +102,7 @@ echo <<<HTML
 		{$text}
   </div>
   <div class="panel-footer">
-	<button type="submit" {$back} class="btn bg-teal btn-sm btn-raised position-left"><i class="fa fa-arrow-circle-o-right position-left"></i>Продолжить</button>
+	<button type="submit" {$back} class="btn bg-teal btn-sm btn-raised position-right">بازگشت<i class="fa fa-arrow-circle-o-left position-right"></i></button>
   </div>
 </div>
 </form>
@@ -156,7 +156,7 @@ function generate_auth_key() {
 
 if($_REQUEST['action'] == "eula") {
 
-  if ( !$_SESSION['dle_install'] ) msgbox( "", "Ошибка", "Установка скрипта была начата не с начала. Вернитесь на главную страницу начала установки скрипта: <br><br><a href=\"http://{$_SERVER['HTTP_HOST']}/install.php\">http://{$_SERVER['HTTP_HOST']}/install.php</a>" );
+	if ( !$_SESSION['dle_install'] ) msgbox( "", "خطا", "به صفحه اصلی نصب سیستم بازگردید و مراحل نصب را از اول طی کنید.<br /><br /><a href=\"http://{$_SERVER['HTTP_HOST']}/install.php\">http://{$_SERVER['HTTP_HOST']}/install.php</a>" );
 
   echo $skin_header;
 
@@ -172,7 +172,7 @@ function check_eula(){
 	}
 	else
 	{
-		DLEalert( 'Вы должны принять лицензионное соглашение, прежде чем продолжите установку.', 'Информация' );
+		DLEalert( 'می بایستی قبل از نصب هشدارنامه را بپذیرید.', 'خطا' );
 		return false;
 	}
 };
@@ -180,22 +180,31 @@ document.getElementById( 'check-eula' ).onsubmit = check_eula;
 </script>
 <div class="panel panel-default">
   <div class="panel-heading">
-    Лицензионное соглашение
+    هشدارها
   </div>
-  <div class="panel-body">
-		Пожалуйста, внимательно прочитайте и примите пользовательское соглашение по использованию DataLife Engine.<br><br><div style="height: 300px; border: 1px solid #76774C; background-color: #FDFDD3; padding: 5px; overflow: auto;"><div style="text-align:center;"><b>Пользовательское лицензионное соглашение на использование программы для ЭВМ "DataLife Engine"</b></div><br><br><!--colorstart:#FF0000--><span style="color:#FF0000"><!--/colorstart-->Уважаемый Пользователь! Перед началом установки, копирования либо иного использования Программы внимательно ознакомьтесь с условиями ее использования, содержащимися в настоящем Соглашении. Установка, запуск или иное начало использования Программы означает надлежащее заключение настоящего Соглашения и Ваше полное согласие со всеми его условиями. Если Вы не согласны безоговорочно принять условия настоящего Соглашения, Вы не имеете права устанавливать и использовать Программу и должны удалить все ее компоненты со своего компьютера (ЭВМ).<!--colorend--></span><!--/colorend--><br><br>Настоящее лицензионное соглашение (далее – Соглашение) заключается между ООО «СофтНьюс Медиа Групп» (далее – Правообладатель) и любым физическим лицом, индивидуальным предпринимателем, юридическим лицом (далее – Пользователь).<br><br><div style="text-align:center;"><b>1. Основные термины</b></div><br><b>1.1. </b><b>Программа</b> – программа для ЭВМ "DataLife Engine", соответствующей версии (как в целом, так и ее компоненты), являющаяся представленной в объективной форме совокупностью данных и команд, в том числе, исходного текста, базы данных, аудиовизуальных произведений, включенных Правообладателем в состав указанной программы для ЭВМ, а также любая документация по её использованию.<br><br><b>1.2. Использование программы</b> - любые действия, связанные с функционированием Программы в соответствии с ее назначением (в том числе запись в память ЭВМ).<br><br><b>1.3. Техническая поддержка</b> – мероприятия, осуществляемые Правообладателем в установленных им пределах и объемах для обеспечения функционирования Программы, включая информационно-консультационную поддержку Пользователей по вопросам использования Программы.<br><br><b>1.4. Пользователь</b> - физическое или юридическое лицо, или индивидуальный предприниматель, приобретающий лицензию на право использования DataLife Engine по данному лицензионному соглашению.<br><br><div style="text-align:center;"><b>2. Предмет лицензионного соглашения</b></div><br><b>2.1. </b>Предметом настоящего лицензионного соглашения является право использования одной лицензионной копии программы для ЭВМ "DataLife Engine", в порядке и на условиях, установленных настоящим соглашением. Если вы не согласны с условиями данного соглашения, вы не можете использовать данный продукт. Установка и использование продукта означает ваше полное согласие со всеми пунктами настоящего соглашения.<br><br><b>2.2. </b>Все положения настоящего Соглашение распространяется как на Программу в целом, так и на её отдельные компоненты, за исключением случаев, когда для компонента системы применяется другой тип лицензии.<br><br><b>2.3. </b>Настоящее Соглашение заключается до или непосредственно в момент начала использования Программы и действует на протяжении всего срока ее правомерного использования Пользователем в пределах срока действия авторского права на нее при условии надлежащего соблюдения Пользователем условий настоящего Соглашения.<br><br><div style="text-align:center;"><b>3. Содержание договора</b></div><br><b>3.1. </b>Срок обслуживания клиента с момента приобретения одной лицензионной копии Программы "DataLife Engine" равен одному году. Если по истечении срока обслуживания, Вы решите не продлевать его действие, то Ваша Программа будет функционировать в полном объеме, но без нашей технической поддержки и без предоставления новых версий Программы, за исключением критических обновлений Программы.<br><br><b>3.2. </b>Правообладатель осуществляет Техническую поддержку Пользователя, в том числе по вопросам, связанным с функциональностью, особенностями установки и эксплуатации на стандартных конфигурациях поддерживаемых (популярных) операционных, почтовых и иных систем Программы в порядке и на условиях, указанных в технической документации к ней.<br><br><b>3.3. </b>В случае приобретения и использования только базовой лицензии на Программу, обслуживание клиентов, на время действия лицензионного соглашения, ограничивается только предоставлением стандартных услуг по обслуживанию: предоставление дистрибутивов, новых версий Программы, критических обновлений Программы. Технической поддержки по базовым лицензиям не предоставляется. Для получения технической поддержки по Программе, пользователям необходимо иметь лицензию, включающую в себя службу технической поддержки, либо быть подписчиком на службу технической поддержки.<br><br><b>3.4. </b>В случае приобретения Пользователем Программы для передачи непосредственным заказчикам уже готового сайта или проекта, Пользователь обязан уведомить заказчика о настоящем лицензионном соглашении, а также полностью передать ему свой клиентский доступ на сайте dle-news.ru, в противном случае, Пользователем лицензии остается лицо непосредственно оплатившее лицензию, и имеющие клиентский доступ на сайте dle-news.ru. Третьим лицам, не имеющим данного доступа, в поддержке и предоставлению дистрибутивов будет отказано.<br><br><b>3.5. </b>Мы оставляем за собой право публиковать, с согласия пользователя программного продукта, списки избранных сайтов, на которых используется Программа "DataLife Engine". Мы оставляем за собой право в любое время изменять условия данного договора, но данные изменения не имеют обратной силы. Изменения данного договора будут разосланы пользователям по электронной почте на адреса, указанные при приобретении лицензии на Программу.<br><br><div style="text-align:center;"><b>4. Ограничения использования Программы</b></div><br><b>4.1. </b>Программа является результатом интеллектуальной деятельности и объектом авторских прав (программа для ЭВМ), которые регулируются и защищены законодательством Российской Федерации об интеллектуальной собственности и нормами международного права.<br><br><b>4.2. </b>Название "DataLife Engine", а также входящие в данную Программу скрипты являются собственностью Правообладателя, использование которых возможно только в рамках данного соглашения, за исключением случаев, когда для компонента системы применяется другой тип лицензии. Любые публикуемые оригинальные материалы, создаваемые в результате использования нашей Программы, и связанные с этим права на них, являются собственностью пользователя и защищены законом. Правообладатель не несет никакой ответственности за содержание сайтов, создаваемых пользователем Программы "DataLife Engine".<br><br><b>4.3. </b>Алгоритм работы Программы и ее исходные коды (в том числе их части) являются собственностью Правообладателя. Любое их использование или использование Программы в нарушение условий настоящего Соглашения рассматривается как нарушение прав Правообладателя и является достаточным основанием для лишения Пользователя предоставленных по настоящему Соглашению прав.<br><br><b>4.4. </b>Правообладатель гарантирует, что обладает всеми необходимыми по настоящему Соглашению правами для предоставления их Пользователю, включая документацию к Программе.<br><br><b>4.5. </b>Приобретая лицензию на Программу "DataLife Engine", вы должны знать, что не приобретаете авторские права на Программу. Вы приобретаете только право на использование Программы на единственном веб-сайте (одном домене второго уровня и его поддоменах), принадлежащем Вам или Вашему клиенту. Для использования Программы на другом сайте, вам необходимо приобретать повторную лицензию.<br><br><b>4.6. </b>Запрещается перепродажа Программы третьим лицам.<br><br><b>4.7. </b>Настоящим соглашением Пользователю не предоставляются никакие права на использование товарных знаков и знаков обслуживания Правообладателя.<br><br><b>4.8. </b>Пользователь не может ни при каких условиях удалять или изменять вид информации и сведения об авторских правах, правах на товарные знаки или патенты, указанные в исходном коде Программы.<br><br><div style="text-align:center;"><b>5. Права и обязанности сторон</b></div><br><b>5.1. Пользователь имеет право:</b><br><br><div style="margin-left:20px;"><b>5.1.1 </b>Изменять дизайн и структуру программного кода в соответствии с нуждами своего сайта.</div><br><div style="margin-left:20px;"><b>5.1.2 </b>Производить и распространять инструкции по созданным собственным модификациям скрипта, шаблонов и языковых файлов, если в них будет иметься указание на оригинального разработчика программного продукта до Ваших модификаций. Модификации, произведенные Вами самостоятельно, не являются собственностью Правообладателя, если не содержат программные коды непосредственно Программы.</div><br><div style="margin-left:20px;"><b>5.1.3 </b>Создавать дополнительные собственные модули для Программы, которые будут взаимодействовать с программными кодами Программы, с указанием на то, что это оригинальный продукт Пользователя.</div><br><div style="margin-left:20px;"><b>5.1.4 </b>Переносить Программу на другой сайт после обязательного уведомления об этом Правообладателя, а также полного удаления Программы с предыдущего сайта.</div><br><div><b>5.2. Пользователь не имеет право:</b></div><br><div style="margin-left:20px;"><b>5.2.1 </b>Передавать права на использование Программы третьим лицам.</div><br><div style="margin-left:20px;"><b>5.2.2 </b>Использовать или изменять структуру программных кодов, функции программы, с целью создания родственных продуктов.</div><br><div style="margin-left:20px;"><b>5.2.3 </b>Создавать отдельные самостоятельные продукты, базирующиеся на нашем программном коде.</div><br><div style="margin-left:20px;"><b>5.2.4 </b>Использовать копии Программы "DataLife Engine" по одной лицензии на более чем одном сайте (одном домене второго уровня и его поддоменах).</div><br><div style="margin-left:20px;"><b>5.2.5 </b>Рекламировать, продавать или публиковать на своем сайте пиратские копии Программы.</div><br><div style="margin-left:20px;"><b>5.2.6 </b>Использовать, распространять нелицензионные копии Программы "DataLife Engine" или содействовать распространению нелицензионных копий Программы "DataLife Engine".</div><br><div style="margin-left:20px;"><b>5.2.7 </b>Модифицировать или удалять механизмы проверки наличия оригинальной лицензии на использование Программы.</div><br><div style="margin-left:20px;"><b>5.2.8</b> Модифицировать или удалять копирайты исходного кода Программы.</div><br><div style="text-align:center;"><b>6. Ограничение гарантийных обязательств</b></div><br><b>6.1. </b>Механизмы безопасности, установленные на "DataLife Engine", могут иметь известные ограничения, и несмотря на то, что мы прилагаем максимальные усилия по обеспечению безопасности Программы, вы должны быть ознакомлены с отсутствием абсолютных гарантий от взлома вашего сайта. Так же наши гарантии и техническая поддержка не распространяются на модификации, произведенные третьей стороной, включая изменения программного кода, стиля, языковых пакетов, а также на изменения перечисленных частей, внесенные владельцем лицензии самостоятельно. Если Программа изменена Вами или третьей стороной, то мы вправе отказать Вам в технической поддержке.<br><br><b>6.2. </b>Программа "DataLife Engine" не подлежит возврату или обмену из-за отсутствия гарантий защищающих Программу от копирования.<br><br><div style="text-align:center;"><b>7. Досрочное расторжение договорных обязательств</b></div><br><b>7.1. </b>Данное соглашение расторгается автоматически, если Вы отказываетесь выполнять условия нашего соглашения. Данное лицензионное соглашение может быть расторгнуто нами в одностороннем порядке, в случае установления фактов нарушения данного лицензионного соглашения. В случае досрочного расторжения соглашения Вы обязуетесь удалить все Ваши копии нашей Программы в течении 3 рабочих дней, с момента получения соответствующего уведомления.<br><br><div style="text-align:center;"><b>8. Контактная информация Правообладателя</b></div><br><b>ООО “СофтНьюс Медиа Групп”<br>660093, г. Красноярск, ул. Капитанская, дом 12, офис 43<br>ИНН/КПП 2464251745/246401001<br>e-mail: support@dle-news.ru</b></div>
-		<div class="checkbox"><label><input type="checkbox" name="eula" id="eula" class="icheck">Я принимаю данное соглашение</label></div>
-  </div>
-  <div class="panel-footer">
-	<button type="submit" class="btn bg-teal btn-sm btn-raised position-left"><i class="fa fa-arrow-circle-o-right position-left"></i>Продолжить</button>
-  </div>
+	<div class="panel-body">
+		لطفا قبل از نصب هشدارهای زیر را مطالعه نمایید.<br /><br />
+		<div style="height: 300px; border: 1px solid #76774C; background-color: #FDFDD3; padding: 5px; overflow: auto;"><b>
+		کاربر گرامی!<br><br>بعد از نصب سیستم حتما فایل <span style="color:red">install.php</span> و پوشه ی <span style="color:red">upgrade</span> را از روی سیستم خود حذف نمایید.<br><br>
+		این سیستم توسط مدیران پشتیبان فارسی دیتالایف انجین در ایران ترجمه، شمسی سازی و منتشر شده است. لذا کوچک ترین حمایت شما از ما رعایت حق کپی رایت است.<br><br>
+		این نسخه ورژن 14.0 سیستم مدیریت محتوای دیتالایف انجین می باشد.<br><br>
+		برای دریافت اطلاعات بیشتر به سایت پشتیبانی فارسی به آدرس <a href="http://datalifeengine.ir" target="_blank">DatalifeEngine.ir</a> مراجعه نمایید.<br><br>
+		در همه حال آماده ی دریافت پیشنهادات و انتقادات شما کاربران گرامی هستیم.<br><br>
+		با تقدیم احترام<br><br>
+		از طرف تیم مدیریتی دیتالایف انجین فارسی
+		</div>
+		<br /><br /><input type="checkbox" name="eula" id="eula" class="icheck"> <label for="eula"> می پذیرم</label>
+	</div>
+	<div class="panel-footer">
+	<button type="submit" class="btn bg-teal btn-sm btn-raised position-right">مرحله بعد<i class="fa fa-arrow-circle-o-left position-right"></i></button>
+	</div>
 </div>
 </form>
 HTML;
 
 } elseif($_REQUEST['action'] == "function_check") {
 
-    if ( !$_SESSION['dle_install'] ) msgbox( "", "Ошибка", "Установка скрипта была начата не с начала. Вернитесь на главную страницу начала установки скрипта: <br><br><a href=\"http://{$_SERVER['HTTP_HOST']}/install.php\">http://{$_SERVER['HTTP_HOST']}/install.php</a>" );
+	if ( !$_SESSION['dle_install'] ) msg( "", "خطا", "به صفحه اصلی نصب سیستم بازگردید و مراحل نصب را از اول طی کنید.<br /><br /><a href=\"http://{$_SERVER['HTTP_HOST']}/install.php\">http://{$_SERVER['HTTP_HOST']}/install.php</a>" );
 
   echo $skin_header;
 
@@ -204,76 +213,78 @@ echo <<<HTML
 <input type=hidden name="action" value="chmod_check">
 <div class="panel panel-default">
   <div class="panel-heading">
-    Проверка установленных компонентов PHP
+    بررسی تنظیمات سرور
   </div>
   <div class="table-responsive">
 <table class="table table-striped table-xs">
 <thead>
-<th width="300">Минимальные требования скрипта</th>
-<th colspan="2">Текущее значение</th>
+<tr>
+<th width="250">نوع نیازمندی</th>
+<th colspan="2">مقدار</th>
+</tr>
 </thead>
 HTML;
 
 	$errors=false;
 
 	if( version_compare(phpversion(), '5.4', '<') ) {
-		$status = '<span class="text-danger"><b>Нет</b></span>';
+		$status = '<span class="text-danger"><b>خیر</b></span>';
 		$errors=true;
 	} else {
-		$status = '<span class="text-success"><b>Да</b></span>';
+		$status = '<span class="text-success"><b>بله</b></span>';
   }
 	
    echo "<tr>
-         <td>Версия PHP 5.4 и выше</td>
+	     <td>نسخه PHP از 5.4 به بالا</td>
          <td colspan=2>$status</td>
          </tr>";
 
 	if( function_exists('mysqli_connect') ) {
-	  $status = '<span class="text-success"><b>Да</b></span>';
+	  $status = '<span class="text-success"><b>بله</b></span>';
 	} else {
-	  $status = '<span class="text-danger"><b>Нет</b></span>';
+	  $status = '<span class="text-danger"><b>خیر</b></span>';
 	  $errors=true;
 	}
 
    echo "<tr>
-         <td>Поддержка MySQLi</td>
+         <td>پشتیبانی از MySQLi</td>
          <td colspan=2>$status</td>
          </tr>";
 
 	if( function_exists('gzopen') ) {
-	  $status = '<span class="text-success"><b>Да</b></span>';
+	  $status = '<span class="text-success"><b>بله</b></span>';
 	} else {
-	  $status = '<span class="text-danger"><b>Нет</b></span>';
+	  $status = '<span class="text-danger"><b>خیر</b></span>';
 	  $errors=true;
 	}
 
-   echo "<tr>
-         <td>Поддержка сжатия ZLib</td>
-         <td colspan=2>$status</td>
-         </tr>";
+	echo "<tr>
+	<td>پشتیبانی از فشرده ساز ZLib</td>
+	<td colspan=2>$status</td>
+	</tr>";
 
 	if( function_exists('mb_convert_encoding') ) {
-	  $status = '<span class="text-success"><b>Да</b></span>';
+	  $status = '<span class="text-success"><b>بله</b></span>';
 	} else {
-	  $status = '<span class="text-danger"><b>Нет</b></span>';
+	  $status = '<span class="text-danger"><b>خیر</b></span>';
 	  $errors=true;
 	}
 
-   echo "<tr>
-         <td>Поддержка многобайтных строк</td>
-         <td colspan=2>$status</td>
-         </tr>";
+	echo "<tr>
+	<td>پشتیبانی از XML</td>
+	<td colspan=2>$status</td>
+	</tr>";
 
 	if($errors) {
-	 $button= "<button onclick=\"location.reload(true); return false;\" class=\"btn bg-danger btn-sm btn-raised position-left\"><i class=\"fa fa-refresh position-left\"></i>Проверить еще раз</button>";
+	 $button= "<button onclick=\"location.reload(true); return false;\" class=\"btn bg-danger btn-sm btn-raised position-left\"><i class=\"fa fa-refresh position-left\"></i>بررسی مجدد</button>";
 	} else {
-	 $button = "<button type=\"submit\" class=\"btn bg-teal btn-sm btn-raised position-left\"><i class=\"fa fa-arrow-circle-o-right position-left\"></i>Продолжить</button>";
+	 $button = "<button type=\"submit\" class=\"btn bg-teal btn-sm btn-raised position-left\">مرحله بعد<i class=\"fa fa-arrow-circle-o-left position-right\"></i></button>";
 	}
 
 echo <<<HTML
 </table>
   <div class="panel-body">
-	Если любой из этих пунктов выделен красным, то пожалуйста выполните действия для исправления этого. Вам необходимо установить недостающие компоненты на сервер. Для этого обратитесь в службу поддержки вашего хостинга.
+	اگر مقدار هر یک از آیتم های بالا خیر بود، قبل از ادامه مراحل نصب، نسبت به تصحیح آیتم مورد نظر اقدام کنید (با مدیریت سرور تماس بگیرید).
   </div>
   <div class="panel-footer">
 	{$button}
@@ -289,7 +300,7 @@ HTML;
 // ********************************************************************************
 elseif($_REQUEST['action'] == "chmod_check") {
 
-if ( !$_SESSION['dle_install'] ) msgbox( "", "Ошибка", "Установка скрипта была начата не с начала. Вернитесь на главную страницу начала установки скрипта: <br><br><a href=\"http://{$_SERVER['HTTP_HOST']}/install.php\">http://{$_SERVER['HTTP_HOST']}/install.php</a>" );
+if ( !$_SESSION['dle_install'] ) msgbox( "", "Error", "Script installation was started not from the beginning. Return to homepage to start the script installation: <br /><br /><a href=\"http://{$_SERVER['HTTP_HOST']}/install.php\">http://{$_SERVER['HTTP_HOST']}/install.php</a>" );
 
   echo $skin_header;
 
@@ -298,16 +309,16 @@ echo <<<HTML
 <input type=hidden name="action" value="doconfig">
 <div class="panel panel-default">
   <div class="panel-heading">
-    Проверка на запись у важных файлов системы
+    سطح دسترسی فولدرها
   </div>
   <div class="table-responsive">
 <table class="table table-striped table-xs">
 HTML;
 
 echo"<thead><tr>
-<th>Папка/Файл</th>
+<th>Directory/File</th>
 <th width=\"100\">CHMOD</th>
-<th width=\"100\">Статус</th></tr></thead><tbody>";
+<th width=\"100\">وضعیت</td></tr></thead><tbody>";
 
 $important_files = array(
 './backup/',
@@ -330,28 +341,28 @@ $chmod_errors = 0;
 $not_found_errors = 0;
     foreach($important_files as $file){
 
-        if(!file_exists($file)){
-            $file_status = "<span class=\"text-danger\">не найден!</span>";
-            $not_found_errors ++;
-        }
-        elseif(is_writable($file)){
-            $file_status = "<span class=\"text-success\">разрешено</span>";
-        }
-        else{
-            @chmod($file, 0777);
-            if(is_writable($file)){
-                $file_status = "<span class=\"text-success\">разрешено</span>";
-            }else{
-                @chmod("$file", 0755);
-                if(is_writable($file)){
-                    $file_status = "<span class=\"text-success\">разрешено</span>";
-                }else{
-                    $file_status = "<span class=\"text-danger\">запрещено</span>";
-                    $chmod_errors ++;
-                }
-            }
-        }
-        $chmod_value = @decoct(@fileperms($file)) % 1000;
+			if(!file_exists($file)){
+				$file_status = "<span class=\"text-danger\">یافت نشد!</span>";
+				$not_found_errors ++;
+			}
+			elseif(is_writable($file)){
+				$file_status = "<span class=\"text-success\">درست</span>";
+			}
+			else{
+				@chmod($file, 0777);
+				if(is_writable($file)){
+					$file_status = "<span class=\"text-success\">درست</span>";
+				}else{
+					@chmod("$file", 0755);
+					if(is_writable($file)){
+						$file_status = "<span class=\"text-success\">درست</span>";
+					}else{
+						$file_status = "<span class=\"text-danger\">نادرست</font>";
+						$chmod_errors ++;
+					}
+				}
+			}
+			$chmod_value = @decoct(@fileperms($file)) % 1000;
 
     echo"<tr>
          <td>$file</td>
@@ -362,18 +373,19 @@ $not_found_errors = 0;
     
 if($chmod_errors == 0 and $not_found_errors == 0){
 
-    $status_report = 'Проверка успешно завершена! Можете продолжить установку!';
+			$status_report = 'سطح دسترسی فولدرها چک شد و مشکلی نداشت. اکنون می توانید به ادامه نصب سیستم بپردازید.';
 
-} else {
-    
-    if($chmod_errors > 0){
-        $status_report = "<span class=\"text-danger\">Внимание!!!</span><br><br>Во время проверки обнаружены ошибки: <b>$chmod_errors</b>. Запрещена запись в файл.<br>Вы должны выставить для папок CHMOD 777, для файлов CHMOD 666, используя FTP клиент.<br><br><span class=\"text-danger\"><b>Настоятельно не рекомендуется</b></span> продолжать установку, пока не будут произведены изменения.<br>";
-    }
+		} else {
 
-    if($not_found_errors > 0){
-        $status_report .= "<span class=\"text-danger\">Внимание!!!</span><br>Во время проверки обнаружены ошибки: <b>$not_found_errors</b>. Файлы не найдены!<br><br><span class=\"text-danger\"><b>Не рекомендуется</b></span> продолжать установку, пока не будут произведены изменения.<br>";
-    }
-}
+			if($chmod_errors > 0){
+				$status_report = "<font color=red>خطا!!!</font><br /><br />در چک کردن فولدرها، مشاهده شد که <b>$chmod_errors</b> امکان نوشتن در آن وجود ندارد. !<br />لطفاً سطح دسترسی به فولدرهای مشخص شده با رنگ قرمز را بر روی 777 قرار دهید.<br /><br />تصحیح این مورد قبل از ادامه روند کار <font color=red><b>به شدت</b></font> توصیه می شود.<br />";
+			}
+
+			if($not_found_errors > 0){
+				$status_report .= "<span class=\"text-danger\">!!!</span><br />در چک کردن فولدرها، <b>$not_found_errors</b> فایل پیدا نشد!<br /><br />تصحیح این مورد قبل از ادامه روند کار <span class=\"text-danger\"><b>به شدت</b></span> توصیه می شود.<br />";
+			}
+		}
+
 
 echo <<<HTML
 </tbody></table>
@@ -382,46 +394,56 @@ echo <<<HTML
 	{$status_report}
   </div>
   <div class="panel-footer">
-	<button type="submit" class="btn bg-teal btn-sm btn-raised position-left"><i class="fa fa-arrow-circle-o-right position-left"></i>Продолжить</button>
+	<button type="submit" class="btn bg-teal btn-sm btn-raised position-right">مرحله بعد<i class="fa fa-arrow-circle-o-left position-right"></i></button>
   </div>
 </div></form>
 HTML;
 
 } elseif($_REQUEST['action'] == "doconfig") {
 
-  if ( !$_SESSION['dle_install'] ) msgbox( "", "Ошибка", "Установка скрипта была начата не с начала. Вернитесь на главную страницу начала установки скрипта: <br><br><a href=\"http://{$_SERVER['HTTP_HOST']}/install.php\">http://{$_SERVER['HTTP_HOST']}/install.php</a>" );
+  if ( !$_SESSION['dle_install'] ) msgbox( "", "خطا", "به صفحه اصلی نصب سیستم بازگردید و مراحل نصب را از اول طی کنید.<br /><br /><a href=\"http://{$_SERVER['HTTP_HOST']}/install.php\">http://{$_SERVER['HTTP_HOST']}/install.php</a>" );
 
   echo $skin_header;
 
   echo <<<HTML
+<style>
+.install-tbl { border-top: 1px solid #ddd; margin-top: 15px }
+.install-tbl tr { margin: 2px; }
+.install-tbl td { border-bottom: 1px solid #ddd; }
+.install-tbl td:first-child { border-left: 1px solid #ddd; }
+.install-tbl td:nth-child( odd ) { background: #fbfbfb; }
+.install-tbl td:nth-child( even ) { background: #f8f8f8; }
+.table-head { background: #1177cc !important; color: #fff; border-left: 0 !important; text-align: center }
+</style>
 <form method="post" action="">
 <input type=hidden name="action" value="doinstall">
 <div class="panel panel-default">
   <div class="panel-heading">
-    Настройка конфигурации системы
+    پیکربندی سیستم
   </div>
   <div class="panel-body">
-<table width="100%">
+	جهت نصب سیستم مدیریت محتوای دیتالایف انجین، فرم زیر را تکمیل نمائید. در صورت نیاز، می توانید از آموزش نصب استفاده کنید. <a href="http://www.datalifeengine.ir/tutorial-video/2918-آموزش-نصب-دیتالایف-انجین-روی-لوکال-هاست.html" target="_blank" style="color: #1177cc">ویدئو آموزش نصب</a>
+<table width="100%" class="install-tbl">
 HTML;
 
 echo '<tr>
-<tr><td colspan="2" style="padding: 5px;"><b>Данные для доступа к MySQL серверу</b><td></tr>
-<tr><td style="padding: 5px;" width="175">Сервер MySQL:</td><td style="padding: 5px;"><input type="text" class="classic" style="width:220px;" name="dbhost" value="localhost"></tr>
-<tr><td style="padding: 5px;">Имя базы данных:</td><td style="padding: 5px;"><input type="text" class="classic" style="width:220px;"" name="dbname"></tr>
-<tr><td style="padding: 5px;">Имя пользователя:</td><td style="padding: 5px;"><input type="text" class="classic" style="width:220px;" name="dbuser"></tr>
-<tr><td style="padding: 5px;">Пароль:</td><td style="padding: 5px;"><input type="text" class="classic" style="width:220px;" name="dbpasswd"></tr>
-<tr><td style="padding: 5px;">Префикс:</td><td style="padding: 5px;"><input type="text" class="classic" style="width:220px;" name="dbprefix" value="dle"> <span class="text-size-small text-muted">Не изменяйте параметр, если не знаете для чего он предназначен</span></tr>
-<tr><td colspan="2" style="padding: 5px;"><b>Данные для доступа с которыми вы будете входить в админпанель скрипта</b><td></tr>
-<tr><td style="padding: 5px;">Имя администратора:</td><td style="padding: 5px;"><input type="text" class="classic" style="width:220px;" name="reg_username" ></tr>
-<tr><td style="padding: 5px;">Пароль:</td><td style="padding: 5px;"><input type="password" class="classic" style="width:220px;" name="reg_password1"></tr>
-<tr><td style="padding: 5px;">Повторите пароль:</td><td style="padding: 5px;"><input type="password" class="classic" style="width:220px;" name="reg_password2"></tr>
-<tr><td style="padding: 5px;">E-mail:</td><td style="padding: 5px;"><input type="text" class="classic" style="width:220px;" name="reg_email"></tr>';
+<tr><td colspan="2" style="padding: 5px;"><b>اطلاعات مربوط به پایگاه داده ها (دیتابیس)</b><td></tr>
+<tr><td style="padding: 5px;" width="175">سرور MySQL:</td><td style="padding: 5px;"><input type="text" class="classic" style="width:220px;direction:ltr;" name="dbhost" value="localhost"></tr>
+<tr><td style="padding: 5px;">نام دیتابیس:</td><td style="padding: 5px;"><input type="text" class="classic" style="width:220px;direction:ltr;"" name="dbname"></tr>
+<tr><td style="padding: 5px;">نام‌کاربری دیتابیس:</td><td style="padding: 5px;"><input type="text" class="classic" style="width:220px;direction:ltr;" name="dbuser"></tr>
+<tr><td style="padding: 5px;">رمز دیتابیس:</td><td style="padding: 5px;"><input type="text" class="classic" style="width:220px;direction:ltr;" name="dbpasswd"></tr>
+<tr><td style="padding: 5px;">پیشوند جدول‌ها:</td><td style="padding: 5px;"><input type="text" class="classic" style="width:220px;direction:ltr;" name="dbprefix" value="dle"> <span class="text-size-small text-muted">اگر نمی‌دانید Prefix Table چه چیزی هست، نیازی به تغییر آن ندارید.</span></tr>
+<tr><td colspan="2" style="padding: 5px;"><b>اطلاعات مربوط به مدیریت سایت</b><td></tr>
+<tr><td style="padding: 5px;">نام‌کاربری مدیریت:</td><td style="padding: 5px;"><input type="text" class="classic" style="width:220px;direction:ltr;" name="reg_username" ></tr>
+<tr><td style="padding: 5px;">رمز عبور:</td><td style="padding: 5px;"><input type="password" class="classic" style="width:220px;direction:ltr;" name="reg_password1"></tr>
+<tr><td style="padding: 5px;">تکرار رمزعبور:</td><td style="padding: 5px;"><input type="password" class="classic" style="width:220px;direction:ltr;" name="reg_password2"></tr>
+<tr><td style="padding: 5px;">آدرس ایمیل:</td><td style="padding: 5px;"><input type="text" class="classic" style="width:220px;direction:ltr;" name="reg_email"></tr>';
 
 echo <<<HTML
 </table>
   </div>
   <div class="panel-footer">
-	<button type="submit" class="btn bg-teal btn-sm btn-raised position-left"><i class="fa fa-arrow-circle-o-right position-left"></i>Продолжить</button>
+	<button type="submit" class="btn bg-teal btn-sm btn-raised position-right">نصب سیستم<i class="fa fa-arrow-circle-o-left position-right"></i></button>
   </div>
 </div></form>
 HTML;
@@ -433,19 +455,19 @@ HTML;
 elseif($_REQUEST['action'] == "doinstall")
 {
 
-	if ( !$_SESSION['dle_install'] ) msgbox( "", "Ошибка", "Установка скрипта была начата не с начала. Вернитесь на главную страницу начала установки скрипта: <br><br><a href=\"http://{$_SERVER['HTTP_HOST']}/install.php\">http://{$_SERVER['HTTP_HOST']}/install.php</a>" );
-		
-	if( !$_POST['reg_username'] OR !$_POST['reg_email'] OR !$_POST['reg_password1'] OR $_POST['reg_password1'] != $_POST['reg_password2'] ){ msgbox("error", "Ошибка!!!" ,"Заполните необходимые поля!", "history.go(-1)"); }
-	
+	if ( !$_SESSION['dle_install'] ) msgbox( "", "خطا", "به صفحه اصلی نصب سیستم بازگردید و مراحل نصب را از اول طی کنید.<br /><br /><a href=\"http://{$_SERVER['HTTP_HOST']}/install.php\">http://{$_SERVER['HTTP_HOST']}/install.php</a>" );
+
+	if( !$_POST['reg_username'] OR !$_POST['reg_email'] OR !$_POST['reg_password1'] OR $_POST['reg_password1'] != $_POST['reg_password2'] ){ msgbox("error", "خطا!!!" ,"تمامی فیلدهای لازم را پر نمایید!", "history.go(-1)"); }
+
 	if (preg_match("/[\||\'|\<|\>|\[|\]|\"|\!|\?|\$|\@|\#|\/|\\\|\&\~\*\{\+]/", $_POST['reg_username']))
-	{
-		msgbox("error", "Ошибка!!!" ,"Введенное имя администратора недопустимо к регистрации!", "history.go(-1)");
+    {
+        msgbox("error", "خطا!!!" ,"نام کاربری مدیریت معتبر نیست!", "javascript:history.go(-1)");
 	}
 	
 	$reg_password = password_hash($_POST['reg_password1'], PASSWORD_DEFAULT);
 	
 	if( !$reg_password ) {
-		msgbox("error", "Ошибка", "PHP extension Crypt must be loaded for password_hash to function", "history.go(-1)");
+		msgbox("error", "PHP extension Crypt must be loaded for password_hash to function", "history.go(-1)");
 	}
 
 	$reg_username = $_POST['reg_username'];
@@ -458,7 +480,7 @@ elseif($_REQUEST['action'] == "doinstall")
 	$timezones = array('Pacific/Midway','US/Samoa','US/Hawaii','US/Alaska','US/Pacific','America/Tijuana','US/Arizona','US/Mountain','America/Chihuahua','America/Mazatlan','America/Mexico_City','America/Monterrey','US/Central','US/Eastern','US/East-Indiana','America/Lima','America/Caracas','Canada/Atlantic','America/La_Paz','America/Santiago','Canada/Newfoundland','America/Buenos_Aires','America/Godthab','Atlantic/Stanley','Atlantic/Azores','Africa/Casablanca','Europe/Dublin','Europe/Lisbon','Europe/London','Europe/Amsterdam','Europe/Belgrade','Europe/Berlin','Europe/Bratislava','Europe/Brussels','Europe/Budapest','Europe/Copenhagen','Europe/Madrid','Europe/Paris','Europe/Prague','Europe/Rome','Europe/Sarajevo','Europe/Stockholm','Europe/Vienna','Europe/Warsaw','Europe/Zagreb','Europe/Athens','Europe/Bucharest','Europe/Helsinki','Europe/Istanbul','Asia/Jerusalem','Europe/Kiev','Europe/Minsk','Europe/Riga','Europe/Sofia','Europe/Tallinn','Europe/Vilnius','Asia/Baghdad','Asia/Kuwait','Africa/Nairobi','Asia/Tehran','Europe/Kaliningrad','Europe/Moscow','Europe/Volgograd','Europe/Samara','Asia/Baku','Asia/Muscat','Asia/Tbilisi','Asia/Yerevan','Asia/Kabul','Asia/Yekaterinburg','Asia/Tashkent','Asia/Kolkata','Asia/Kathmandu','Asia/Almaty','Asia/Novosibirsk','Asia/Jakarta','Asia/Krasnoyarsk','Asia/Hong_Kong','Asia/Kuala_Lumpur','Asia/Singapore','Asia/Taipei','Asia/Ulaanbaatar','Asia/Urumqi','Asia/Irkutsk','Asia/Seoul','Asia/Tokyo','Australia/Adelaide','Australia/Darwin','Asia/Yakutsk','Australia/Brisbane','Pacific/Port_Moresby','Australia/Sydney','Asia/Vladivostok','Asia/Sakhalin','Asia/Magadan','Pacific/Auckland','Pacific/Fiji');
 
 	if ( !in_array($timezone, $timezones) ) {
-		$timezone = "Europe/Moscow";
+        $timezone = "Asia/Tehran";
 		date_default_timezone_set ( $timezone );
 	}
 	
@@ -477,11 +499,11 @@ elseif($_REQUEST['action'] == "doinstall")
 	$check_db = new db;
 	
 	if ( !$check_db->connect($dbuser, $dbpasswd, $dbname, $dbhost, false) ) {
-		msgbox("error", "Ошибка!!!" ,"Невозможно соединиться с MySQL сервером по указанным доступам. Введите корректные данные доступа для соединения с БД MySQL. У вас возникла ошибка:<br><br>".$check_db->query_errors_list[0]['error'], "history.go(-1)");
+        msgbox("error", "خطا!!!" ,"امکان اتصال به سرور بانک اطلاعاتی MySQL میسر نیست. لطفا اطلاعات درست جهت اتصال به دیتابیس را وارد کنید.", "history.go(-1)");
 	}
 	
 	if( version_compare($check_db->mysql_version, '5.5.3', '<') ) {
-		msgbox("error", "Ошибка!!!" ,"На вашем сервере установления версия MySQL <b>{version}</b>, для установки скрипта DataLife Engine необходима версия MySQL не ниже 5.5.3", "history.go(-1)");
+		msgbox("error", "خطا!!!" ,"On your server the MySQL version is <b>{$check_db->mysql_version}</b>, to install the script you need MySQL version 5.5.3 or greater", "history.go(-1)");
 	}
 	
 	if( version_compare($check_db->mysql_version, '5.6.4', '<') ) {
@@ -508,9 +530,9 @@ $config = <<<HTML
 
 'admin_mail' => "{$reg_email}",
 
-'description' => "Демонстрационная страница движка DataLife Engine",
+'description' => "Datalife Engine Farsi",
 
-'keywords' => "DataLife, Engine, CMS, PHP движок",
+'keywords' => "DataLife, Engine, CMS, PHP engine",
 
 'date_adjust' => "{$timezone}",
 
@@ -518,9 +540,9 @@ $config = <<<HTML
 
 'allow_alt_url' => "1",
 
-'langs' => "Russian",
+'langs' => "Farsi",
 
-'skin' => "Default",
+'skin' => "Papercut",
 
 'allow_gzip' => "0",
 
@@ -532,7 +554,7 @@ $config = <<<HTML
 
 'smilies' => "bowtie,smile,laughing,blush,smiley,relaxed,smirk,heart_eyes,kissing_heart,kissing_closed_eyes,flushed,relieved,satisfied,grin,wink,stuck_out_tongue_winking_eye,stuck_out_tongue_closed_eyes,grinning,kissing,stuck_out_tongue,sleeping,worried,frowning,anguished,open_mouth,grimacing,confused,hushed,expressionless,unamused,sweat_smile,sweat,disappointed_relieved,weary,pensive,disappointed,confounded,fearful,cold_sweat,persevere,cry,sob,joy,astonished,scream,tired_face,angry,rage,triumph,sleepy,yum,mask,sunglasses,dizzy_face,imp,smiling_imp,neutral_face,no_mouth,innocent",
 
-'timestamp_active' => "j-m-Y, H:i",
+'timestamp_active' => "j F Y, H:i",
 
 'news_sort' => "date",
 
@@ -552,7 +574,7 @@ $config = <<<HTML
 
 'auto_wrap' => "80",
 
-'timestamp_comment' => "j F Y H:i",
+'timestamp_comment' => "j M Y H:i",
 
 'allow_comments_wysiwyg' => "1",
 
@@ -654,7 +676,7 @@ $config = <<<HTML
 
 'allow_multi_category' => "1",
 
-'short_title' => "Демонстрационный сайт",
+'short_title' => "دیتالایف انجین فارسی",
 
 'allow_rss' => "1",
 
@@ -666,7 +688,7 @@ $config = <<<HTML
 
 'comments_maxlen' => "3000",
 
-'offline_reason' => "Сайт находится на текущей реконструкции, после завершения всех работ сайт будет открыт.<br><br>Приносим вам свои извинения за доставленные неудобства.",
+'offline_reason' => "درحال حاضر دسترسی به این وب‌سایت امکان پذیر نمی‌باشد<br /><br />لطفاً ساعاتی بعد از این وب‌سایت بازدید نمائید.",
 
 'catalog_sort' => "date",
 
@@ -994,37 +1016,37 @@ $social_config = <<<HTML
 ?>
 HTML;
 
-$con_file = fopen("engine/data/config.php", "w+") or die("Извините, но невозможно создать файл <b>.engine/data/config.php</b>.<br>Проверьте правильность проставленного CHMOD!");
+$con_file = fopen("engine/data/config.php", "w+") or die("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><font size=2 face=tahoma>شما باید سطح دسترسی فایل <b>.engine/data/config.php</b>. را 666 بگذارید.");
 fwrite($con_file, $config);
 fclose($con_file);
 @chmod("engine/data/config.php", 0666);
 
-$con_file = fopen("engine/data/dbconfig.php", "w+") or die("Извините, но невозможно создать файл <b>.engine/data/dbconfig.php</b>.<br>Проверьте правильность проставленного CHMOD!");
+$con_file = fopen("engine/data/dbconfig.php", "w+") or die("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><font size=2 face=tahoma>شما باید سطح دسترسی فایل <b>.engine/data/dbconfig.php</b>. را 666 بگذارید.");
 fwrite($con_file, $dbconfig);
 fclose($con_file);
 @chmod("engine/data/dbconfig.php", 0666);
 
-$con_file = fopen("engine/data/videoconfig.php", "w+") or die("Извините, но невозможно создать файл <b>.engine/data/videoconfig.php</b>.<br>Проверьте правильность проставленного CHMOD!");
+$con_file = fopen("engine/data/videoconfig.php", "w+") or die("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><font size=2 face=tahoma>شما باید سطح دسترسی فایل <b>.engine/data/videoconfig.php</b>. را 666 بگذارید.");
 fwrite($con_file, $video_config);
 fclose($con_file);
 @chmod("engine/data/videoconfig.php", 0666);
 
-$con_file = fopen("engine/data/socialconfig.php", "w+") or die("Извините, но невозможно создать файл <b>.engine/data/socialconfig.php</b>.<br>Проверьте правильность проставленного CHMOD!");
+$con_file = fopen("engine/data/socialconfig.php", "w+") or die("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><font size=2 face=tahoma>شما باید سطح دسترسی فایل <b>.engine/data/socialconfig.php</b>. را 666 بگذارید.");
 fwrite($con_file, $social_config);
 fclose($con_file);
 @chmod("engine/data/socialconfig.php", 0666);
 
-$con_file = fopen("engine/data/wordfilter.db.php", "w+") or die("Извините, но невозможно создать файл <b>.engine/data/wordfilter.db.php</b>.<br>Проверьте правильность проставленного CHMOD!");
+$con_file = fopen("engine/data/wordfilter.db.php", "w+") or die("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><font size=2 face=tahoma>شما باید سطح دسترسی فایل  <b>.engine/data/wordfilter.db.php</b>. را 666 بگذارید.");
 fwrite($con_file, '');
 fclose($con_file);
 @chmod("engine/data/wordfilter.db.php", 0666);
 
-$con_file = fopen("engine/data/xfields.txt", "w+") or die("Извините, но невозможно создать файл <b>.engine/data/xfields.txt</b>.<br>Проверьте правильность проставленного CHMOD!");
+$con_file = fopen("engine/data/xfields.txt", "w+") or die("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><font size=2 face=tahoma>شما باید سطح دسترسی فایل  <b>.engine/data/xfields.txt</b>. را 666 بگذارید.");
 fwrite($con_file, '');
 fclose($con_file);
 @chmod("engine/data/xfields.txt", 0666);
 
-$con_file = fopen("engine/data/xprofile.txt", "w+") or die("Извините, но невозможно создать файл <b>.engine/data/xprofile.txt</b>.<br>Проверьте правильность проставленного CHMOD!");
+$con_file = fopen("engine/data/xprofile.txt", "w+") or die("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><font size=2 face=tahoma>شما باید سطح دسترسی فایل  <b>.engine/data/xprofile.txt</b>. را 666 بگذارید.");
 fwrite($con_file, '');
 fclose($con_file);
 @chmod("engine/data/xprofile.txt", 0666);
@@ -1058,6 +1080,26 @@ $reg_username = $db->safesql( $reg_username );
 $reg_password = $db->safesql( $reg_password );
 
 $tableSchema = array();
+
+// DatalifeEngine.IR Added
+$tableSchema[] = "DROP TABLE IF EXISTS " . PREFIX . "_obmen";
+
+$tableSchema[] = "CREATE TABLE " . PREFIX . "_obmen (
+`id` int(11) NOT NULL auto_increment,
+`title` varchar(255) NOT NULL default '',
+`link` varchar(255) NOT NULL default '',
+`icq` varchar(255) NOT NULL default '',
+`mail` varchar(255) NOT NULL default '',
+`posit` smallint(5) NOT NULL default '1',
+`description` varchar(255) default NULL,
+`bold` char(1) default '',
+`color` varchar(255) default '',
+`target` varchar(255) default '',
+PRIMARY KEY  (`id`)
+) ENGINE=" . $storage_engine . " DEFAULT CHARACTER SET " . COLLATE . " COLLATE " . COLLATE . "_general_ci";
+
+$tableSchema[] = "INSERT INTO `" . PREFIX . "_obmen` VALUES (1, 'Datalife Engine Farsi', 'http://datalifeengine.ir', '', 'info@datalifeengine.ir', 0, 'Datalife Engine Farsi', '0', '', '')";
+// DatalifeEngine.IR Added
 
 $tableSchema[] = "DROP TABLE IF EXISTS " . PREFIX . "_category";
 
@@ -1975,71 +2017,54 @@ $tableSchema[] = "CREATE TABLE " . PREFIX . "_plugins_logs (
   KEY `plugin_id` (`plugin_id`)
 ) ENGINE=" . $storage_engine . " DEFAULT CHARACTER SET " . COLLATE . " COLLATE " . COLLATE . "_general_ci";
 
-$tableSchema[] = "INSERT INTO " . PREFIX . "_rssinform VALUES (1, 'dle', 'Новости с Яндекса', '0', 'https://news.yandex.ru/index.rss', 'informer', 3, 0, 200, 1, 'j F Y H:i')";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_rssinform VALUES (1, 'dle', 'اخبار سایت دیتالایف انجین فارسی', '0', 'http://www.datalifeengine.ir/rss.xml', 'informer', 3, 0, 200, 1, 'j F Y H:i')";
 
-$tableSchema[] = "INSERT INTO " . PREFIX . "_usergroups VALUES (1, 'Администраторы', 'all', 1, 'all', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 50, 101, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, '{THEME}/images/icon_1.gif', 0, 1, 1, 1, 1, 1, 1, 0, 1,500,1000,1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,1,'<b><span style=\"color:red\">','</span></b>',1,1,'all', 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 'zip,rar,exe,doc,pdf,swf', 4096, 0, 2, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, '', 1, 1, 1, 3, '800x600', 300, '200x150', 1, 3, 1000, 'jpg,png,zip,pdf',1,1,'10x10')";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_usergroups VALUES (2, 'Главные редакторы', 'all', 1, 'all', 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 50, 101, 1, 1, 1, 0, 2, 1, 1, 1, 1, 1, 0, '{THEME}/images/icon_2.gif', 0, 1, 0, 1, 1, 1, 1, 0, 1,500,1000,1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,1,'','',1,1,'all', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 'zip,rar,exe,doc,pdf,swf', 4096, 0, 2, 1, 0, 0, 0, 0, 2, 0, 0, 2, 0, 0, 2, 0, 0, 2, '', 1, 1, 1, 3, '800x600', 300, '200x150', 1, 3, 1000, 'jpg,png,zip,pdf',1,1,'10x10')";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_usergroups VALUES (3, 'Журналисты', 'all', 1, 'all', 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 50, 101, 1, 1, 1, 0, 3, 0, 1, 1, 1, 1, 0, '{THEME}/images/icon_3.gif', 0, 1, 0, 1, 1, 1, 1, 0, 1,500,1000,1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,1,'','',1,1,'all', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 'zip,rar,exe,doc,pdf,swf', 4096, 0, 2, 1, 0, 0, 0, 0, 3, 0, 0, 3, 0, 0, 3, 0, 0, 3, '', 1, 1, 1, 3, '800x600', 300, '200x150', 0, 3, 1000, 'jpg,png,zip,pdf',1,1,'10x10')";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_usergroups VALUES (4, 'Посетители', 'all', 1, 'all', 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 20, 101, 1, 1, 1, 0, 4, 0, 1, 1, 1, 1, 0, '{THEME}/images/icon_4.gif', 0, 1, 0, 1, 0, 1, 1, 1, 0,500,1000,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,1,'','',1,0,'all', 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 'zip,rar,exe,doc,pdf,swf', 4096, 0, 2, 1, 0, 2, 0, 0, 4, 0, 0, 4, 0, 0, 4, 0, 0, 4, '', 0, 0, 0, 1, '800x600', 300, '200x150', 0, 3, 1000, 'jpg,png,zip,pdf',0,0,'10x10')";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_usergroups VALUES (5, 'Гости', 'all', 0, 'all', 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 5, 0, 1, 1, 1, 0, 1, '{THEME}/images/icon_5.gif', 0, 1, 0, 0, 0, 0, 1, 1, 0,1,1,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0,'','',0,0,'all', 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '', 0, 0, 2, 1, 0, 2, 0, 0, 5, 0, 0, 5, 0, 0, 5, 0, 0, 5, '', 0, 0, 0, 1, '800x600', 300, '200x150', 0, 3, 1000, 'jpg,png,zip,pdf',0,0,'10x10')";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_usergroups VALUES (1, 'مدیر کل', 'all', 1, 'all', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 50, 101, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, '{THEME}/images/icon_1.gif', 0, 1, 1, 1, 1, 1, 1, 0, 1,500,1000,1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,1,'<b><span style=\"color:red\">','</span></b>',1,1,'all', 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 'zip,rar,exe,doc,pdf,swf', 4096, 0, 2, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, '', 1, 1, 1, 3, '800x600', 300, '200x150', 1, 3, 1000, 'jpg,png,zip,pdf',1,1,'10x10')";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_usergroups VALUES (2, 'مدیر', 'all', 1, 'all', 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 50, 101, 1, 1, 1, 0, 2, 1, 1, 1, 1, 1, 0, '{THEME}/images/icon_2.gif', 0, 1, 0, 1, 1, 1, 1, 0, 1,500,1000,1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,1,'','',1,1,'all', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 'zip,rar,exe,doc,pdf,swf', 4096, 0, 2, 1, 0, 0, 0, 0, 2, 0, 0, 2, 0, 0, 2, 0, 0, 2, '', 1, 1, 1, 3, '800x600', 300, '200x150', 1, 3, 1000, 'jpg,png,zip,pdf',1,1,'10x10')";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_usergroups VALUES (3, 'ویرایشگر', 'all', 1, 'all', 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 50, 101, 1, 1, 1, 0, 3, 0, 1, 1, 1, 1, 0, '{THEME}/images/icon_3.gif', 0, 1, 0, 1, 1, 1, 1, 0, 1,500,1000,1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,1,'','',1,1,'all', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 'zip,rar,exe,doc,pdf,swf', 4096, 0, 2, 1, 0, 0, 0, 0, 3, 0, 0, 3, 0, 0, 3, 0, 0, 3, '', 1, 1, 1, 3, '800x600', 300, '200x150', 0, 3, 1000, 'jpg,png,zip,pdf',1,1,'10x10')";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_usergroups VALUES (4, 'عضو سایت', 'all', 1, 'all', 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 20, 101, 1, 1, 1, 0, 4, 0, 1, 1, 1, 1, 0, '{THEME}/images/icon_4.gif', 0, 1, 0, 1, 0, 1, 1, 1, 0,500,1000,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,1,'','',1,0,'all', 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 'zip,rar,exe,doc,pdf,swf', 4096, 0, 2, 1, 0, 2, 0, 0, 4, 0, 0, 4, 0, 0, 4, 0, 0, 4, '', 0, 0, 0, 1, '800x600', 300, '200x150', 0, 3, 1000, 'jpg,png,zip,pdf',0,0,'10x10')";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_usergroups VALUES (5, 'میهمان', 'all', 0, 'all', 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 5, 0, 1, 1, 1, 0, 1, '{THEME}/images/icon_5.gif', 0, 1, 0, 0, 0, 0, 1, 1, 0,1,1,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0,'','',0,0,'all', 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, '', 0, 0, 2, 1, 0, 2, 0, 0, 5, 0, 0, 5, 0, 0, 5, 0, 0, 5, '', 0, 0, 0, 1, '', 0, '', 0, 3, 1000, 'jpg,png,zip,pdf',0,0,'10x10')";
 
-$tableSchema[] = "INSERT INTO " . PREFIX . "_rss VALUES (1, 'https://dle-news.ru/rss.xml', 'Официальный сайт DataLife Engine', 1, 1, 1, 1, 1, '<div class=\"full-post-content row\">{get}</div><div class=\"full-post-footer ignore-select\">', 5, '', 1, 0)";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_rss VALUES (1, 'http://datalifeengine.ir/rss.xml', 'DataLife Engine Farsi', 1, 1, 1, 1, 1, '<div class=\"full-post-content row\">{get}</div><div class=\"full-post-footer ignore-select\">', 5, '', 1, 0)";
 
-$tableSchema[] = "INSERT INTO " . PREFIX . "_email values (1, 'reg_mail', '{%username%},\r\n\r\nЭто письмо отправлено с сайта $url\r\n\r\nВы получили это письмо, так как этот e-mail адрес был использован при регистрации на сайте. Если Вы не регистрировались на этом сайте, просто проигнорируйте это письмо и удалите его. Вы больше не получите такого письма.\r\n\r\n------------------------------------------------\r\nВаш логин и пароль на сайте:\r\n------------------------------------------------\r\n\r\nЛогин: {%username%}\r\nПароль: {%password%}\r\n\r\n------------------------------------------------\r\nИнструкция по активации\r\n------------------------------------------------\r\n\r\nБлагодарим Вас за регистрацию.\r\nМы требуем от Вас подтверждения Вашей регистрации, для проверки того, что введённый Вами e-mail адрес - реальный. Это требуется для защиты от нежелательных злоупотреблений и спама.\r\n\r\nДля активации Вашего аккаунта, зайдите по следующей ссылке:\r\n\r\n{%validationlink%}\r\n\r\nЕсли и при этих действиях ничего не получилось, возможно Ваш аккаунт удалён. В этом случае, обратитесь к Администратору, для разрешения проблемы.\r\n\r\nС уважением,\r\n\r\nАдминистрация $url.', 0)";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_email values (2, 'feed_mail', '{%username_to%},\r\n\r\nДанное письмо вам отправил {%username_from%} с сайта $url\r\n\r\n------------------------------------------------\r\nТекст сообщения\r\n------------------------------------------------\r\n\r\n{%text%}\r\n\r\nIP адрес отправителя: {%ip%}\r\nГруппа: {%group%}\r\n\r\n------------------------------------------------\r\nПомните, что администрация сайта не несет ответственности за содержание данного письма\r\n\r\nС уважением,\r\n\r\nАдминистрация $url', 0)";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_email values (3, 'lost_mail', 'Уважаемый {%username%},\r\n\r\nВы сделали запрос на получение забытого пароля на сайте $url Однако в целях безопасности все пароли хранятся в зашифрованном виде, поэтому мы не можем сообщить вам ваш старый пароль, поэтому если вы хотите сгенерировать новый пароль, зайдите по следующей ссылке: \r\n\r\n{%lostlink%}\r\n\r\nЕсли вы не делали запроса для получения пароля, то просто удалите данное письмо, ваш пароль храниться в надежном месте, и недоступен посторонним лицам.\r\n\r\nIP адрес отправителя: {%ip%}\r\n\r\nС уважением,\r\n\r\nАдминистрация $url', 0)";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_email values (4, 'new_news', 'Уважаемый администратор,\r\n\r\nуведомляем вас о том, что на сайт  $url была добавлена новость, которая в данный момент ожидает модерации.\r\n\r\n------------------------------------------------\r\nКраткая информация о новости\r\n------------------------------------------------\r\n\r\nАвтор: {%username%}\r\nЗаголовок новости: {%title%}\r\nКатегория: {%category%}\r\nДата добавления: {%date%}\r\n\r\nС уважением,\r\n\r\nАдминистрация $url', 0)";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_email values (5, 'comments', 'Уважаемый {%username_to%},\r\n\r\nуведомляем вас о том, что на сайт  $url был добавлен комментарий к новости, на которую вы были подписаны.\r\n\r\n------------------------------------------------\r\nКраткая информация о комментарии\r\n------------------------------------------------\r\n\r\nАвтор: {%username%}\r\nДата добавления: {%date%}\r\nСсылка на новость: {%link%}\r\n\r\n------------------------------------------------\r\nТекст комментария\r\n------------------------------------------------\r\n\r\n{%text%}\r\n\r\n------------------------------------------------\r\n\r\nЕсли вы не хотите больше получать уведомлений о новых комментариях к данной новости, то проследуйте по данной ссылке: {%unsubscribe%}\r\n\r\nС уважением,\r\n\r\nАдминистрация $url', 0)";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_email values (6, 'pm', 'Уважаемый {%username%},\r\n\r\nуведомляем вас о том, что на сайте  $url вам было отправлено персональное сообщение.\r\n\r\n------------------------------------------------\r\nКраткая информация о сообщении\r\n------------------------------------------------\r\n\r\nОтправитель: {%fromusername%}\r\nДата  получения: {%date%}\r\nЗаголовок: {%title%}\r\n\r\n------------------------------------------------\r\nТекст сообщения\r\n------------------------------------------------\r\n\r\n{%text%}\r\n\r\nС уважением,\r\n\r\nАдминистрация $url', 0)";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_email values (7, 'wait_mail', 'Уважаемый {%username%},\r\n\r\nВы сделали запрос на обьединение  вашего аккаунта на сайте $url с аккаунтом в социальной сети {%network%}.  Однако в целях безопасности вам необходимо подтвердить данное действие по следующей ссылке: \r\n\r\n------------------------------------------------\r\n{%link%}\r\n------------------------------------------------\r\n\r\nЕсли вы не делали данного запроса, то просто удалите это письмо, данные вашего аккаунта хранятся в надежном месте, и недоступны посторонним лицам.\r\n\r\nIP адрес отправителя: {%ip%}\r\n\r\nС уважением,\r\n\r\nАдминистрация $url', 0)";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_email values (1, 'reg_mail', 'با سلام خدمت شما کاربر گرامی {%username%},\r\n\r\nاز اینکه در وب سایت $url ثبت نام کرده اید، متشکریم؛ \r\n\r\n مشخصات شما در این وب سایت به شرح زیر می‌باشد:\r\n\r\nنام کاربری: {%username%}\r\nرمز عبور: {%password%}\r\n\r\n\r\nاکنون جهت تکمیل و اتمام مراحل ثبت نام در سایت، بر روی لینک زیر کلیک نمائید:\r\n\r\n{%validationlink%}', 0)";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_email values (2, 'feed_mail', 'با سلام خدمت شما کاربر گرامی {%username_to%},\r\n\r\nایمیلی از طرف نام کاربری {%username_from%} در سایت $url  برای شما ارسال شده است.\r\n\r\nمتن پیام به شرح زیر می‌باشد:\r\n\r\n{%text%}\r\n\r\nIP ارسال کننده: {%ip%}', 0)";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_email values (3, 'lost_mail', 'با سلام خدمت شما کاربر گرامی {%username%},\r\n\r\nبرای اکانت کاربری شما در وب سایت $url  درخواست تغییر رمزعبور داده شده است.\r\n در صورتی که این درخواست از جانب شما بوده است بر روی لینک زیر کلیک نمایید تا فرایند تغییر رمز عبور شما تکمیل گردد؛ در غیر این صورت این ایمیل را نادیده بگیرید: \r\n\r\n{%lostlink%}\r\n\r\nIP ارسال کننده: {%ip%}', 0)";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_email values (4, 'new_news', 'با سلام خدمت شما مدیریت محترم سایت $url \r\n\r\nمطلب جدیدی در سایت با مشخصات زیر ارسال گردید:\r\n\r\nفرستنده: {%username%}\r\nعنوان مطلب: {%title%}\r\nموضوع: {%category%}\r\nتاریخ ارسال: {%date%}', 0)";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_email values (5, 'comments', 'با سلام خدمت شما کاربر گرامی {%username_to%},\r\n\r\nنظر جدیدی در وب سایت  $url  توسط شخصی با نام کاربری {%username%} ارسال شده است.\r\nتاریخ ارسال: {%date%}\r\nلینک خبر:  {%link%}\r\n\r\nمتن نظر به شرح زیر است:\r\n{%text%}\r\n\r\n\r\n اگر شما می‌خواهید اشتراک خود را از آگاهی نظر جدید این خبر حذف کنید، بر روی لینک زیر کلیک نمائید: \r\n{%unsubscribe%}', 0)";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_email values (6, 'pm', 'با سلام خدمت شما کاربر گرامی {%username%},\r\n\r\nشما در وب سایت $url پیغام خصوصی جدیدی دریافت کرده اید. \r\n\r\n مشخصات این پیغام خصوصی به شرح زیر می‌باشد:\r\n\r\n فرستنده: {%fromusername%}\r\nتاریخ ارسال: {%date%}\r\nعنوان پیام: {%title%}\r\n\r\nمتن پیام به شرح زیر می‌باشد:\r\n{%text%}', 0)";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_email values (7, 'wait_mail', '{%username%} عزیز,\r\n\r\nشما در سایت $url با استفاده از شبکه اجتماعی {%network%} ثبت نام کرده اید. بخاطر مسائل امنیتی، بر روی لینک زیر کلیک کنید تا مراحل ثبت نام تکمیل شود: \r\n\r\n------------------------------------------------\r\n{%link%}\r\n------------------------------------------------\r\n\r\nتوجه، در صورتی که قبلاً در این سایت حساب کاربری ایجاد کرده باشید (بدون شبکه اجتماعی)، رمز عبور شما تغییر خواهد یافت و به صورت قبل امکان ورود ندارید و فقط با استفاده از شبکه اجتماعی قادر خواهید بود وارد سایت شوید.\r\n\r\nاگر شما این درخواست را ارسال نکرده اید، بر روی لینک بالا کلیک نکنید و این ایمیل را نادیده بگیرید.\r\n\r\nآی پی شخص درخواست کننده: {%ip%}\r\n\r\nبا تشکر،\r\n\r\nمدیریت سایت $url', 0)";
 $tableSchema[] = "INSERT INTO " . PREFIX . "_email values (8, 'newsletter', '<html>\r\n<head>\r\n<title>{%title%}</title>\r\n<meta content=\"text/html; charset={%charset%}\" http-equiv=Content-Type>\r\n<style type=\"text/css\">\r\nhtml,body{\r\n    font-family: Verdana;\r\n    word-spacing: 0.1em;\r\n    letter-spacing: 0;\r\n    line-height: 1.5em;\r\n    font-size: 11px;\r\n}\r\n\r\np {\r\n	margin:0px;\r\n	padding: 0px;\r\n}\r\n\r\na:active,\r\na:visited,\r\na:link {\r\n	color: #4b719e;\r\n	text-decoration:none;\r\n}\r\n\r\na:hover {\r\n	color: #4b719e;\r\n	text-decoration: underline;\r\n}\r\n</style>\r\n</head>\r\n<body>\r\n{%content%}\r\n</body>\r\n</html>', 0)";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_email values (9, 'twofactor', '{%username%},\r\n\r\nЭто письмо отправлено с сайта $url\r\n\r\nВы получили это письмо, так как для вашего аккаунта включена двухфакторная авторизация. Для авторизации на сайте вам необходимо ввести полученный вами пин-код.\r\n\r\n------------------------------------------------\r\nПин-код:\r\n------------------------------------------------\r\n\r\n{%pin%}\r\n\r\n------------------------------------------------\r\nЕсли Вы не авторизовывались на нашем сайте, то ваш пароль известен посторонним лицам. Вам нужно незамедлительно зайти на сайт под своим логином и паролем, и в своем профиле изменить свой пароль.\r\n\r\nIP пользователя который ввел пароль: {%ip%}\r\n\r\nС уважением,\r\n\r\nАдминистрация $url', 0)";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_email values (9, 'twofactor', '{%username%},\r\n\r\nاین ایمیل از سایت  $url ارسال شده است \r\n\r\nشما این ایمیل را دریافت کرده اید زیرا حساب شما دارای تایید ورود دو مرحله ای است. برای تأیید در سایت، شما باید کد پین خود را وارد کنید.\r\n\r\n------------------------------------------------\r\nکد پین:\r\n------------------------------------------------\r\n\r\n{%pin%}\r\n\r\n------------------------------------------------\r\nIf you are not authorized on our site, then your password is known to unauthorized persons. You need to immediately go to the site under your login and password, and change your password in your profile.\r\n\r\nآیپی ارسال کننده: {%ip%}\r\n\r\nС با تشکر,\r\n\r\nمدیریت $url', 0)";
 
-
-$tableSchema[] = "INSERT INTO " . PREFIX . "_category (name, alt_name, keywords) values ('О скрипте', 'o-skripte', '')";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_category (name, alt_name, keywords) values ('В мире', 'v-mire', '')";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_category (name, alt_name, keywords) values ('Экономика', 'ekonomika', '')";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_category (name, alt_name, keywords) values ('Религия', 'religiya', '')";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_category (name, alt_name, keywords) values ('Криминал', 'kriminal', '')";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_category (name, alt_name, keywords) values ('Спорт', 'sport', '')";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_category (name, alt_name, keywords) values ('Культура', 'kultura', '')";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_category (name, alt_name, keywords) values ('Инопресса', 'inopressa', '')";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_banners (banner_tag, descr, code, approve, short_place, bstick, main, category) values ('header', 'Верхний баннер', '<div style=\"text-align:center;\"><a href=\"https://dle-news.ru/\" target=\"_blank\"><img src=\"{$url}templates/Default/images/_banner_.gif\" style=\"border: none;\" alt=\"\" /></a></div>', 1, 0, 0, 0, 0)";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_category (name, alt_name, keywords) values ('اخبار', 'main', ''), ('فیلم', 'film', ''), ('سریال', 'serial', ''), ('موزیک', 'music', ''), ('ورزش', 'sport', '')";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_banners (banner_tag, descr, code, approve, short_place, bstick, main, category) values ('header', 'Top banner', '<div align=\"center\"><a href=\"http://www.datalifeengine.ir/\" target=\"_blank\"><img src=\"{$url}templates/News/images/_banner_.gif\" style=\"border: none;\" alt=\"\" /></a></div>', 0, 0, 0, 0, 0)";
 
 $add_time = time();
+$thistimeold = date ("Y-m-d H:i:s", $add_time - 10);
 $thistime = date ("Y-m-d H:i:s", $add_time);
 
-$tableSchema[] = "INSERT INTO " . PREFIX . "_static (`name`, `descr`, `template`, `allow_br`, `allow_template`, `grouplevel`, `tpl`, `metadescr`, `metakeys`, `views`, `template_folder`, `date`) VALUES ('dle-rules-page', 'Общие правила на сайте', '<b>Общие правила поведения на сайте:</b><br><br>Начнем с того, что на сайте общаются сотни людей, разных религий и взглядов, и все они являются полноправными посетителями нашего сайта, поэтому если мы хотим чтобы это сообщество людей функционировало нам и необходимы правила. Мы настоятельно рекомендуем прочитать настоящие правила, это займет у вас всего минут пять, но сбережет нам и вам время и поможет сделать сайт более интересным и организованным.<br><br>Начнем с того, что на нашем сайте нужно вести себя уважительно ко всем посетителям сайта. Не надо оскорблений по отношению к участникам, это всегда лишнее. Если есть претензии - обращайтесь к Админам или Модераторам (воспользуйтесь личными сообщениями). Оскорбление других посетителей считается у нас одним из самых тяжких нарушений и строго наказывается администрацией. <b>У нас строго запрещен расизм, религиозные и политические высказывания.</b> Заранее благодарим вас за понимание и за желание сделать наш сайт более вежливым и дружелюбным.<br><br><b>На сайте строго запрещено:</b> <br><br>- сообщения, не относящиеся к содержанию статьи или к контексту обсуждения<br>- оскорбление и угрозы в адрес посетителей сайта<br>- в комментариях запрещаются выражения, содержащие ненормативную лексику, унижающие человеческое достоинство, разжигающие межнациональную рознь<br>- спам, а также реклама любых товаров и услуг, иных ресурсов, СМИ или событий, не относящихся к контексту обсуждения статьи<br><br>Давайте будем уважать друг друга и сайт, на который Вы и другие читатели приходят пообщаться и высказать свои мысли. Администрация сайта оставляет за собой право удалять комментарии или часть комментариев, если они не соответствуют данным требованиям.<br><br>При нарушении правил вам может быть дано <b>предупреждение</b>. В некоторых случаях может быть дан бан <b>без предупреждений</b>. По вопросам снятия бана писать администратору.<br><br><b>Оскорбление</b> администраторов или модераторов также караются <b>баном</b> - уважайте чужой труд.<br><br><div style=\"text-align:center;\">{ACCEPT-DECLINE}</div>', 1, 1, 'all', '', 'Общие правила', 'Общие правила', 0, '', '{$add_time}')";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_users (name, password, email, reg_date, lastdate, user_group, news_num, info, signature, favorites, xfields) values ('$reg_username', '$reg_password', '$reg_email', '$add_time', '$add_time', '1', '3', '', '', '', '')";
-$tableSchema[] = "INSERT INTO " . PREFIX . "_vote (category, vote_num, date, title, body) VALUES ('all', '0', '$thistime', 'Оцените работу движка', 'Лучший из новостных<br>Неплохой движок<br>Устраивает ... но ...<br>Встречал и получше<br>Совсем не понравился')";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_static (`name`, `descr`, `template`, `allow_br`, `allow_template`, `grouplevel`, `tpl`, `metadescr`, `metakeys`, `views`, `template_folder`, `date`) VALUES ('dle-rules-page', 'قوانین عمومی سایت', '<b>قوانین عمومی طرز رفتار در سایت</b><br /><br />برای شروع سایت، با ارتباط برقرار کردن صدها نفر از مردم از ادیان و اعتقادات مختلف، و بسیاری از میهمانان سایت، شما موظف هستید که به یک سری از قوانین سایت عمل کنید. شما را توصیه به خواندن این قوانین می کنیم که در کل بیشتر از پنج دقیقه طول نمی کشد.<br /><br />1. این وب سایت تابع قوانین جمهوری اسلامی ایران می باشد.<br />2. کپی مطلب از این وب سایت با ذکر منبع بلامانع است.<br />3. نمایش مطالب هر عضو در سایت به معنای تایید آن نیست و مسئولیت آن بر عهده خود نویسنده مطلب می باشد.<br />4. توهین به هر شخص ،  نژاد ، قوم و زبانی در این سایت ممنوع می باشد.<br />5. در حد امکان از بحث ها تفرقه انگیز بین اقوام ایرانی و طرح مطالبی که موجب ایجاد تنش بین اعضای سایت می گردد خودداری شود.<br /><br /><b>در صورتی که شخصی از قوانین سایت خارج گردد نام کاربری ایشان مسدود خواهد شد.</b><br /><div align=\"center\">{ACCEPT-DECLINE}</div>', 1, 1, 'all', '', 'قوانین عمومی', 'قوانین عمومی', 0, '', '{$add_time}')";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_users (name, password, email, reg_date, lastdate, user_group, news_num, info, signature, favorites, xfields) values ('$reg_username', '$reg_password', '$reg_email', '$add_time', '$add_time', '1', '6', '', '', '', '')";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_vote (category, vote_num, date, title, body) VALUES ('all', '0', '$thistime', 'نظرشما در مورد سیستم؟', 'عالی<br />خوب<br />متوسط<br />بد')";
 
-$title = "Добро пожаловать";
-$short_story = "<div style=\"text-align:center;\"><img src=\"".$url."uploads/boxsmall.jpg\" alt=\"\" /></div>Добро пожаловать на демонстрационную страницу движка DataLife Engine. DataLife Engine - это многопользовательский новостной движок, обладающий большими функциональными возможностями. Движок предназначен, в первую очередь, для создания новостных блогов и сайтов с большим информационным контекстом. Однако, он имеет большое количество настроек, которые позволяют использовать его практически для любых целей. Движок может быть интегрирован практически в любой существующий дизайн, и не имеет никаких ограничений по созданию шаблонов для него. Еще одной ключевой особенностью DataLife Engine является низкая нагрузка на системные ресурсы. Даже при очень большой аудитории сайта нагрузка на сервер будет минимальной, и вы не будете испытывать каких-либо проблем с отображением информации. Движок оптимизирован под поисковые системы. Обо всех функциональных особенностях вы сможете прочитать на <a href=\"https://dle-news.ru/\" target=\"_blank\">нашей странице</a>.<br><br>Обсуждение скрипта по всем вопросам ведется <a href=\"https://forum.dle-news.ru/index.php\" target=\"_blank\">здесь</a>. Также там Вы сможете получить оперативную помощь.";
-$full_story = "";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_tags (news_id, tag) values ('1', 'DLE'), ('1', 'Datalife'), ('1', 'Engine'), ('1', 'CMS'), ('1', 'Farsi'), ('1', 'DatalifeEngine.ir')";
 
-$tableSchema[] = "INSERT INTO " . PREFIX . "_post (id, date, autor, short_story, full_story, xfields, title, keywords, category, alt_name, allow_comm, approve, allow_main, tags) values ('1', '$thistime', '$reg_username', '$short_story', '$full_story', '', '$title', '', '1', 'post1', '1', '1', '1', 'по, новости')";
+$tableSchema[] = "INSERT INTO `" . PREFIX . "_images` (`id`, `images`, `news_id`, `author`, `date`) VALUES (1, '2019-10/1572193752_1.jpg', 3, 'admin', '1572193725'), (2, '2019-10/1572193781_2.jpg', 2, 'admin', '1572193753'), (3, '2019-10/1572193809_3.jpg', 4, 'admin', '1572193798'), (4, '2019-10/1572368565_4.png', 5, 'admin', '1572368359'), (5, '2019-10/1572368565_5.jpg', 6, 'admin', '1572368542');";
 
-$title = "Приобретение и оплата скрипта";
-$short_story = "Уважаемые вебмастера хотим для вас сделать небольшое дополнение. Прежде чем обратиться с каким-либо вопросом в службу поддержки скрипта, убедитесь что вы тщательно прочитали документацию по скрипту и не нашли там для вас необходимого ответа. Мы оставляем за собой право игнорировать вопросы, поступившие к нам от пользователей, использующих некоммерческую версию скрипта или не оплативших лицензию, включающую в себя службу технической поддержки. Вы можете приобрести один из двух типов лицензии на DataLife Engine по вашему желанию:<br><br>- <b>Базовая лицензия.</b> При приобретении данной лицензии вы также получаете возможность получения бесплатно новых версий скрипта в течении <b>одного года</b>.<br><br>- <b>Расширенная лицензия.</b> При приобретении данной лицензии вы получаете все что входит в базовую лицензию, а также дополнительно входит служба технической поддержки скрипта и разрешение на снятие копирайтов на скрипт с пользовательской части (видимой для обычных посетителей сайта).<br><br><b>Срок действия лицензии</b> составляет <span style=\"color:#FF0000\">1 год</span>, в течении которого вы бесплатно будете получать все последующие версии скрипта и обновления, а в случае приобретения расширенной лицензии, и тех. поддержку. После окончания срока лицензии вы можете ее продлить, либо использовать пожизненно бесплатно актуальную на тот момент времени версию скрипта.<br><br><b>Как оплатить скрипт вы можете прочитать на</b> <a href=\"https://dle-news.ru/price.html\" target=\"_blank\">https://dle-news.ru/price.html</a><br><br><b>С уважением,<br><br>SoftNews Media Group</b>";
+$tableSchema[] = "INSERT INTO `" . PREFIX . "_post` (`autor`, `date`, `short_story`, `full_story`, `xfields`, `title`, `descr`, `keywords`, `category`, `alt_name`, `comm_num`, `allow_comm`, `allow_main`, `approve`, `fixed`, `allow_br`, `symbol`, `tags`, `metatitle`) VALUES
+    ('$reg_username', '$thistimeold', 'با سلام خدمت شما کاربر گرامی؛<br><br>از اینکه این سیستم را برای سایت خود در نظر گرفته اید متشکریم.<br><br>خواهشمندیم در صورت برخورد با هر اشکالی در این سیستم و یا اگر پیشنهادی در بهتر سازی آن دارید ما را توسط ایمیل زیر با خبر فرمایید.<br><br>برای دانلود قالب های فارسی و امکانات اضافی دیگر به سایت زیر مراجعه فرمایید.<br><br><br><div align=\"left\">E-Mail: <a href=\"http://datalifeengine.ir\" target=\"_blank\" rel=\"noopener external noreferrer\">info@datalifeengine.ir</a><br><br>Offical website: <a href=\"http://datalifeengine.ir\" target=\"_blank\" rel=\"noopener external noreferrer\">www.datalifeengine.ir</a><br><br>Support forum: <a href=\"http://forum.datalifeengine.ir\" target=\"_blank\" rel=\"noopener external noreferrer\">www.forum.Datalifeengine.ir</a><br><br>Free template: <a href=\"http://themes.datalifeengine.ir\" target=\"_blank\" rel=\"noopener external noreferrer\">www.themes.datalifeEngine.ir</a></div><br><div align=\"center\"><img src=\"{$url}uploads/boxsmall.jpg\" width=\"330\" height=\"448\" class=\"fr-fic fr-dii\" alt=\"\"></div><br>شاد و پیروز باشید.', '', '', 'دیتالایف انجین فارسی نسخه 14.0', 'با سلام خدمت شما کاربر گرامی؛ از اینکه این سیستم را برای سایت خود در نظر گرفته اید متشکریم. خواهشمندیم در صورت برخورد با هر اشکالی در این سیستم و یا اگر پیشنهادی در بهتر سازی آن دارید ما را توسط ایمیل زیر با خبر فرمایید. برای دانلود قالب های فارسی و امکانات اضافی دیگر به سایت زیر مراجعه فرمایید.', 'فرمایید, forum, سیستم, datalifeengine, Support, website, Offical, مراجعه, Datalifeengine, پیروز, باشید, datalifeEngine, themes, template, اضافی, فارسی, متشکریم, خواهشمندیم, گرفته, اینکه', '1', 'welcome', 0, 1, 1, 1, 0, 0, '', 'Datalife, Engine, CMS', ''),
+    ('$reg_username', '$thistime', 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.<br><img src=\"{$url}uploads/posts/2019-10/1572193781_2.jpg\" alt=\"\" class=\"fr-dib\"><br>', '', '', 'خبر آزمایش اول', 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و', 'طراحان, شرایط, استفاده, شناخت, موجود, ایجاد, دشواری, فارسی, فرهنگ, الخصوص, خلاقی, ارائه, رایانه, پیشرو, وزمان, پیوسته, دنیای, طراحی, اساسا, سوالات', '2', 'test-1', 0, 1, 1, 1, 0, 0, '', 'تست, تست اول', ''),
+    ('$reg_username', '$thistime', 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.<br><img src=\"{$url}uploads/posts/2019-10/1572193752_1.jpg\" alt=\"\" class=\"fr-dib\"><br>', '', '', 'خبر آزمایشی دوم', 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و', 'طراحان, شرایط, استفاده, شناخت, موجود, ایجاد, دشواری, فارسی, فرهنگ, الخصوص, خلاقی, ارائه, رایانه, پیشرو, وزمان, پیوسته, دنیای, طراحی, اساسا, سوالات', '3', 'test-2', 0, 1, 1, 1, 0, 0, '', 'تست, تست دوم', ''),
+    ('$reg_username', '$thistime', 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.<br><img src=\"{$url}uploads/posts/2019-10/1572193809_3.jpg\" alt=\"\" class=\"fr-dib\"><br>', '', '', 'خبر آزمایشی سوم', 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و', 'طراحان, شرایط, استفاده, شناخت, موجود, ایجاد, دشواری, فارسی, فرهنگ, الخصوص, خلاقی, ارائه, رایانه, پیشرو, وزمان, پیوسته, دنیای, طراحی, اساسا, سوالات', '4', 'test-3', 0, 1, 1, 1, 0, 0, '', 'تست, تست سوم', ''),
+    ('$reg_username', '$thistime', 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.<br><img src=\"{$url}uploads/posts/2019-10/1572368565_4.png\" alt=\"\" class=\"fr-dib\"><br>', '', '', 'خبر آزمایشی سوم', 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و', 'طراحان, شرایط, استفاده, شناخت, موجود, ایجاد, دشواری, فارسی, فرهنگ, الخصوص, خلاقی, ارائه, رایانه, پیشرو, وزمان, پیوسته, دنیای, طراحی, اساسا, سوالات', '5', 'test-4', 0, 1, 1, 1, 0, 0, '', 'تست, تست چهارم', ''),
+    ('$reg_username', '$thistime', 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.<br><br><img src=\"{$url}uploads/posts/2019-10/1572368565_5.jpg\" alt=\"\" class=\"fr-dib\"><br>', '', '', 'خبر آزمایشی پنجم', 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و', 'طراحان, شرایط, استفاده, شناخت, موجود, ایجاد, دشواری, فارسی, فرهنگ, الخصوص, خلاقی, ارائه, رایانه, پیشرو, وزمان, پیوسته, دنیای, طراحی, اساسا, سوالات', '2', 'test-5', 0, 1, 1, 1, 0, 0, '', 'تست, تست پنجم', '');";
 
-$add_time = time()-20;
-$thistime = date ("Y-m-d H:i:s", $add_time);
+$tableSchema[] = "INSERT INTO " . PREFIX . "_post_extras (news_id, user_id) values ('1', '1');";
 
-$tableSchema[] = "INSERT INTO " . PREFIX . "_post (id, date, autor, short_story, full_story, xfields, title, keywords, category, alt_name, allow_comm, approve, allow_main, tags) values ('2', '$thistime', '$reg_username', '$short_story', '$full_story', '', '$title', '', '1', 'post2', '1', '1', '1', 'по, новости')";
+$tableSchema[] = "INSERT INTO `" . PREFIX . "_images` (`images`, `news_id`, `author`, `date`) VALUES ('2019-10/1572193752_1.jpg', 3, '$reg_username', '1572193725'), ('2019-10/1572193781_2.jpg', 2, '$reg_username', '1572193753'), ('2019-10/1572193809_3.jpg', 4, '$reg_username', '1572193798'), ('2019-10/1572368565_4.png', 5, '$reg_username', '1572368359'), ('2019-10/1572368565_5.jpg', 6, '$reg_username', '1572368542');";
 
-$title = "Осуществление технической поддержки скрипта";
-$short_story = "<b>Техническая поддержка скрипта</b> осуществляется силами <a href=\"https://forum.dle-news.ru/index.php\" target=\"_blank\">форума поддержки</a>, а также по E-Mail. По мере поступления возникших у вас вопросов мы стараемся ответить на все ваши вопросы, но в связи с большим количеством посетителей, это не всегда является возможным. Поэтому гарантированная техническая поддержка предоставляется, только пользователям, которые приобрели расширенную лицензию на скрипт.<br><br><b>Услуги по технической поддержке скрипта включают в себя:</b><br><br>1. Приоритетное получение ответа на вопросы, которые задают пользователи впервые столкнувшиеся со скриптом и естественно не знающие всех нюансов работы скрипта. В компетенции службы поддержки находится только помощь только по непосредственным сбоям самого скрипта, в случае если причиной некорректной работы скрипта явился ваш шаблон, не соответствующий требованиям скрипта, то в поддержке вам может быть отказано.<br><br>2. Также вы получаете возможность одноразовой установки скрипта вам на сервер, включая настройку его до полной работоспособности с учетом текущих настроек сервера (иногда нужно верно отключить поддержку ЧПУ, включение специальных директив для Русского Апача, для верной загрузки картинок и прочее...).<br><br>3. Вы получаете консультационную поддержку по работе со структурой скрипта, например у вас есть желание добавить небольшие изменения в скрипт для более удобной работы для вас, вы сможете сэкономить время на поиске нужного куска кода просто спросив у нас. Вам будет предоставлена консультация где это копать и как вообще лучше реализовать поставленную задачу. (Внимание мы не пишем за вас дополнительные модули, а только помогаем вам лучше разобраться со структурой скрипта, поэтому всегда задавайте вопросы по существу, вопросы типа: \"как мне сделать такую фишку\" могут быть проигнорированы службой поддержки).<br><br>4. Еще одна из часто возникающих проблем это некорректное обновление скрипта, например во время обновления произошел сбой сервера, часть новых данных была внесена в базу и настройки, часть нет, в итоге вы получаете нерабочий скрипт, со всеми вытекающими последствиями. В данном случае для вас будет проведена ручная коррекция поврежденной структуры базы данных.<br><br>В случае если вы не являетесь подписчиком дополнительной службы поддержки, ваши вопросы могут быть проигнорированы и оставлены без ответа.<br><br><b>С уважением,<br><br>SoftNews Media Group</b>";
-
-$add_time = time()-50;
-$thistime = date ("Y-m-d H:i:s", $add_time);
-
-$tableSchema[] = "INSERT INTO " . PREFIX . "_post (id, date, autor, short_story, full_story, xfields, title, keywords, category, alt_name, allow_comm, approve, allow_main, tags) values ('3', '$thistime', '$reg_username', '$short_story', '$full_story', '', '$title', '', '1', 'post4', '1', '1', '1', '')";
-
-$tableSchema[] = "INSERT INTO " . PREFIX . "_post_extras (news_id, user_id) values ('1', '1'), ('2', '1'), ('3', '1')";
-
-$tableSchema[] = "INSERT INTO " . PREFIX . "_post_extras_cats (news_id, cat_id) values ('1', '1'), ('2', '1'), ('3', '1')";
-
-$tableSchema[] = "INSERT INTO " . PREFIX . "_tags (news_id, tag) values ('1', 'по'), ('2', 'по'), ('3', 'по'), ('1', 'новости'), ('2', 'новости')";
+$tableSchema[] = "INSERT INTO " . PREFIX . "_post_extras_cats (news_id, cat_id) values ('1', '1');";
 
       foreach($tableSchema as $table) {
 
@@ -2053,16 +2078,15 @@ $tableSchema[] = "INSERT INTO " . PREFIX . "_tags (news_id, tag) values ('1', '�
 echo <<<HTML
 <div class="panel panel-default">
   <div class="panel-heading">
-    Установка завершена
+    پایان نصب
   </div>
   <div class="panel-body">
-Поздравляем Вас, DataLife Engine был успешно установлен на Ваш сервер. Вы можете зайти теперь на главную <a href="{$url}">страницу вашего сайта</a>  и посмотреть возможности скрипта. Либо Вы можете <a href="admin.php">зайти</a> в панель управления DataLife Engine и изменить другие настройки системы.
-<br><br><span class="text-danger">Внимание: при установке скрипта создается структура базы данных, создается аккаунт администратора, а также прописываются основные настройки системы, поэтому после успешной установки удалите файл <b>install.php</b> во избежание повторной установки скрипта!</span><br><br>
-Приятной Вам работы<br><br>
-SoftNews Media Group
+سیستم مدیریت محتوای دیتالایف انجین با موفقیت بر روی سایت شما نصب گردید.<br/> برای دیدن صفحه اصلی سایت <B><a href="index.php"><font color="#1176CC" size="2">اینجا</font></a></B> کلیک کنید و یا اگر می خواهید کنترل پنل مدیریت سایت را ببینید <B><a href="admin.php"><font color="#1176CC" size="2">اینجا</font></a></B> کلیک کنید.
+<br><br><span class="text-danger">توجه: به یاد داشته باشید که فایل <b>install.php</b> را برای امنیت بیشتر سایت حذف کنید. همچنین در صورتی که نیاز به ارتقاء سیستم ندارید و بار اول هست این سیستم را نصب می کنید، فولدر <strong>/upgrade/</strong> را حذف کنید.</span><br><br>
+موفق باشید.<br>
   </div>
   <div class="panel-footer">
-	<a href="{$url}" class="btn bg-teal btn-sm btn-raised position-left"><i class="fa fa-arrow-circle-o-right position-left"></i>Продолжить</a>
+	<a href="{$url}" class="btn bg-teal btn-sm btn-raised position-left">ورود به سایت<i class="fa fa-arrow-circle-o-left position-right"></i></a>
   </div>
 </div>
 HTML;
@@ -2072,7 +2096,7 @@ else {
 
 	if (@file_exists(ENGINE_DIR.'/data/config.php')) {
 
-		msgbox( "", "Установка скрипта автоматически заблокирована", "Внимание, на сервере обнаружена уже установленная копия DataLife Engine. Если вы хотите еще раз произвести установку скрипта, то вам необходимо вручную удалить файл <b>/engine/data/config.php</b>, используя FTP протокол." );
+			msgbox( "", "خطا در نصب سیستم", "به دلیل وجود فایل <b>engine/data/config.php/</b> شما نمی توانید دوباره این سیستم را نصب کنید. [مگر آنکه فایل مذکور را حذف کنید]" );
 
 		die ();
 	}
@@ -2080,7 +2104,7 @@ else {
 	$_SESSION['dle_install'] = 1;
 
 // ********************************************************************************
-// Приветствие
+// Greeting
 // ********************************************************************************
 
   echo $skin_header;
@@ -2090,17 +2114,18 @@ echo <<<HTML
 <input type="hidden" name="action" value="eula">
 <div class="panel panel-default">
   <div class="panel-heading">
-    Мастер установки DataLife Engine
+    نصب و راه اندازی سیستم دیتالایف انجین فارسی
   </div>
-  <div class="panel-body">
-	Добро пожаловать в мастер установки DataLife Engine. Данный мастер поможет вам установить скрипт всего за несколько минут. Однако, не смотря на это, мы настоятельно рекомендуем Вам ознакомиться с документацией по работе со скриптом, а также по его установке, которая поставляется вместе со скриптом.<br><br>
-	<span class="text-danger">Внимание: при установке скрипта создается структура базы данных, создается аккаунт администратора, а также прописываются основные настройки системы, поэтому после успешной установки удалите файл <b>install.php</b> во избежание повторной установки скрипта!</span><br><br>
-	Приятной Вам работы,<br><br>
-	SoftNews Media Group
-  </div>
-  <div class="panel-footer">
-	<button type="submit" class="btn bg-teal btn-sm btn-raised position-left"><i class="fa fa-arrow-circle-o-right position-left"></i>Начать установку</button>
-  </div>
+	<div class="panel-body">
+      با سلام خدمت شما کاربر گرامی،<br><br>
+      به صفحۀ نصب سیستم مدیریت محتوای فارسی دیتالایف انجین نسخه 14.0 خوش آمدید.<br><br>
+	  به خاطر داشته باشید در صورتیکه حالت سئوی سیستم را غیرفعال می کنید، فایل <b>htaccess.</b> را از روی سرور حذف نموده و در مرحله پیکربندی سیستم قابلیت سئو را غیر فعال نمایید.<br><br>
+	<span class="text-danger">توجه: برای امنیت بیشتر سایت، ضروریست که بعد از نصب، فایل <B>install.php</b> و پوشه ی <b>upgrade</b> را از سرور خود پاک کنید.</span><br><br>
+	<font color="#555555">امیدواریم از امکانات این سیستم لذت ببرید.</font>
+	</div>
+	<div class="panel-footer">
+	<button type="submit" class="btn bg-teal btn-sm btn-raised position-left">شروع نصب <i class="fa fa-arrow-circle-o-left position-right"></i></button>
+	</div>
 </div>
 </form>
 HTML;
