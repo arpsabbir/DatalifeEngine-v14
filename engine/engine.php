@@ -1,7 +1,7 @@
 <?PHP
 /*
 =====================================================
- DataLife Engine v13.3
+ DataLife Engine v14.0
 -----------------------------------------------------
  Persian support site: http://datalifeengine.ir
 -----------------------------------------------------
@@ -1216,7 +1216,7 @@ $metatags = <<<HTML
 <title>{$metatags['title']}</title>
 <meta name="description" content="{$metatags['description']}">
 <meta name="keywords" content="{$metatags['keywords']}">{$robots_meta}
-<meta name="generator" content="DataLife Engine v13.3 (http://www.datalifeengine.ir/)" />
+<meta name="generator" content="DataLife Engine v14.0 (http://www.datalifeengine.ir/)" />
 {$s_meta}<link rel="search" type="application/opensearchdescription+xml" href="{$PHP_SELF}?do=opensearch" title="{$config['home_title']}">
 HTML;
 
