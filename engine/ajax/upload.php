@@ -997,8 +997,6 @@ echo <<<HTML
 </div>
 HTML;
 
-$max_file_size = number_format($max_file_size);
-
 if ( $uploaded_list ) $im_show = "tabClick(0);"; else $im_show = "";
 
 echo <<<HTML
